@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:virtulib_project"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="fonts/Dosis.ttf #Dosis ExtraLight"/>
+        </Style>
     </Application.Resources>
 </Application>
