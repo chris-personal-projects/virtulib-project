@@ -12,28 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using virtulib_project.Pages;
 
 namespace virtulib_project
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Browse.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Browse : Page
     {
-        public MainWindow()
+        public Browse()
         {
             InitializeComponent();
-            Main.Navigate(new Homepage());
         }
-
-        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed)
-            {
-                DragMove();
-            }
-        }
-
     }
 }
