@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace virtulib_project
+namespace virtulib_project.Pages
 {
     /// <summary>
     /// Interaction logic for Browse.xaml

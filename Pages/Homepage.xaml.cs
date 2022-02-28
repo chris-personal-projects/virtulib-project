@@ -27,7 +27,7 @@ namespace virtulib_project.Pages
 
         private void StartClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("Browse.xaml", UriKind.Relative));
+            NavigationService.Navigate(new Uri("/Pages/Browse.xaml", UriKind.Relative));
         }
     }
 }
