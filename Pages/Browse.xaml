@@ -63,6 +63,17 @@
             >
             </TextBox>
             <fa:ImageAwesome 
+                Icon="QuestionCircle" 
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center" 
+                Width="30" 
+                Height="30"
+                Foreground="White"
+                Grid.Column="8"
+                Grid.ColumnSpan="2"
+                Margin="20, 0, 0, 0"
+            ></fa:ImageAwesome>
+            <fa:ImageAwesome 
                 Icon="ShoppingCart" 
                 VerticalAlignment="Center" 
                 HorizontalAlignment="Center" 
