@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:virtulib_project.Pages"
       xmlns:fa="http://schemas.fontawesome.io/icons/"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="800" d:DesignWidth="1200"
       Title="Browse"
@@ -33,6 +34,43 @@
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             
+            <Grid Grid.Column="1">
+                <materialDesign:DialogHost BorderBrush="{DynamicResource MaterialDesignDivider}">
+                    
+                    <materialDesign:DialogHost.DialogContent>
+                        <Grid Width="300" Height="150" HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal" Margin="15">
+                                <materialDesign:PackIcon Kind="Folder" Foreground="{StaticResource PrimaryHueMidBrush}" Width="50" Height="50"/>
+                                <TextBlock Foreground="Gray" Width="200" Margin="15 5" TextWrapping="Wrap">
+                            Allow Application to access photos, media and files on your computer?
+                                </TextBlock>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="15">
+                                <Button Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Style="{DynamicResource MaterialDesignFlatButton}" Margin="4" VerticalAlignment="Center">
+                                    Deny
+                                </Button>
+                                <Button Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}" Style="{DynamicResource MaterialDesignFlatButton}" Margin="4" VerticalAlignment="Center">
+                                    Allow
+                                </Button>
+                            </StackPanel>
+                        </Grid>
+                    </materialDesign:DialogHost.DialogContent>
+
+                    <Button Style="{StaticResource MaterialDesignFlatButton}" 
+                            Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
+                    >
+                        <fa:ImageAwesome 
+                            Icon="Bars" 
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Center" 
+                            Foreground="White"
+                        ></fa:ImageAwesome>
+                    </Button>
+                </materialDesign:DialogHost>
+            </Grid>
+           
+
+
             <Image 
                 Width="50" 
                 Height="50" 
@@ -41,15 +79,6 @@
                 RenderOptions.BitmapScalingMode="Fant"
             />
 
-            <fa:ImageAwesome 
-                Icon="Bars" 
-                VerticalAlignment="Center" 
-                HorizontalAlignment="Center" 
-                Width="30" 
-                Height="30"
-                Foreground="White"
-                Grid.Column="1"
-            ></fa:ImageAwesome>
             <TextBox 
                 Grid.Column="2" 
                 Grid.ColumnSpan="7"
@@ -59,6 +88,7 @@
                 Width="900"
                 Height="25"
                 Text=""
+                Margin="10, 0, 0, 0"
                 VerticalContentAlignment="Center"
             >
             </TextBox>
@@ -100,7 +130,7 @@
                 <RowDefinition Height="55"></RowDefinition>
                 <RowDefinition Height="25"></RowDefinition>
             </Grid.RowDefinitions>
-            
+
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="10"/>
@@ -121,7 +151,7 @@
                     Height="30"
                     Foreground="White"
                 ></fa:ImageAwesome>
-                
+
                 <Grid Grid.Column="3">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="25"></RowDefinition>
@@ -209,7 +239,7 @@
 
                     </StackPanel>
                 </Grid>
-                
+
                 <fa:ImageAwesome 
                     Icon="ArrowCircleRight" 
                     Grid.Column="5"
@@ -696,9 +726,6 @@
                     Foreground="White"
                 ></fa:ImageAwesome>
             </Grid>
-
-         
         </Grid>
-        
     </Grid>
 </Page>

@@ -3,15 +3,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
         xmlns:local="clr-namespace:virtulib_project"
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="1200"
         WindowStyle="None"
         ResizeMode="NoResize"
-        Background="#181735"
         >
-
-    <Grid MouseDown="Grid_MouseDown">
-        <Frame x:Name="Main"/>
+    <Grid >
+        <Frame MouseDown="Grid_MouseDown" x:Name="Main"/>
     </Grid>
 </Window>
