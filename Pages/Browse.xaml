@@ -374,16 +374,21 @@
                         RenderOptions.BitmapScalingMode="Fant"
                     />
 
-                    <Button Style="{StaticResource MaterialDesignFlatButton}" 
-                        Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
+                    <Button
+						Style="{StaticResource MaterialDesignFlatButton}"
+						Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
                         Grid.Column="1"
-                    >
-                        <fa:ImageAwesome 
-                            Icon="Bars" 
-                            VerticalAlignment="Center" 
-                            HorizontalAlignment="Center" 
-                            Foreground="White"
-                        ></fa:ImageAwesome>
+					>
+                        <Button.Template>
+                            <ControlTemplate>
+                                <fa:ImageAwesome 
+                                    Icon="Bars" 
+                                    VerticalAlignment="Center" 
+                                    HorizontalAlignment="Center" 
+                                    Foreground="White"
+                                ></fa:ImageAwesome>
+                            </ControlTemplate>
+                        </Button.Template>
                     </Button>
                     
                     <TextBox 
@@ -410,15 +415,27 @@
                         Margin="20, 0, 0, 0"
                     ></fa:ImageAwesome>
 
-                    <fa:ImageAwesome 
-                        Icon="ShoppingCart" 
-                        VerticalAlignment="Center" 
-                        HorizontalAlignment="Center" 
-                        Width="30" 
-                        Height="30"
-                        Foreground="White"
-                        Grid.Column="9"
-                    ></fa:ImageAwesome>
+                    <Button
+						Style="{StaticResource MaterialDesignFlatButton}"
+						Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
+						Grid.Column="9"
+						Height="50"
+						Width="50"
+					>
+                        <Button.Template>
+                            <ControlTemplate>
+                                <fa:ImageAwesome 
+                                    Icon="ShoppingCart" 
+                                    VerticalAlignment="Center" 
+                                    HorizontalAlignment="Center" 
+                                    Width="30" 
+                                    Height="30"
+                                    Foreground="White"
+                                    Grid.Column="9"
+                                ></fa:ImageAwesome>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
                 </Grid>
 
                 <Grid Grid.Row="1">

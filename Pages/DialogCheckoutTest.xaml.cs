@@ -18,9 +18,9 @@ namespace virtulib_project.Pages
     /// <summary>
     /// Interaction logic for ChrisTest.xaml
     /// </summary>
-    public partial class ChrisTest : Page
+    public partial class DialogCheckoutTest : Page
     {
-        public ChrisTest()
+        public DialogCheckoutTest()
         {
             InitializeComponent();
         }
