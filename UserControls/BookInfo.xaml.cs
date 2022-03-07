@@ -13,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace virtulib_project.Pages
+namespace virtulib_project.UserControls
 {
     /// <summary>
-    /// Interaction logic for Browse.xaml
+    /// Interaction logic for BookInfo.xaml
     /// </summary>
-    public partial class Browse : Page
+    public partial class BookInfo : UserControl
     {
-        public Browse()
+        public BookInfo()
         {
             InitializeComponent();
-        }
-
-        private void Book_Summary(object sender, RoutedEventArgs e)
-        {
-            Console.WriteLine("Hi Chris!");
         }
     }
 }

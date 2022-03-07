@@ -89,7 +89,7 @@
             </Button>
         </Grid>
         <materialDesign:DialogHost BorderBrush="{DynamicResource MaterialDesignDivider}">
-            <materialDesign:DialogHost.DialogContent>
+            <materialDesign:DialogHost.DialogContent Identifier="CheckoutDialog">
                 <Grid Width="500" Height="700" HorizontalAlignment="Center" VerticalAlignment="Top">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="50"/>
@@ -572,14 +572,29 @@
                             <StackPanel 
                             Grid.Row="2"
                             Orientation="Horizontal"
-                        >
-                                <Rectangle
-                                Width="100"
-                                Stroke="AliceBlue"
-                                Fill="AliceBlue"
-                                Margin="10, 0, 0, 0"
                             >
-                                </Rectangle>
+
+                                <Button
+						            Style="{StaticResource MaterialDesignFlatButton}"
+                                    Grid.Column="1"
+                                    Margin="10, 0, 0, 0"
+                                    Height="135"
+                                    Click="Book_Summary"
+					            >
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Rectangle
+                                                Width="100"
+                                                Stroke="AliceBlue"
+                                                Fill="AliceBlue"
+                                            >
+                                            </Rectangle>    
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+
+
+
                                 <Rectangle
                                 Width="105"
                                 Stroke="#d08d2f"
