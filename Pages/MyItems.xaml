@@ -502,9 +502,9 @@
             Width="85" 
             Height="60"
             Foreground="#FF992910"
-            Margin="990,375,125,365"
+            Margin="990,383,125,357"
                     />
-        <TextBox HorizontalAlignment="Left" Height="32" Margin="990,440,0,0" TextWrapping="Wrap" Text="Remove" VerticalAlignment="Top" Width="90" FontSize="22" FontWeight="Bold" BorderThickness="0" Foreground="#FF992910"/>
+        <TextBox HorizontalAlignment="Left" Height="32" Margin="990,448,0,0" TextWrapping="Wrap" Text="Remove" VerticalAlignment="Top" Width="90" FontSize="22" FontWeight="Bold" BorderThickness="0" Foreground="#FF992910"/>
         <TextBox HorizontalAlignment="Left" Height="40" Margin="188,625,0,0" TextWrapping="Wrap" Text="Due in: &#xA;" VerticalAlignment="Top" Width="112" FontSize="22" FontWeight="Bold" BorderThickness="0"/>
         <TextBox HorizontalAlignment="Left" Height="40" Margin="275,625,0,0" TextWrapping="Wrap" Text="5 days" VerticalAlignment="Top" Width="112" FontSize="22" FontWeight="Bold" BorderThickness="0"/>
         <fa:ImageAwesome 
