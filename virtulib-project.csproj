@@ -141,6 +141,7 @@
   <ItemGroup>
     <Content Include="bin\Debug\virtulib-project.exe" />
     <Content Include="bin\Debug\virtulib-project.pdb" />
+    <Resource Include="imgs\dorothy.png" />
     <Resource Include="imgs\virtulib-logo.png" />
   </ItemGroup>
   <ItemGroup>
