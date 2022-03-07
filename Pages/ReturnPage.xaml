@@ -1,0 +1,301 @@
+﻿<Page x:Class="virtulib_project.Pages.Page2"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:virtulib_project.Pages"
+      xmlns:fa="http://schemas.fontawesome.io/icons/"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="600"
+      Title="ReturnPage"
+      Background="#181735">
+
+   
+
+
+    <Grid>
+        <TextBlock
+            Text="Book Return"
+            Foreground="White"
+            HorizontalAlignment="Center"
+            FontSize="30"
+            VerticalAlignment="Top"
+            Margin="30"
+        ></TextBlock>
+
+        <TextBlock
+            Text="Select All"
+            FontSize="25"
+            Foreground="White"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="30,100,0,0"
+        ></TextBlock>
+
+        <Rectangle
+            Width="500"
+            Height="50"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Stroke="White"
+            Fill="White"
+            Margin="0,150,0,0"
+        ></Rectangle>
+
+        <Rectangle
+            Width="30"
+            Height="30"
+            Stroke="Black"
+            Fill="White"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="60,160,0,0"
+        ></Rectangle>
+
+        <TextBlock
+            Text="1. Computer Networks"
+            Foreground="Black"
+            FontSize="25"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="110,155,0,0"
+        ></TextBlock>
+
+        <TextBlock
+            Text="6"
+            Foreground="Orange"
+            FontSize="25"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Margin="0,155,120,0"
+        ></TextBlock>
+
+        <TextBlock
+            Text="days"
+            Foreground="Black"
+            FontSize="25"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Margin="0,155,70,0"
+        ></TextBlock>
+
+        <fa:ImageAwesome
+            Icon="Check"
+            Width="25"
+            Height="25"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="63,165,0,0"
+        ></fa:ImageAwesome>
+
+      
+
+        
+
+    
+
+        
+
+        <Rectangle
+            Width="500"
+            Height="50"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Stroke="White"
+            Fill="White"
+            Margin="0,250,0,0"
+        ></Rectangle>
+
+        <Rectangle
+            Width="30"
+            Height="30"
+            Stroke="Black"
+            Fill="White"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="60,260,0,0"
+        ></Rectangle>
+
+        <TextBlock
+            Text="2. Home Depot Renovation"
+            Foreground="Black"
+            FontSize="25"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="110,255,0,0"
+        ></TextBlock>
+
+        <TextBlock
+            Text="12"
+            Foreground="Green"
+            FontSize="25"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Margin="0,255,120,0"
+        ></TextBlock>
+
+        <TextBlock
+            Text="days"
+            Foreground="Black"
+            FontSize="25"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Margin="0,255,70,0"
+        ></TextBlock>
+
+
+
+        <Rectangle
+            Width="500"
+            Height="50"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Stroke="White"
+            Fill="White"
+            Margin="0,350,0,0"
+        ></Rectangle>
+
+        <Rectangle
+            Width="30"
+            Height="30"
+            Stroke="Black"
+            Fill="White"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="60,360,0,0"
+        ></Rectangle>
+
+        <TextBlock
+            Text="3. Dilbert Complete Collection"
+            Foreground="Black"
+            FontSize="25"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="110,355,0,0"
+        ></TextBlock>
+
+        <TextBlock
+            Text="14"
+            Foreground="Green"
+            FontSize="25"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Margin="0,355,120,0"
+        ></TextBlock>
+
+        <TextBlock
+            Text="days"
+            Foreground="Black"
+            FontSize="25"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Margin="0,355,70,0"
+        ></TextBlock>
+
+
+
+        <Rectangle
+            Width="500"
+            Height="50"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            Stroke="White"
+            Fill="White"
+            Margin="0,450,0,0"
+        ></Rectangle>
+
+        <Rectangle
+            Width="30"
+            Height="30"
+            Stroke="Black"
+            Fill="White"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="60,460,0,0"
+        ></Rectangle>
+
+
+        <TextBlock
+            Text="4. Dummie's Windows 11"
+            Foreground="Black"
+            FontSize="25"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            Margin="110,455,0,0"
+        ></TextBlock>
+
+        <TextBlock
+            Text="21"
+            Foreground="Green"
+            FontSize="25"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Margin="0,455,120,0"
+        ></TextBlock>
+
+        <TextBlock
+            Text="days"
+            Foreground="Black"
+            FontSize="25"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Right"
+            Margin="0,455,70,0"
+        ></TextBlock>
+
+        <Button
+            Content="Arrage Drop- Off"
+            FontSize="20"
+            FontWeight="UltraBold"
+            Foreground="Black"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Bottom"
+            Height="70"
+            Width="230"
+            Margin="50,0,0,150"
+        ></Button>
+
+        <fa:ImageAwesome
+            Icon="LocationArrow"
+            Height="30"
+            Width="30"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Left"
+            Margin="60,0,0,170"
+            Foreground="Brown"
+        ></fa:ImageAwesome>
+
+        <Button
+            Height="70"
+            Width="230"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            Content="Print Shipping Label"
+            Margin="0,0,50,150"
+            FontSize="20"
+            Foreground="Black"
+        ></Button>
+
+        <fa:ImageAwesome
+            Icon="Cube"
+            Height="30"
+            Width="30"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            Margin="0,0,240,170"
+            
+        ></fa:ImageAwesome>
+
+
+        <Line Stretch="Fill" Stroke="White" X2="1" VerticalAlignment="Bottom" Margin="140,0,140,20"></Line>
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+</Page>

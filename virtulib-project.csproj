@@ -82,6 +82,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\ReturnPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Pages\Browse.xaml.cs">
@@ -92,6 +96,9 @@
     </Compile>
     <Compile Include="Pages\Checkout.xaml.cs">
       <DependentUpon>Checkout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ReturnPage.xaml.cs">
+      <DependentUpon>ReturnPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
