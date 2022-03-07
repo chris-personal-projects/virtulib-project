@@ -1,0 +1,693 @@
+﻿<Page x:Class="virtulib_project.Pages.Browse"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:virtulib_project.Pages"
+      xmlns:fa="http://schemas.fontawesome.io/icons/"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1200"
+      Title="Browse"
+      Background="#181735">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid 
+            Grid.Row="0" 
+            Background="#0F0F2D"
+        >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="50"/>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            
+            <Image 
+                Width="50" 
+                Height="50" 
+                Grid.Column="0"
+                Source="/imgs/virtulib-logo.png"
+                RenderOptions.BitmapScalingMode="Fant"
+            />
+
+            <fa:ImageAwesome 
+                Icon="Bars" 
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center" 
+                Width="30" 
+                Height="30"
+                Foreground="White"
+                Grid.Column="1"
+            ></fa:ImageAwesome>
+            <TextBox 
+                Grid.Column="2" 
+                Grid.ColumnSpan="7"
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Center" 
+                TextWrapping="Wrap"
+                Width="900"
+                Height="25"
+                Text=""
+                VerticalContentAlignment="Center"
+            >
+            </TextBox>
+            <fa:ImageAwesome 
+                Icon="ShoppingCart" 
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center" 
+                Width="30" 
+                Height="30"
+                Foreground="White"
+                Grid.Column="9"
+            ></fa:ImageAwesome>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="165"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="165"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="165"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="55"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="55"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="55"></RowDefinition>
+                <RowDefinition Height="25"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+
+                <fa:ImageAwesome 
+                    Icon="ArrowCircleLeft" 
+                    Grid.Column="1"
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Width="30" 
+                    Height="30"
+                    Foreground="White"
+                ></fa:ImageAwesome>
+                
+                <Grid Grid.Column="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"></RowDefinition>
+                        <RowDefinition Height="5"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock 
+                        Text="Popular"
+                        Foreground="White"
+                        FontSize="20"
+                        Grid.Row="0"
+                        VerticalAlignment="Center"
+                        FontWeight="Bold"
+                        Margin="10, 5, 0, 0"
+                    />
+
+                    <StackPanel 
+                        Grid.Row="2"
+                        Orientation="Horizontal"
+                    >
+                        <Rectangle
+                            Width="100"
+                            Stroke="AliceBlue"
+                            Fill="AliceBlue"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#d08d2f"
+                            Fill="#d08d2f"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="Beige"
+                            Fill="Beige"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#53a7ac"
+                            Fill="#53a7ac"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#a243bc"
+                            Fill="#a243bc"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#f00f3b"
+                            Fill="#f00f3b"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="100"
+                            Stroke="AliceBlue"
+                            Fill="AliceBlue"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#d08d2f"
+                            Fill="#d08d2f"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="Beige"
+                            Fill="Beige"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+
+                    </StackPanel>
+                </Grid>
+                
+                <fa:ImageAwesome 
+                    Icon="ArrowCircleRight" 
+                    Grid.Column="5"
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Width="30" 
+                    Height="30"
+                    Foreground="White"
+                ></fa:ImageAwesome>
+            </Grid>
+
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+
+                <fa:ImageAwesome 
+                    Icon="ArrowCircleLeft" 
+                    Grid.Column="1"
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Width="30" 
+                    Height="30"
+                    Foreground="White"
+                ></fa:ImageAwesome>
+
+                <Grid Grid.Column="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"></RowDefinition>
+                        <RowDefinition Height="5"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock 
+                        Text="New and Noteworthy"
+                        Foreground="White"
+                        FontSize="20"
+                        Grid.Row="0"
+                        VerticalAlignment="Center"
+                        FontWeight="Bold"
+                        Margin="10, 5, 0, 0"
+                    />
+
+                    <StackPanel 
+                        Grid.Row="2"
+                        Orientation="Horizontal"
+                    >
+                        <Rectangle
+                            Width="100"
+                            Stroke="AliceBlue"
+                            Fill="AliceBlue"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#d08d2f"
+                            Fill="#d08d2f"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="Beige"
+                            Fill="Beige"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#53a7ac"
+                            Fill="#53a7ac"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#a243bc"
+                            Fill="#a243bc"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#f00f3b"
+                            Fill="#f00f3b"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="100"
+                            Stroke="AliceBlue"
+                            Fill="AliceBlue"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#d08d2f"
+                            Fill="#d08d2f"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="Beige"
+                            Fill="Beige"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                    </StackPanel>
+                </Grid>
+
+                <fa:ImageAwesome 
+                    Icon="ArrowCircleRight" 
+                    Grid.Column="5"
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Width="30" 
+                    Height="30"
+                    Foreground="White"
+                ></fa:ImageAwesome>
+            </Grid>
+
+            <Grid Grid.Row="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+
+                <fa:ImageAwesome 
+                    Icon="ArrowCircleLeft" 
+                    Grid.Column="1"
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Width="30" 
+                    Height="30"
+                    Foreground="White"
+                ></fa:ImageAwesome>
+
+                <Grid Grid.Column="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"></RowDefinition>
+                        <RowDefinition Height="5"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock 
+                        Text="Librarian Recommended"
+                        Foreground="White"
+                        FontSize="20"
+                        Grid.Row="0"
+                        VerticalAlignment="Center"
+                        FontWeight="Bold"
+                        Margin="10, 5, 0, 0"
+                    />
+
+                    <StackPanel 
+                        Grid.Row="2"
+                        Orientation="Horizontal"
+                    >
+                        <Rectangle
+                            Width="100"
+                            Stroke="AliceBlue"
+                            Fill="AliceBlue"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#d08d2f"
+                            Fill="#d08d2f"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="Beige"
+                            Fill="Beige"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#53a7ac"
+                            Fill="#53a7ac"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#a243bc"
+                            Fill="#a243bc"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#f00f3b"
+                            Fill="#f00f3b"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="100"
+                            Stroke="AliceBlue"
+                            Fill="AliceBlue"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#d08d2f"
+                            Fill="#d08d2f"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="Beige"
+                            Fill="Beige"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                    </StackPanel>
+                </Grid>
+
+                <fa:ImageAwesome 
+                    Icon="ArrowCircleRight" 
+                    Grid.Column="5"
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Width="30" 
+                    Height="30"
+                    Foreground="White"
+                ></fa:ImageAwesome>
+            </Grid>
+
+            <Grid Grid.Row="7">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+
+                <fa:ImageAwesome 
+                    Icon="ArrowCircleLeft" 
+                    Grid.Column="1"
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Width="30" 
+                    Height="30"
+                    Foreground="White"
+                ></fa:ImageAwesome>
+
+                <Grid Grid.Column="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"></RowDefinition>
+                        <RowDefinition Height="5"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock 
+                        Text="Media Types"
+                        Foreground="White"
+                        FontSize="20"
+                        Grid.Row="0"
+                        VerticalAlignment="Center"
+                        FontWeight="Bold"
+                        Margin="10, 5, 0, 0"
+                    />
+
+                    <StackPanel 
+                        Grid.Row="2"
+                        Orientation="Horizontal"
+                    >
+                        <Rectangle
+                            Width="100"
+                            Stroke="AliceBlue"
+                            Fill="AliceBlue"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#d08d2f"
+                            Fill="#d08d2f"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="Beige"
+                            Fill="Beige"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#53a7ac"
+                            Fill="#53a7ac"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#a243bc"
+                            Fill="#a243bc"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#f00f3b"
+                            Fill="#f00f3b"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="100"
+                            Stroke="AliceBlue"
+                            Fill="AliceBlue"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#d08d2f"
+                            Fill="#d08d2f"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="Beige"
+                            Fill="Beige"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                    </StackPanel>
+                </Grid>
+
+                <fa:ImageAwesome 
+                    Icon="ArrowCircleRight" 
+                    Grid.Column="5"
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Width="30" 
+                    Height="30"
+                    Foreground="White"
+                ></fa:ImageAwesome>
+            </Grid>
+
+            <Grid Grid.Row="9">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+
+                <fa:ImageAwesome 
+                    Icon="ArrowCircleLeft" 
+                    Grid.Column="1"
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Width="30" 
+                    Height="30"
+                    Foreground="White"
+                ></fa:ImageAwesome>
+
+                <Grid Grid.Column="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25"></RowDefinition>
+                        <RowDefinition Height="5"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock 
+                        Text="You Might Also Like"
+                        Foreground="White"
+                        FontSize="20"
+                        Grid.Row="0"
+                        VerticalAlignment="Center"
+                        FontWeight="Bold"
+                        Margin="10, 5, 0, 0"
+                    />
+
+                    <StackPanel 
+                        Grid.Row="2"
+                        Orientation="Horizontal"
+                    >
+                        <Rectangle
+                            Width="100"
+                            Stroke="AliceBlue"
+                            Fill="AliceBlue"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#d08d2f"
+                            Fill="#d08d2f"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="Beige"
+                            Fill="Beige"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#53a7ac"
+                            Fill="#53a7ac"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#a243bc"
+                            Fill="#a243bc"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#f00f3b"
+                            Fill="#f00f3b"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="100"
+                            Stroke="AliceBlue"
+                            Fill="AliceBlue"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="#d08d2f"
+                            Fill="#d08d2f"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                        <Rectangle
+                            Width="105"
+                            Stroke="Beige"
+                            Fill="Beige"
+                            Margin="10, 0, 0, 0"
+                        >
+                        </Rectangle>
+                    </StackPanel>
+                </Grid>
+
+                <fa:ImageAwesome 
+                    Icon="ArrowCircleRight" 
+                    Grid.Column="5"
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Width="30" 
+                    Height="30"
+                    Foreground="White"
+                ></fa:ImageAwesome>
+            </Grid>
+
+         
+        </Grid>
+        
+    </Grid>
+</Page>
