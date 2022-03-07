@@ -468,5 +468,6 @@
         </Image>
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="305,635,0,0" TextWrapping="Wrap" Text="ENABLED" VerticalAlignment="Top" Width="90" FontWeight="Bold" Foreground="#FF1A7216" FontSize="18"/>
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="298,675,0,0" TextWrapping="Wrap" Text="Go to store" VerticalAlignment="Top" Width="145" FontWeight="Bold" Foreground="#FF162F72" FontSize="18"/>
+        <Image HorizontalAlignment="Left" Height="120" VerticalAlignment="Top" Width="70" Margin="230,180,0,0" RenderTransformOrigin="1.95,0.9" Source="/virtulib-project;component/imgs/dorothy.png"/>
     </Grid>
 </Page>
