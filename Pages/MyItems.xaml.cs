@@ -18,9 +18,9 @@ namespace virtulib_project.Pages
     /// <summary>
     /// Interaction logic for Browse.xaml
     /// </summary>
-    public partial class Browse : Page
+    public partial class MyItems : Page
     {
-        public Browse()
+        public MyItems()
         {
             InitializeComponent();
         }

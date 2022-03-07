@@ -456,7 +456,7 @@
 
             </Grid>
         </materialDesign:DialogHost>
-        <Image x:Name="Profile_Picture" HorizontalAlignment="Left" Height="120" Margin="230,180,0,0" VerticalAlignment="Top" Width="75" Source="dorothy.png" RenderTransformOrigin="1.063,0.555">
+        <Image x:Name="Profile_Picture" HorizontalAlignment="Left" Height="120" Margin="230,180,0,0" VerticalAlignment="Top" Width="75" Source="/imgs/dorothy.png" RenderTransformOrigin="1.063,0.555">
             <Image.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
