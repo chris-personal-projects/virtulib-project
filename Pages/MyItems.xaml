@@ -514,7 +514,7 @@
             Width="85" 
             Height="60"
             Foreground="#FF326E0F"
-            Margin="915,585,200,155"
+            Margin="930,585,185,155"
                     />
         <fa:ImageAwesome 
             VerticalAlignment="Center" 
@@ -522,10 +522,10 @@
             Width="85" 
             Height="60"
             Foreground="#FF916D21"
-            Margin="1032,577,83,163" Icon="Send"
+            Margin="1042,577,73,163" Icon="Send"
                     />
-        <TextBox HorizontalAlignment="Left" Height="32" Margin="925,650,0,0" TextWrapping="Wrap" Text="Renew" VerticalAlignment="Top" Width="75" FontSize="22" FontWeight="Bold" BorderThickness="0" Foreground="#FF326E0F"/>
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="1041,642,0,0" TextWrapping="Wrap" Text="Return" VerticalAlignment="Top" Width="74" FontSize="22" FontWeight="Bold" BorderThickness="0" Foreground="#FF916D21"/>
+        <TextBox HorizontalAlignment="Left" Height="32" Margin="940,650,0,0" TextWrapping="Wrap" Text="Renew" VerticalAlignment="Top" Width="75" FontSize="22" FontWeight="Bold" BorderThickness="0" Foreground="#FF326E0F"/>
+        <TextBox HorizontalAlignment="Left" Height="40" Margin="1051,642,0,0" TextWrapping="Wrap" Text="Return" VerticalAlignment="Top" Width="74" FontSize="22" FontWeight="Bold" BorderThickness="0" Foreground="#FF916D21"/>
         <fa:ImageAwesome 
             VerticalAlignment="Center" 
             HorizontalAlignment="Center" 
