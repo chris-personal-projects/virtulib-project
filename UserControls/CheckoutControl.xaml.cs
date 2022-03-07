@@ -23,6 +23,7 @@ namespace virtulib_project.UserControls
         public CheckoutControl()
         {
             InitializeComponent();
+            DataContext = this;
         }
     }
 }

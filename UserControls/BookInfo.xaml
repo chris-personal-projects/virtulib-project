@@ -11,5 +11,26 @@
     <StackPanel Margin="16">
         <TextBlock Text="{Binding ProgressTitle}"/>
         <ProgressBar Margin="0,16,0,0" IsIndeterminate="True" Height="38" Width="38" Style="{StaticResource MaterialDesignCircularProgressBar}"/>
+
+        <Button
+							Style="{StaticResource MaterialDesignFlatButton}"
+							Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+							Grid.Column="9"
+							Height="50"
+							Width="50"
+						>
+            <Button.Template>
+                <ControlTemplate>
+                    <materialDesign:PackIcon
+										Kind="WindowClose"
+										Foreground="Red"
+										Width="50"
+										Height="50"
+										VerticalAlignment="Center"
+										HorizontalAlignment="Center"
+									/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </StackPanel>
 </UserControl>

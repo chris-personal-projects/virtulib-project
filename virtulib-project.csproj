@@ -69,6 +69,9 @@
     <Compile Include="UserControls\BookInfo.xaml.cs">
       <DependentUpon>BookInfo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\CheckoutControl.xaml.cs">
+      <DependentUpon>CheckoutControl.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -98,6 +101,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\BookInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\CheckoutControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
