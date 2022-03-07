@@ -478,7 +478,7 @@
             Width="85" 
             Height="60"
             Foreground="#FF326E0F"
-            Margin="915,190,200,550"
+            Margin="825,193,290,547"
                     />
         <fa:ImageAwesome 
             Icon="Book" 
@@ -487,10 +487,10 @@
             Width="85" 
             Height="60"
             Foreground="#FF136BEA"
-            Margin="1045,190,70,550"
+            Margin="945,193,170,547"
                     />
-        <TextBox HorizontalAlignment="Left" Height="32" Margin="925,255,0,0" TextWrapping="Wrap" Text="Renew" VerticalAlignment="Top" Width="75" FontSize="22" FontWeight="Bold" BorderThickness="0" Foreground="#FF326E0F"/>
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="1060,255,0,0" TextWrapping="Wrap" Text="Read" VerticalAlignment="Top" Width="55" FontSize="22" FontWeight="Bold" BorderThickness="0" Foreground="#FF136BEA"/>
+        <TextBox HorizontalAlignment="Left" Height="32" Margin="835,258,0,0" TextWrapping="Wrap" Text="Renew" VerticalAlignment="Top" Width="75" FontSize="22" FontWeight="Bold" BorderThickness="0" Foreground="#FF326E0F"/>
+        <TextBox HorizontalAlignment="Left" Height="40" Margin="960,258,0,0" TextWrapping="Wrap" Text="Read" VerticalAlignment="Top" Width="55" FontSize="22" FontWeight="Bold" BorderThickness="0" Foreground="#FF136BEA"/>
         <TextBox HorizontalAlignment="Left" Height="40" Margin="635,170,0,0" TextWrapping="Wrap" Text=" Digital Version&#xA;" VerticalAlignment="Top" Width="170" FontSize="22" FontWeight="Bold" BorderThickness="0"/>
         <TextBox HorizontalAlignment="Left" Height="40" Margin="188,411,0,0" TextWrapping="Wrap" Text="On Hold&#xA;" VerticalAlignment="Top" Width="112" FontSize="22" FontWeight="Bold" BorderThickness="0"/>
         <TextBox HorizontalAlignment="Left" Height="40" Margin="635,365,0,0" TextWrapping="Wrap" Text=" Physical Version&#xA;" VerticalAlignment="Top" Width="180" FontSize="22" FontWeight="Bold" BorderThickness="0"/>
@@ -522,9 +522,18 @@
             Width="85" 
             Height="60"
             Foreground="#FF916D21"
-            Margin="1045,585,70,155" Icon="Send"
+            Margin="1032,577,83,163" Icon="Send"
                     />
         <TextBox HorizontalAlignment="Left" Height="32" Margin="925,650,0,0" TextWrapping="Wrap" Text="Renew" VerticalAlignment="Top" Width="75" FontSize="22" FontWeight="Bold" BorderThickness="0" Foreground="#FF326E0F"/>
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="1054,650,0,0" TextWrapping="Wrap" Text="Return" VerticalAlignment="Top" Width="74" FontSize="22" FontWeight="Bold" BorderThickness="0" Foreground="#FF916D21"/>
+        <TextBox HorizontalAlignment="Left" Height="40" Margin="1041,642,0,0" TextWrapping="Wrap" Text="Return" VerticalAlignment="Top" Width="74" FontSize="22" FontWeight="Bold" BorderThickness="0" Foreground="#FF916D21"/>
+        <fa:ImageAwesome 
+            VerticalAlignment="Center" 
+            HorizontalAlignment="Center" 
+            Width="85" 
+            Height="60"
+            Foreground="#FF916D21"
+            Margin="1051,193,64,547" Icon="Send"
+                    />
+        <TextBox HorizontalAlignment="Left" Height="40" Margin="1060,258,0,0" TextWrapping="Wrap" Text="Return" VerticalAlignment="Top" Width="74" FontSize="22" FontWeight="Bold" BorderThickness="0" Foreground="#FF916D21"/>
     </Grid>
 </Page>
