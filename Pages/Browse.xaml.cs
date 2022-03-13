@@ -62,10 +62,6 @@ namespace virtulib_project.Pages
             IsShow = !IsShow;
         }
 
-        private void Open_Cart(object sender, RoutedEventArgs e)
-        {
-            DialogObject = new CheckoutControl();
-            IsShow = !IsShow;
-        }
+
     }
 }
