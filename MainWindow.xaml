@@ -7,7 +7,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         Background="{DynamicResource MaterialDesignPaper}"
-        xmlns:local="clr-namespace:virtulib_project"
+        xmlns:local="clr-namespace:virtulib_project" xmlns:models="clr-namespace:virtulib_project.Models" d:DataContext="{d:DesignInstance Type=models:MainViewModel}"
         mc:Ignorable="d"
         Title="MainWindow" Height="860" Width="1200"
         WindowStyle="None"
@@ -40,8 +40,8 @@
     <Grid MouseDown="Grid_MouseDown" >
         <materialDesign:DialogHost 
             BorderBrush="{DynamicResource MaterialDesignDivider}"
-            IsOpen="{Binding IsShow}"
-            DialogContent="{Binding DialogObject}"
+            IsOpen="{Binding MainDialog.IsShow}"
+            DialogContent="{Binding MainDialog.DialogObject}"
         >
             <Grid>
                 <Grid x:Name="GridMenu" Width="250" HorizontalAlignment="Left" Margin="-250 0 0 0" Background="#232247" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="30">

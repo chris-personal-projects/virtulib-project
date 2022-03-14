@@ -16,48 +16,23 @@ using virtulib_project.Pages;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using virtulib_project.UserControls;
-using System.Diagnostics;
+using virtulib_project.Models;
 
 namespace virtulib_project
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window, INotifyPropertyChanged
+    public partial class MainWindow : Window
     {
-        private bool m_isShow;
-        private object m_dialogObject;
-
-
+        private MainViewModel _main = new MainViewModel();
 
         public MainWindow()
         {
             InitializeComponent();
             Main.Navigate(new Browse());
-            DataContext = this;
-        }
+            DataContext = _main;
 
-        public bool IsShow
-        {
-            get { return m_isShow; }
-            set { m_isShow = value; OnPropertyChanged(); }
-        }
-
-        public object DialogObject
-        {
-            get { return m_dialogObject; }
-            set
-            {
-                if (m_dialogObject == value) return;
-                m_dialogObject = value; OnPropertyChanged();
-            }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            if (PropertyChanged != null)
-                PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
@@ -70,8 +45,8 @@ namespace virtulib_project
 
         private void Open_Cart(object sender, RoutedEventArgs e)
         {
-            DialogObject = new CheckoutControl();
-            IsShow = !IsShow;
+            object checkoutControl = new CheckoutControl();
+            _main.SetDialog(checkoutControl);
         }
 
     }
