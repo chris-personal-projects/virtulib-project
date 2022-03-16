@@ -216,7 +216,8 @@
 
                     <Frame 
                         Grid.Row="1"
-                        x:Name="Main"/>
+                        x:Name="Main"
+                        DataContext=""/>
                 </Grid>
             </Grid>
         </materialDesign:DialogHost>

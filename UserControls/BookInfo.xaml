@@ -146,7 +146,7 @@
 										Kind="Star"
 										Width="30"
 										Height="30"
-										Foreground="Yellow"
+										Foreground="#ccb100"
 										VerticalAlignment="Center"
 										HorizontalAlignment="Center"
 									/>
@@ -154,7 +154,7 @@
 										Kind="Star"
 										Width="30"
 										Height="30"
-										Foreground="Yellow"
+										Foreground="#ccb100"
 										VerticalAlignment="Center"
 										HorizontalAlignment="Center"
 									/>
@@ -162,7 +162,7 @@
 										Kind="Star"
 										Width="30"
 										Height="30"
-										Foreground="Yellow"
+										Foreground="#ccb100"
 										VerticalAlignment="Center"
 										HorizontalAlignment="Center"
 									/>
@@ -170,7 +170,7 @@
 										Kind="Star"
 										Width="30"
 										Height="30"
-										Foreground="Yellow"
+										Foreground="#ccb100"
 										VerticalAlignment="Center"
 										HorizontalAlignment="Center"
 									/>
@@ -178,7 +178,7 @@
 										Kind="StarOutline"
 										Width="30"
 										Height="30"
-										Foreground="Yellow"
+										Foreground="#ccb100"
 										VerticalAlignment="Center"
 										HorizontalAlignment="Center"
 									/>
@@ -345,7 +345,7 @@
 										Kind="Star"
 										Width="30"
 										Height="30"
-										Foreground="Yellow"
+										Foreground="#ccb100"
 										VerticalAlignment="Center"
 										HorizontalAlignment="Center"
 									/>
@@ -353,7 +353,7 @@
 										Kind="Star"
 										Width="30"
 										Height="30"
-										Foreground="Yellow"
+										Foreground="#ccb100"
 										VerticalAlignment="Center"
 										HorizontalAlignment="Center"
 									/>
@@ -361,7 +361,7 @@
 										Kind="Star"
 										Width="30"
 										Height="30"
-										Foreground="Yellow"
+										Foreground="#ccb100"
 										VerticalAlignment="Center"
 										HorizontalAlignment="Center"
 									/>
@@ -369,7 +369,7 @@
 										Kind="Star"
 										Width="30"
 										Height="30"
-										Foreground="Yellow"
+										Foreground="#ccb100"
 										VerticalAlignment="Center"
 										HorizontalAlignment="Center"
 									/>
@@ -377,7 +377,7 @@
 										Kind="StarOutline"
 										Width="30"
 										Height="30"
-										Foreground="Yellow"
+										Foreground="#ccb100"
 										VerticalAlignment="Center"
 										HorizontalAlignment="Center"
 									/>

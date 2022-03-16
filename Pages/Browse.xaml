@@ -10,13 +10,12 @@
       d:DesignHeight="800" d:DesignWidth="1200"
       Title="Browse"
       Background="#181735">
-
-    <Grid>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid Grid.Row="0">
+    <Grid x:Name="BrowseRoot">
+        <Grid.RowDefinitions>
+             <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="10"></RowDefinition>
                     <RowDefinition Height="165"></RowDefinition>
@@ -643,8 +642,8 @@
                             Foreground="White"
                         ></fa:ImageAwesome>
                 </Grid>
+
             </Grid>
 
-        </Grid>
     </Grid>
 </Page>

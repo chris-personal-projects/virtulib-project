@@ -30,7 +30,7 @@ namespace virtulib_project
         public MainWindow()
         {
             InitializeComponent();
-            Main.Navigate(new Browse());
+            Main.Navigate(new Browse(_main));
             DataContext = _main;
 
         }
