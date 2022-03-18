@@ -69,6 +69,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Events\BookSummaryEventArgs.cs" />
     <Compile Include="Models\BrowseViewModel.cs" />
     <Compile Include="Models\DialogViewModel.cs" />
     <Compile Include="Models\MainViewModel.cs" />
@@ -84,6 +85,9 @@
     </Compile>
     <Compile Include="UserControls\CheckoutControl.xaml.cs">
       <DependentUpon>CheckoutControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\NetflixScroll.xaml.cs">
+      <DependentUpon>NetflixScroll.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -130,6 +134,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\CheckoutControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\NetflixScroll.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

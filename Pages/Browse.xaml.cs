@@ -16,6 +16,7 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using virtulib_project.UserControls;
 using virtulib_project.Models;
+using virtulib_project.Events;
 
 namespace virtulib_project.Pages
 {
@@ -32,16 +33,19 @@ namespace virtulib_project.Pages
             // DataContext = this;
             BrowseRoot.DataContext = mainViewModel;
             _mainViewModel = mainViewModel;
+
+            // Dynamically create Netflix scrolls here 
+            NetflixScroll netflixScroll = new NetflixScroll();
+            netflixScroll.bookSummaryCustomEvent += new EventHandler<BookSummaryEventArgs>(Book_Summary);
+            Grid.SetRow(netflixScroll, 0);
+            BrowseRoot.Children.Add(netflixScroll);
         }
 
-        private void Book_Summary(object sender, RoutedEventArgs e)
+        private void Book_Summary(object sender, BookSummaryEventArgs e)
         {
+            // Console.WriteLine("Chris Control");
             object bookSumControl = new BookInfo();
-            // _browse.SetBookDialog(bookSumControl);
             _mainViewModel.SetDialog(bookSumControl);
-
         }
-
-
     }
 }
