@@ -35,10 +35,16 @@ namespace virtulib_project.Pages
             _mainViewModel = mainViewModel;
 
             // Dynamically create Netflix scrolls here 
-            NetflixScroll netflixScroll = new NetflixScroll();
-            netflixScroll.bookSummaryCustomEvent += new EventHandler<BookSummaryEventArgs>(Book_Summary);
-            Grid.SetRow(netflixScroll, 0);
-            BrowseRoot.Children.Add(netflixScroll);
+            //int numScrolls = 4;
+            //NetflixScroll netflixScroll;
+            //for (int i = 0; i < numScrolls; i++)
+            //{
+            //    netflixScroll = new NetflixScroll();
+            //    netflixScroll.bookSummaryCustomEvent += new EventHandler<BookSummaryEventArgs>(Book_Summary);
+            //    Grid.SetRow(netflixScroll, i);
+            //    BrowseRoot.Children.Add(netflixScroll);
+            //}
+
         }
 
         private void Book_Summary(object sender, BookSummaryEventArgs e)

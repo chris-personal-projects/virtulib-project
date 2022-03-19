@@ -12,14 +12,15 @@
       Title="Browse"
       Background="#181735">
     <Grid x:Name="BrowseRoot">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="265"/>
-            <RowDefinition Height="265"/>
-            <RowDefinition Height="265"/>
+        <ScrollViewer>
+            <StackPanel Orientation="Vertical">
+                <uc:NetflixScroll Grid.Row="0"/>
+                <uc:NetflixScroll Grid.Row="0"/>
+                <uc:NetflixScroll Grid.Row="0"/>
+                <uc:NetflixScroll Grid.Row="0"/>
 
-        </Grid.RowDefinitions>
-        <!-- <uc:NetflixScroll Grid.Row="0"/> -->
-
+            </StackPanel>
+        </ScrollViewer>
 
     </Grid>
 </Page>

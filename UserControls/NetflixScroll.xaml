@@ -7,30 +7,27 @@
              xmlns:fa="http://schemas.fontawesome.io/icons/"
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
-             d:DesignHeight="250" d:DesignWidth="1200">
+             d:DesignHeight="265" d:DesignWidth="1200">
     <Grid>
-        <Grid Width="1200" Height="250">
+        <Grid Width="1200" Height="265">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="10"/>
                 <ColumnDefinition Width="30"/>
-                <ColumnDefinition Width="10"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="10"/>
                 <ColumnDefinition Width="30"/>
                 <ColumnDefinition Width="10"/>
             </Grid.ColumnDefinitions>
 
-            <fa:ImageAwesome 
-                        Icon="ArrowCircleLeft" 
-                        Grid.Column="1"
-                        VerticalAlignment="Center" 
-                        HorizontalAlignment="Center" 
-                        Width="30" 
-                        Height="30"
-                        Foreground="White"
-            ></fa:ImageAwesome>
+            <materialDesign:PackIcon 
+                Kind="ChevronLeftBox" 
+                Grid.Column="1"
+                Width="30" 
+                Height="250" 
+                Foreground="White"                         
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center" />
 
-            <Grid Grid.Column="3">
+            <Grid Grid.Column="2">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"></RowDefinition>
                     <RowDefinition Height="4*"></RowDefinition>
@@ -54,14 +51,14 @@
                     <Button
 						Style="{StaticResource MaterialDesignFlatButton}"
                         Grid.Column="1"
-                        Margin="9.375 10 9.375 10"
+                        Margin="10"
                         Height="150"
                         Click="Book_Summary_Click"
 					>
                         <Button.Template>
                             <ControlTemplate>
                                 <Rectangle
-                                    Width="118.75"
+                                    Width="120"
                                     Stroke="AliceBlue"
                                     Fill="AliceBlue"
                                 />
@@ -72,14 +69,14 @@
                     <Button
 						Style="{StaticResource MaterialDesignFlatButton}"
                         Grid.Column="1"
-                        Margin="9.375 10 9.375 10"
+                        Margin="10"
                         Height="150"
                         Click="Book_Summary_Click"
 					>
                         <Button.Template>
                             <ControlTemplate>
                                 <Rectangle
-                                    Width="118.75"
+                                    Width="120"
                                     Stroke="Beige"
                                     Fill="Beige"
                                 />
@@ -90,14 +87,14 @@
                     <Button
 						Style="{StaticResource MaterialDesignFlatButton}"
                         Grid.Column="1"
-                        Margin="9.375 10 9.375 10"
+                        Margin="10"
                         Height="150"
                         Click="Book_Summary_Click"
 					>
                         <Button.Template>
                             <ControlTemplate>
                                 <Rectangle
-                                    Width="118.75"
+                                    Width="120"
                                     Stroke="AliceBlue"
                                     Fill="AliceBlue"
                                 />
@@ -108,14 +105,14 @@
                     <Button
 						Style="{StaticResource MaterialDesignFlatButton}"
                         Grid.Column="1"
-                        Margin="9.375 10 9.375 10"
+                        Margin="10"
                         Height="150"
                         Click="Book_Summary_Click"
 					>
                         <Button.Template>
                             <ControlTemplate>
                                 <Rectangle
-                                    Width="118.75"
+                                    Width="120"
                                     Stroke="Beige"
                                     Fill="Beige"
                                 />
@@ -126,14 +123,14 @@
                     <Button
 						Style="{StaticResource MaterialDesignFlatButton}"
                         Grid.Column="1"
-                        Margin="9.375 10 9.375 10"
+                        Margin="10"
                         Height="150"
                         Click="Book_Summary_Click"
 					>
                         <Button.Template>
                             <ControlTemplate>
                                 <Rectangle
-                                    Width="118.75"
+                                    Width="120"
                                     Stroke="AliceBlue"
                                     Fill="AliceBlue"
                                 />
@@ -144,14 +141,14 @@
                     <Button
 						Style="{StaticResource MaterialDesignFlatButton}"
                         Grid.Column="1"
-                        Margin="9.375 10 9.375 10"
+                        Margin="10"
                         Height="150"
                         Click="Book_Summary_Click"
 					>
                         <Button.Template>
                             <ControlTemplate>
                                 <Rectangle
-                                    Width="118.75"
+                                    Width="120"
                                     Stroke="Beige"
                                     Fill="Beige"
                                 />
@@ -162,14 +159,14 @@
                     <Button
 						Style="{StaticResource MaterialDesignFlatButton}"
                         Grid.Column="1"
-                        Margin="9.375 10 9.375 10"
+                        Margin="10"
                         Height="150"
                         Click="Book_Summary_Click"
 					>
                         <Button.Template>
                             <ControlTemplate>
                                 <Rectangle
-                                    Width="118.75"
+                                    Width="120"
                                     Stroke="AliceBlue"
                                     Fill="AliceBlue"
                                 />
@@ -180,35 +177,37 @@
                     <Button
 						Style="{StaticResource MaterialDesignFlatButton}"
                         Grid.Column="1"
-                        Margin="9.375 10 9.375 10"
+                        Margin="10"
                         Height="150"
                         Click="Book_Summary_Click"
 					>
                         <Button.Template>
                             <ControlTemplate>
                                 <Rectangle
-                                    Width="118.75"
+                                    Width="120"
                                     Stroke="Beige"
                                     Fill="Beige"
                                 />
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
+
+
+
 
 
 
                 </StackPanel>
             </Grid>
 
-            <fa:ImageAwesome 
-                        Icon="ArrowCircleRight" 
-                        Grid.Column="5"
-                        VerticalAlignment="Center" 
-                        HorizontalAlignment="Center" 
-                        Width="30" 
-                        Height="30"
-                        Foreground="White"
-                    ></fa:ImageAwesome>
+            <materialDesign:PackIcon 
+                Kind="ChevronRightBox" 
+                Grid.Column="3"
+                Width="30" 
+                Height="250" 
+                Foreground="White"                         
+                VerticalAlignment="Center" 
+                HorizontalAlignment="Center" />
         </Grid>
 
     </Grid>
