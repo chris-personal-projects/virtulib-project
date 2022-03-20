@@ -89,6 +89,9 @@
     <Compile Include="UserControls\NetflixScroll.xaml.cs">
       <DependentUpon>NetflixScroll.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\VirtulibBook.xaml.cs">
+      <DependentUpon>VirtulibBook.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -138,6 +141,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\NetflixScroll.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\VirtulibBook.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -191,6 +198,7 @@
   <ItemGroup>
     <Content Include="bin\Debug\virtulib-project.exe" />
     <Content Include="bin\Debug\virtulib-project.pdb" />
+    <Resource Include="imgs\bookImgs\hungry-caterpillar-small.jpg" />
     <Resource Include="imgs\barcelona.png" />
     <Resource Include="imgs\dorothy.png" />
     <Resource Include="imgs\virtulib-logo.png" />

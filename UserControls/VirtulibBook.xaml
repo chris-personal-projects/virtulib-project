@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="virtulib_project.UserControls.VirtulibBook"
+             x:Name="VirtulibBookControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="170" d:DesignWidth="137.5">
+    <Grid DataContext="{Binding ElementName=VirtulibBookControl}">
+        <Button
+		    Style="{StaticResource MaterialDesignFlatButton}"
+            Margin="8.75 10 8.75 10"
+            Height="150"
+            Click="Book_Summary_Click"
+	>
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Rectangle
+                            Width="120"
+                            Stroke="AliceBlue"
+                            Fill="AliceBlue"
+                    />
+                        <Image Source="{Binding BookImage, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UserControl}}" />
+
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+
+</UserControl>

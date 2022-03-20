@@ -25,11 +25,18 @@ namespace virtulib_project.UserControls
         private String customEventText = "Custom Events FTW!!!";
         double scrollItemOffset = 0;
 
+        private string _imgSourceUrl;
+        // private string _imgSourceUrl = @"/imgs/bookImgs/hungry-caterpillar-small.jpg";
+        
+        public string ImageSourceUrl 
+        { 
+            get { return _imgSourceUrl; }
+            set { _imgSourceUrl = value; }
+        }
+
         public NetflixScroll()
         {
             InitializeComponent();
-            DataContext = Parent;
-
         }
 
         private void Book_Summary_Click(object sender, RoutedEventArgs e)
