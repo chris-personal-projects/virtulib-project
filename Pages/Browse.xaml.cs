@@ -30,26 +30,24 @@ namespace virtulib_project.Pages
         public Browse(MainViewModel mainViewModel)
         {
             InitializeComponent();
-            // DataContext = this;
             BrowseRoot.DataContext = mainViewModel;
             _mainViewModel = mainViewModel;
 
             // Dynamically create Netflix scrolls here 
-            //int numScrolls = 4;
-            //NetflixScroll netflixScroll;
-            //for (int i = 0; i < numScrolls; i++)
-            //{
-            //    netflixScroll = new NetflixScroll();
-            //    netflixScroll.bookSummaryCustomEvent += new EventHandler<BookSummaryEventArgs>(Book_Summary);
-            //    Grid.SetRow(netflixScroll, i);
-            //    BrowseRoot.Children.Add(netflixScroll);
-            //}
+            int numScrolls = 4;
+            NetflixScroll netflixScroll;
+            for (int i = 0; i < numScrolls; i++)
+            {
+                netflixScroll = new NetflixScroll();
+                netflixScroll.bookSummaryCustomEvent += new EventHandler<BookSummaryEventArgs>(Book_Summary);
+                Grid.SetRow(netflixScroll, i);
+                BrowseRootPanel.Children.Add(netflixScroll);
+            }
 
         }
 
         private void Book_Summary(object sender, BookSummaryEventArgs e)
         {
-            // Console.WriteLine("Chris Control");
             object bookSumControl = new BookInfo();
             _mainViewModel.SetDialog(bookSumControl);
         }

@@ -28,7 +28,6 @@ namespace virtulib_project.UserControls
         {
             InitializeComponent();
             DataContext = Parent;
-            //_mainViewModel = mainViewModel;
 
         }
 
@@ -39,14 +38,6 @@ namespace virtulib_project.UserControls
                 bookSummaryCustomEvent(sender, new BookSummaryEventArgs(customEventText));
             }
         }
-
-        //private void Book_Summary(object sender, RoutedEventArgs e)
-        //{
-        //    object bookSumControl = new BookInfo();
-        //    // _browse.SetBookDialog(bookSumControl);
-        //    _mainViewModel.SetDialog(bookSumControl);
-
-        //}
 
 
     }

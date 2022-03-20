@@ -10,14 +10,11 @@
       mc:Ignorable="d" 
       d:DesignHeight="800" d:DesignWidth="1200"
       Title="Browse"
-      Background="#181735">
+      Background="{StaticResource DarkBlue2}">
     <Grid x:Name="BrowseRoot">
-        <ScrollViewer>
-            <StackPanel Orientation="Vertical">
-                <uc:NetflixScroll Grid.Row="0"/>
-                <uc:NetflixScroll Grid.Row="0"/>
-                <uc:NetflixScroll Grid.Row="0"/>
-                <uc:NetflixScroll Grid.Row="0"/>
+        <ScrollViewer >
+            <StackPanel Orientation="Vertical" x:Name="BrowseRootPanel">
+
 
             </StackPanel>
         </ScrollViewer>
