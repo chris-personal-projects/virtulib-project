@@ -10,8 +10,6 @@
              d:DesignHeight="265" d:DesignWidth="1200">
 
     <Grid>
-        
-        
         <Grid Width="1200" Height="265">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="10"/>
@@ -22,23 +20,30 @@
                 <ColumnDefinition Width="20"/>
             </Grid.ColumnDefinitions>
 
-            <materialDesign:PackIcon 
-                Kind="ChevronLeftBox" 
+            <Button x:Name="Netflix_Left_Click"
+				Style="{StaticResource MaterialDesignFlatButton}"
                 Grid.Column="1"
-                Width="30" 
-                Height="250" 
-                Foreground="White"                         
-                VerticalAlignment="Center" 
-                HorizontalAlignment="Center" />
+                Click="Netflix_Left_Scroll"
+            >
+                <Button.Template>
+                    <ControlTemplate>
+                        <materialDesign:PackIcon 
+                            Kind="ChevronLeftBox" 
+                            Height="265" 
+                            Width="30"
+                            Foreground="White"                         
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Center" />
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
 
             <Grid Grid.Column="2">
-                
-                
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*"></RowDefinition>
                     <RowDefinition Height="4*"></RowDefinition>
                 </Grid.RowDefinitions>
-                
+
                 <TextBlock 
                     Text="Popular"
                     Foreground="White"
@@ -50,18 +55,18 @@
                 />
                 <ScrollViewer 
                     Grid.Row="2" 
-                    HorizontalScrollBarVisibility="Auto" 
-                    VerticalScrollBarVisibility="Auto" 
+                    HorizontalScrollBarVisibility="Visible" 
+                    VerticalScrollBarVisibility="Disabled" 
                     x:Name="NetflixScrollPanel"
-                    >
-                    <StackPanel Orientation="Horizontal">
-
+                    PreviewMouseWheel="NetflixScrollPanel_PreviewMouseWheel"
+                >
+                    <StackPanel Orientation="Horizontal" x:Name="NetflixStackPanel" Loaded="onNetflixStackPanelLoad">
                         <Button
-						Style="{StaticResource MaterialDesignFlatButton}"
-                        Grid.Column="1"
-                        Margin="8.75 10 8.75 10"
-                        Height="150"
-                        Click="Book_Summary_Click"
+						    Style="{StaticResource MaterialDesignFlatButton}"
+                            Grid.Column="1"
+                            Margin="8.75 10 8.75 10"
+                            Height="150"
+                            Click="Book_Summary_Click"
 					>
                             <Button.Template>
                                 <ControlTemplate>
@@ -274,17 +279,28 @@
                         </Button>
                     </StackPanel>
                 </ScrollViewer>
-  
+
             </Grid>
 
-            <materialDesign:PackIcon 
-                Kind="ChevronRightBox" 
+            <Button x:Name="Netflix_Right_Click"
+				Style="{StaticResource MaterialDesignFlatButton}"
                 Grid.Column="3"
-                Width="30" 
-                Height="250" 
-                Foreground="White"                         
-                VerticalAlignment="Center" 
-                HorizontalAlignment="Center" />
+                Click="Netflix_Right_Scroll"
+            >
+                <Button.Template>
+                    <ControlTemplate>
+                        <materialDesign:PackIcon 
+                            Kind="ChevronRightBox" 
+                            Height="265" 
+                            Width="30"
+                            Foreground="White"                         
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Center" />
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            
+
         </Grid>
 
     </Grid>
