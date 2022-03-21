@@ -64,7 +64,6 @@
                     <StackPanel 
                         Orientation="Horizontal" 
                         x:Name="NetflixStackPanel" 
-                        Loaded="onNetflixStackPanelLoad"
                     >
                         <local:VirtulibBook x:Name="binding" BookImage="{Binding ImageSourceUrl}"/> 
                        

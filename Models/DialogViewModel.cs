@@ -26,5 +26,6 @@ namespace virtulib_project.Models
                 m_dialogObject = value; OnPropertyChanged();
             }
         }
+
     }
 }

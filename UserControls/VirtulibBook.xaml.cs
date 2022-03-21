@@ -22,7 +22,7 @@ namespace virtulib_project.UserControls
     /// </summary>
     public partial class VirtulibBook : UserControl
     {
-
+        private VirtulibBookModel virtulibBookData;
         public string BookImage
         {
             get { return (String)GetValue(BookImageProperty); }
@@ -33,14 +33,14 @@ namespace virtulib_project.UserControls
             DependencyProperty.Register("BookImage", typeof(string),
                 typeof(VirtulibBook), new PropertyMetadata(""));
 
-        public event RoutedEventHandler VirtuLibBookSelected
+        public event RoutedEventHandler VirtulibBookSelected
         {
-            add { AddHandler(VirtuLibBookSelectedEvent, value); }
-            remove { RemoveHandler(VirtuLibBookSelectedEvent, value); }
+            add { AddHandler(VirtulibBookSelectedEvent, value); }
+            remove { RemoveHandler(VirtulibBookSelectedEvent, value); }
         }
 
-        public static readonly RoutedEvent VirtuLibBookSelectedEvent =
-            EventManager.RegisterRoutedEvent("VirtuLibBookSelected",
+        public static readonly RoutedEvent VirtulibBookSelectedEvent =
+            EventManager.RegisterRoutedEvent("VirtulibBookSelected",
                 RoutingStrategy.Bubble, typeof(RoutedEventHandler),
                 typeof(VirtulibBook));
 
@@ -49,15 +49,32 @@ namespace virtulib_project.UserControls
             InitializeComponent();
         }
 
-        private void Book_Summary_Click(object sender, RoutedEventArgs e)
+        public VirtulibBook(VirtulibBookModel virtulibBook)
         {
-            Console.WriteLine("Pwned");
-            RaiseVirtuLibBookSelectedEvent();
+            InitializeComponent();
+            virtulibBookData = virtulibBook;
+
+            //virtulibBookData.Title = virtulibBook.Title;
+            //virtulibBookData.ItemType = virtulibBook.ItemType;
+            //virtulibBookData.Author = virtulibBook.Author;
+            //virtulibBookData.PublishDate = virtulibBook.PublishDate;
+            //virtulibBookData.MediaType = virtulibBook.MediaType;
+            //virtulibBookData.ReviewScore = virtulibBook.ReviewScore;
+            //virtulibBookData.Copies = virtulibBook.Copies;
+            //virtulibBookData.Description = virtulibBook.Description;
+            //virtulibBookData.Category = virtulibBook.Category;
+            Console.WriteLine($"Testing: {virtulibBookData.Title}");
         }
 
-        void RaiseVirtuLibBookSelectedEvent()
+
+        private void Book_Summary_Click(object sender, RoutedEventArgs e)
         {
-            RoutedEventArgs newEventArgs = new RoutedEventArgs(VirtulibBook.VirtuLibBookSelectedEvent);
+            RaiseVirtulibBookSelectedEvent(virtulibBookData);
+        }
+
+        void RaiseVirtulibBookSelectedEvent(VirtulibBookModel virtulibBook)
+        {
+            RoutedEventArgs newEventArgs = new VirtulibBookSelectedEventArgs(VirtulibBook.VirtulibBookSelectedEvent, virtulibBook);
             RaiseEvent(newEventArgs);
         }
     }
