@@ -21,13 +21,11 @@ namespace virtulib_project.UserControls
     public partial class NetflixScroll : UserControl
     {
         // private MainViewModel _mainViewModel;
-        public event EventHandler<BookSummaryEventArgs> bookSummaryCustomEvent;
+        public event EventHandler<BookSummaryEventArgs> BookSummaryCustomEvent;
         private String customEventText = "Custom Events FTW!!!";
         double scrollItemOffset = 0;
 
-        private string _imgSourceUrl;
-        // private string _imgSourceUrl = @"/imgs/bookImgs/hungry-caterpillar-small.jpg";
-        
+        private string _imgSourceUrl;        
         public string ImageSourceUrl 
         { 
             get { return _imgSourceUrl; }
@@ -37,13 +35,24 @@ namespace virtulib_project.UserControls
         public NetflixScroll()
         {
             InitializeComponent();
+
+            // Dynamically create Virtulib books to insert to Netflix Scroller
+            int numBooks = 4;
+            VirtulibBook virtulibBook;
+            for (int i = 0; i < numBooks; i++)
+            {
+                virtulibBook = new VirtulibBook();
+                virtulibBook.BookImage = "/imgs/bookImgs/hungry-caterpillar-small.jpg";
+                virtulibBook.VirtuLibBookSelected += Book_Summary_Click;
+                NetflixStackPanel.Children.Add(virtulibBook);
+            }
         }
 
-        private void Book_Summary_Click(object sender, RoutedEventArgs e)
+        public void Book_Summary_Click(object sender, RoutedEventArgs e)
         {
-            if (bookSummaryCustomEvent != null)
+            if (BookSummaryCustomEvent != null)
             {
-                bookSummaryCustomEvent(sender, new BookSummaryEventArgs(customEventText));
+                BookSummaryCustomEvent(sender, new BookSummaryEventArgs(customEventText));
             }
         }
 

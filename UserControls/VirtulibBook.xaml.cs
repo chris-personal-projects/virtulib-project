@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using virtulib_project.Models;
+using virtulib_project.Events;
 
 namespace virtulib_project.UserControls
 {
@@ -21,6 +22,7 @@ namespace virtulib_project.UserControls
     /// </summary>
     public partial class VirtulibBook : UserControl
     {
+
         public string BookImage
         {
             get { return (String)GetValue(BookImageProperty); }
@@ -31,35 +33,32 @@ namespace virtulib_project.UserControls
             DependencyProperty.Register("BookImage", typeof(string),
                 typeof(VirtulibBook), new PropertyMetadata(""));
 
+        public event RoutedEventHandler VirtuLibBookSelected
+        {
+            add { AddHandler(VirtuLibBookSelectedEvent, value); }
+            remove { RemoveHandler(VirtuLibBookSelectedEvent, value); }
+        }
+
+        public static readonly RoutedEvent VirtuLibBookSelectedEvent =
+            EventManager.RegisterRoutedEvent("VirtuLibBookSelected",
+                RoutingStrategy.Bubble, typeof(RoutedEventHandler),
+                typeof(VirtulibBook));
+
         public VirtulibBook()
         {
             InitializeComponent();
-            // BookImage = "/imgs/bookImgs/hungry-caterpillar-small.jpg";
-            // _bookImage = "/imgs/bookImgs/hungry-caterpillar-small.jpg";
-            // BookImage = GenBookImage("/imgs/bookImgs/hungry-caterpillar-small.jpg");
         }
-
-        //private Image GenBookImage(string uriSource)
-        //{
-        //    BookImage = new Image();
-        //    BitmapImage bitImg = new BitmapImage();
-        //    bitImg.BeginInit();
-        //    bitImg.UriSource = new Uri(uriSource, UriKind.Relative);
-        //    bitImg.EndInit();
-
-        //    BookImage.Stretch = Stretch.Fill;
-        //    BookImage.Source = bitImg;
-        //    return BookImage;
-        //}
 
         private void Book_Summary_Click(object sender, RoutedEventArgs e)
         {
-            //if (bookSummaryCustomEvent != null)
-            //{
-            //    bookSummaryCustomEvent(sender, new BookSummaryEventArgs(customEventText));
-            //}
-            Console.WriteLine($"Chris {BookImage}");
+            Console.WriteLine("Pwned");
+            RaiseVirtuLibBookSelectedEvent();
         }
 
+        void RaiseVirtuLibBookSelectedEvent()
+        {
+            RoutedEventArgs newEventArgs = new RoutedEventArgs(VirtulibBook.VirtuLibBookSelectedEvent);
+            RaiseEvent(newEventArgs);
+        }
     }
 }

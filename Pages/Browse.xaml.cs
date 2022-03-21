@@ -39,7 +39,7 @@ namespace virtulib_project.Pages
             for (int i = 0; i < numScrolls; i++)
             {
                 netflixScroll = new NetflixScroll();
-                netflixScroll.bookSummaryCustomEvent += new EventHandler<BookSummaryEventArgs>(Book_Summary);
+                netflixScroll.BookSummaryCustomEvent += new EventHandler<BookSummaryEventArgs>(Book_Summary);
                 Grid.SetRow(netflixScroll, i);
                 BrowseRootPanel.Children.Add(netflixScroll);
             }
