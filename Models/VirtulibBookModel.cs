@@ -11,6 +11,7 @@ namespace virtulib_project.Models
         private string _title;
         private string _itemType;
         private string _author;
+        private string imageUrl;
         private string _publishDate;
         private string _mediaType;
         private float _reviewScore;
@@ -21,6 +22,7 @@ namespace virtulib_project.Models
         public string Title { get => _title; set => _title = value; }
         public string ItemType { get => _itemType; set => _itemType = value; }
         public string Author { get => _author; set => _author = value; }
+        public string ImageUrl { get => imageUrl; set => imageUrl = value; }
         public string PublishDate { get => _publishDate; set => _publishDate = value; }
         public string MediaType { get => _mediaType; set => _mediaType = value; }
         public float ReviewScore { get => _reviewScore; set => _reviewScore = value; }

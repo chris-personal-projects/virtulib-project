@@ -18,11 +18,24 @@ namespace virtulib_project.UserControls
     /// <summary>
     /// Interaction logic for BookInfo.xaml
     /// </summary>
-    public partial class BookInfo : UserControl
+    public partial class BookInfoDialog : UserControl
     {
-        public BookInfo()
+
+        public string BookInfoDialogImage
+        {
+            get { return (String)GetValue(BookInfoDialogImageProperty); }
+            set { SetValue(BookInfoDialogImageProperty, value); }
+        }
+
+        public static readonly DependencyProperty BookInfoDialogImageProperty =
+            DependencyProperty.Register("BookInfoDialogImage", typeof(string),
+            typeof(BookInfoDialog), new PropertyMetadata(""));
+
+        public BookInfoDialog()
         {
             InitializeComponent();
+            DataContext = this;
         }
+
     }
 }

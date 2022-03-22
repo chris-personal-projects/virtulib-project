@@ -85,8 +85,8 @@
     <Compile Include="Pages\SearchResult.xaml.cs">
       <DependentUpon>SearchResult.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\BookInfo.xaml.cs">
-      <DependentUpon>BookInfo.xaml</DependentUpon>
+    <Compile Include="UserControls\BookInfoDialog.xaml.cs">
+      <DependentUpon>BookInfoDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\CheckoutControl.xaml.cs">
       <DependentUpon>CheckoutControl.xaml</DependentUpon>
@@ -137,7 +137,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="UserControls\BookInfo.xaml">
+    <Page Include="UserControls\BookInfoDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

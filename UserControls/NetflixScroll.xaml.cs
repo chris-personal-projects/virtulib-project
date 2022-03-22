@@ -20,45 +20,12 @@ namespace virtulib_project.UserControls
 {
     public partial class NetflixScroll : UserControl
     {
-        // private MainViewModel _mainViewModel;
-        // public event EventHandler<BookSummaryEventArgs> BookSummaryCustomEvent;
-        // public VirtulibBookModel virtulibBookData = new VirtulibBookModel();
-        double scrollItemOffset = 0;
-
-        //private string _imgSourceUrl;        
-        //public string ImageSourceUrl 
-        //{ 
-        //    get { return _imgSourceUrl; }
-        //    set { _imgSourceUrl = value; }
-        //}
+        private double scrollItemOffset = 0;
 
         public NetflixScroll()
         {
             InitializeComponent();
-
-            // Dynamically create Virtulib books to insert to Netflix Scroller
-            //int numBooks = 8;
-            //VirtulibBook virtulibBook;
-            //for (int i = 0; i < numBooks; i++)
-            //{
-            //    if (i % 2 == 0)
-            //        virtulibBook = new VirtulibBook(virtulibBookData);
-            //    else
-            //        virtulibBook = new VirtulibBook(virtulibBookData2);
-            //    virtulibBook.BookImage = "/imgs/bookImgs/hungry-caterpillar-small.jpg";
-            //    // virtulibBook.VirtulibBookSelected += Book_Summary_Click;
-            //    NetflixStackPanel.Children.Add(virtulibBook);
-            //}
-            // InitNetflixScrollOffsets();
         }
-
-        //public void Book_Summary_Click(object sender, RoutedEventArgs e)
-        //{
-        //    if (BookSummaryCustomEvent != null)
-        //    {
-        //        BookSummaryCustomEvent(sender, new BookSummaryEventArgs("Cake"));
-        //    }
-        //}
 
         private void NetflixScrollPanel_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {

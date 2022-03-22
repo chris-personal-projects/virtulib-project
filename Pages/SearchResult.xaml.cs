@@ -58,7 +58,7 @@ namespace virtulib_project.Pages
 
         private void Book_Summary(object sender, RoutedEventArgs e)
         {
-            DialogObject = new BookInfo();
+            DialogObject = new BookInfoDialog();
             IsShow = !IsShow;
         }
 

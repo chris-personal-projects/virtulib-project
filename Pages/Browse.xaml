@@ -14,7 +14,6 @@
     <Grid x:Name="BrowseRoot">
         <ScrollViewer >
             <StackPanel Orientation="Vertical" x:Name="BrowseRootPanel">
-                
             </StackPanel>
         </ScrollViewer>
 

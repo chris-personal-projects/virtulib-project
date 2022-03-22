@@ -23,6 +23,7 @@ namespace virtulib_project.UserControls
     public partial class VirtulibBook : UserControl
     {
         private VirtulibBookModel virtulibBookData;
+
         public string BookImage
         {
             get { return (String)GetValue(BookImageProperty); }
@@ -53,23 +54,6 @@ namespace virtulib_project.UserControls
         {
             InitializeComponent();
             virtulibBookData = virtulibBook;
-
-            //virtulibBookData.Title = virtulibBook.Title;
-            //virtulibBookData.ItemType = virtulibBook.ItemType;
-            //virtulibBookData.Author = virtulibBook.Author;
-            //virtulibBookData.PublishDate = virtulibBook.PublishDate;
-            //virtulibBookData.MediaType = virtulibBook.MediaType;
-            //virtulibBookData.ReviewScore = virtulibBook.ReviewScore;
-            //virtulibBookData.Copies = virtulibBook.Copies;
-            //virtulibBookData.Description = virtulibBook.Description;
-            //virtulibBookData.Category = virtulibBook.Category;
-            Console.WriteLine($"Testing: {virtulibBookData.Title}");
-        }
-
-
-        private void Book_Summary_Click(object sender, RoutedEventArgs e)
-        {
-            RaiseVirtulibBookSelectedEvent(virtulibBookData);
         }
 
         void RaiseVirtulibBookSelectedEvent(VirtulibBookModel virtulibBook)
@@ -77,5 +61,11 @@ namespace virtulib_project.UserControls
             RoutedEventArgs newEventArgs = new VirtulibBookSelectedEventArgs(VirtulibBook.VirtulibBookSelectedEvent, virtulibBook);
             RaiseEvent(newEventArgs);
         }
+
+        private void Book_Summary_Click(object sender, RoutedEventArgs e)
+        {
+            RaiseVirtulibBookSelectedEvent(virtulibBookData);
+        }
+
     }
 }
