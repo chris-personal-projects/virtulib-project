@@ -49,5 +49,9 @@ namespace virtulib_project
             _main.SetDialog(checkoutControl);
         }
 
+        private void helpButtonClick(object sender, RoutedEventArgs e)
+        {
+            Main.Navigate(new Help());
+        }
     }
 }

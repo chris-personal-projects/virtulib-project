@@ -99,10 +99,22 @@
                             </ListViewItem>
 
                             <ListViewItem Height="45" Padding="0">
-                                <StackPanel Orientation="Horizontal" Margin="10 0">
-                                    <materialDesign:PackIcon Kind="HelpCircleOutline" Width="20" Height="20" Foreground="#FFF08033" Margin="5" VerticalAlignment="Center"/>
-                                    <TextBlock Text="Help" Margin="10"/>
-                                </StackPanel>
+                                <Button
+                                    x:Name="helpNav"
+				                    Style="{StaticResource MaterialDesignFlatButton}"
+                                    Width="250"
+                                    Height="Auto" Click="helpButtonClick"
+                                    
+			                    >
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <StackPanel Orientation="Horizontal" Margin="10 0">
+                                                <materialDesign:PackIcon Kind="HelpCircleOutline" Width="20" Height="20" Foreground="#FFF08033" Margin="5" VerticalAlignment="Center"/>
+                                                <AccessText FontWeight="Light" FontSize="16" FontFamily="Champagne &amp;" Foreground="AliceBlue" Margin="10" VerticalAlignment="Center" Text="Help" TextWrapping="Wrap" TextAlignment="Center"/>
+                                            </StackPanel>
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
                             </ListViewItem>
 
                             <ListViewItem Height="45" Padding="0">
@@ -217,7 +229,8 @@
                     <Frame 
                         Grid.Row="1"
                         x:Name="Main"
-                        DataContext=""/>
+                        DataContext=""
+                        NavigationUIVisibility="Hidden" Panel.ZIndex="1"/>
                 </Grid>
             </Grid>
         </materialDesign:DialogHost>
