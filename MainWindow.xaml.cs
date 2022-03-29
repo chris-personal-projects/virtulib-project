@@ -53,5 +53,10 @@ namespace virtulib_project
         {
             Main.Navigate(new Help());
         }
+
+        private void helpPanelClick(object sender, MouseButtonEventArgs e)
+        {
+            Main.Navigate(new Help());
+        }
     }
 }

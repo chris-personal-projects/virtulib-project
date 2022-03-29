@@ -99,22 +99,24 @@
                             </ListViewItem>
 
                             <ListViewItem Height="45" Padding="0">
-                                <Button
-                                    x:Name="helpNav"
-				                    Style="{StaticResource MaterialDesignFlatButton}"
-                                    Width="250"
-                                    Height="Auto" Click="helpButtonClick"
+                                <Border Background="#00000000" MouseLeftButtonUp="helpPanelClick" Cursor="Hand">
+                                    <Button
+                                        x:Name="helpNav"
+				                        Style="{StaticResource MaterialDesignFlatButton}"
+                                        Width="250"
+                                        Height="Auto" Click="helpButtonClick" MouseLeftButtonUp="helpButtonClick"
                                     
-			                    >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <StackPanel Orientation="Horizontal" Margin="10 0">
-                                                <materialDesign:PackIcon Kind="HelpCircleOutline" Width="20" Height="20" Foreground="#FFF08033" Margin="5" VerticalAlignment="Center"/>
-                                                <AccessText FontWeight="Light" FontSize="16" FontFamily="Champagne &amp;" Foreground="AliceBlue" Margin="10" VerticalAlignment="Center" Text="Help" TextWrapping="Wrap" TextAlignment="Center"/>
-                                            </StackPanel>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
+			                        >
+                                        <Button.Template>
+                                            <ControlTemplate>
+                                                <StackPanel Orientation="Horizontal" Margin="10 0">
+                                                    <materialDesign:PackIcon Kind="HelpCircleOutline" Width="20" Height="20" Foreground="#FFF08033" Margin="5" VerticalAlignment="Center"/>
+                                                    <AccessText FontWeight="Light" FontSize="16" FontFamily="Champagne &amp;" Foreground="AliceBlue" Margin="10" VerticalAlignment="Center" Text="Help" TextWrapping="Wrap" TextAlignment="Center"/>
+                                                </StackPanel>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                </Border>
                             </ListViewItem>
 
                             <ListViewItem Height="45" Padding="0">
