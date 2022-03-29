@@ -53,10 +53,20 @@ namespace virtulib_project
         {
             Main.Navigate(new Help());
         }
-
-        private void helpPanelClick(object sender, MouseButtonEventArgs e)
+        
+        private void ProfilePanelClick(object sender, RoutedEventArgs e)
         {
-            Main.Navigate(new Help());
+            Main.Navigate(new Profile());
+        }
+
+        private void myItemsClick(object sender, MouseButtonEventArgs e)
+        {
+            Main.Navigate(new MyItems());
+        }
+
+        private void homePage(object sender, MouseButtonEventArgs e)
+        {
+            Main.Navigate(new Browse(_main));
         }
     }
 }
