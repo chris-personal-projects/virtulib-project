@@ -13,6 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using virtulib_project.Pages;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using virtulib_project.UserControls;
+using virtulib_project.Models;
 
 namespace virtulib_project
 {
@@ -21,10 +25,14 @@ namespace virtulib_project
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainViewModel _main = new MainViewModel();
+
         public MainWindow()
         {
             InitializeComponent();
-            Main.Navigate(new Homepage());
+            Main.Navigate(new Browse(_main));
+            DataContext = _main;
+
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
@@ -35,5 +43,30 @@ namespace virtulib_project
             }
         }
 
+        private void Open_Cart(object sender, RoutedEventArgs e)
+        {
+            object checkoutControl = new CheckoutControl();
+            _main.SetDialog(checkoutControl);
+        }
+
+        private void helpButtonClick(object sender, RoutedEventArgs e)
+        {
+            Main.Navigate(new Help());
+        }
+        
+        private void ProfilePanelClick(object sender, RoutedEventArgs e)
+        {
+            Main.Navigate(new Profile());
+        }
+
+        private void myItemsClick(object sender, MouseButtonEventArgs e)
+        {
+            Main.Navigate(new MyItems());
+        }
+
+        private void homePage(object sender, MouseButtonEventArgs e)
+        {
+            Main.Navigate(new Browse(_main));
+        }
     }
 }

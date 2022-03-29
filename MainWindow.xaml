@@ -3,15 +3,252 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:virtulib_project"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{DynamicResource MaterialDesignPaper}"
+        xmlns:local="clr-namespace:virtulib_project" xmlns:models="clr-namespace:virtulib_project.Models" d:DataContext="{d:DesignInstance Type=models:MainViewModel}"
         mc:Ignorable="d"
-        Title="MainWindow" Height="800" Width="1200"
+        Title="MainWindow" Height="860" Width="1200"
         WindowStyle="None"
         ResizeMode="NoResize"
-        Background="#181735"
-        >
+>
+    <Window.Resources>
+        <Storyboard x:Key="CloseMenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="GridMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="250"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="OpenMenu">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="GridMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="250"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
 
-    <Grid MouseDown="Grid_MouseDown">
-        <Frame x:Name="Main"/>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="SideNavClose">
+            <BeginStoryboard x:Name="CloseMenu_BeginStoryboard" Storyboard="{StaticResource CloseMenu}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="SideNavOpen">
+            <BeginStoryboard Storyboard="{StaticResource OpenMenu}"/>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Grid MouseDown="Grid_MouseDown" >
+        <materialDesign:DialogHost 
+            BorderBrush="{DynamicResource MaterialDesignDivider}"
+            IsOpen="{Binding MainDialog.IsShow}"
+            DialogContent="{Binding MainDialog.DialogObject}"
+        >
+            <Grid>
+                <Grid x:Name="GridMenu" Width="250" HorizontalAlignment="Left" Margin="-250 0 0 0" Background="{StaticResource DarkBlue3}" RenderTransformOrigin="0.5,0.5" Panel.ZIndex="30">
+                    <Grid.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Grid.RenderTransform>
+                    <StackPanel>
+                        <Grid Margin="20">
+                            <Image
+                                Margin="0, 25, 0, 0"
+                                Grid.Column="0"
+                                Source="/imgs/barcelona.png"
+                                RenderOptions.BitmapScalingMode="Fant"/>
+                        </Grid>
+
+                        <ListView Foreground="White" FontFamily="Champagne &amp; Limousines" FontSize="18">
+                            <Border Background="#00000000" MouseLeftButtonUp="ProfilePanelClick" Cursor="Hand">
+                                <ListViewItem Height="100" Padding="0" Width="232" RenderTransformOrigin="0.502,0.55">
+                                    <StackPanel Orientation="Vertical" Margin="00">
+                                        <TextBlock Text="Welcome back," Foreground="White" FontSize="20" TextAlignment="Left"/>
+                                        <TextBlock Text="Dorothy" Foreground="White" FontSize="28"/>
+                                    </StackPanel>
+                                </ListViewItem>
+                            </Border>
+
+                            
+                            <ListViewItem Height="45" Padding="0" Width="250">
+                                <Border Background="#00000000" MouseLeftButtonUp="homePage" Cursor="Hand" Width="250">
+                                    <StackPanel Orientation="Horizontal" Margin="10 0">
+                                        <materialDesign:PackIcon Kind="Home" Width="20" Height="20" Foreground="{StaticResource PrimaryHueDarkBrush}" Margin="5" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Home" Margin="10"/>
+                                    </StackPanel>
+                                </Border>
+                            </ListViewItem>
+
+                            
+                            <ListViewItem Height="45" Padding="0" Width="250">
+                                <Border Background="#00000000" MouseLeftButtonUp="Open_Cart" Cursor="Hand" Width="250">
+                                    <StackPanel Orientation="Horizontal" Margin="10 0">
+                                        <fa:ImageAwesome Icon="ShoppingCart" HorizontalAlignment="Center" Width="20" Height="20" Foreground="White" Grid.Column="9" Margin="5" VerticalAlignment="Center"/>
+                                        <TextBlock Text="My Cart" Margin="10"/>
+                                    </StackPanel>
+                                </Border>
+                            </ListViewItem>
+                            
+                    
+                            <ListViewItem Height="45" Padding="0">
+                                <Border Background="#00000000" MouseLeftButtonUp="myItemsClick" Cursor="Hand" Width="250">
+                                    <StackPanel Orientation="Horizontal" Margin="10 0">
+                                        <materialDesign:PackIcon Kind="BagCarryOn" Width="20" Height="20" Foreground="#FFE6A701" Margin="5" VerticalAlignment="Center"/>
+                                        <TextBlock Text="My Items" Margin="10"/>
+                                    </StackPanel>
+                                </Border>
+                            </ListViewItem>
+
+                            <ListViewItem Height="45" Padding="0">
+                                <Border Background="#00000000" MouseLeftButtonUp="ProfilePanelClick" Cursor="Hand" Width="250">
+                                    <StackPanel Orientation="Horizontal" Margin="10 0">
+                                        <materialDesign:PackIcon Kind="Settings" Width="20" Height="20" Foreground="#FF0069C1" Margin="5" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Settings" Margin="10"/>
+                                    </StackPanel>
+                                </Border>
+                            </ListViewItem>
+
+                            <ListViewItem Height="45" Padding="0">
+                                <Border Background="#00000000" MouseLeftButtonUp="helpButtonClick" Cursor="Hand" Width="250">
+                                    <Button
+                                        x:Name="helpNav"
+				                        Style="{StaticResource MaterialDesignFlatButton}"
+                                        Width="250"
+                                        Height="Auto" Click="helpButtonClick" MouseLeftButtonUp="helpButtonClick"
+                                    
+			                        >
+                                        <Button.Template>
+                                            <ControlTemplate>
+                                                <StackPanel Orientation="Horizontal" Margin="10 0">
+                                                    <materialDesign:PackIcon Kind="HelpCircleOutline" Width="20" Height="20" Foreground="#FFF08033" Margin="5" VerticalAlignment="Center"/>
+                                                    <AccessText FontWeight="Light" FontSize="16" FontFamily="Champagne &amp;" Foreground="AliceBlue" Margin="10" VerticalAlignment="Center" Text="Help" TextWrapping="Wrap" TextAlignment="Center"/>
+                                                </StackPanel>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                </Border>
+                            </ListViewItem>
+
+                            <ListViewItem Height="45" Padding="0">
+                                <StackPanel Orientation="Horizontal" Margin="10 0">
+                                    <materialDesign:PackIcon Kind="ExitToApp" Width="20" Height="20" Foreground="#FFD41515" Margin="5" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Logout" Margin="10"/>
+                                </StackPanel>
+                            </ListViewItem>
+
+
+
+                        </ListView>
+                    </StackPanel>
+                    <Button x:Name="SideNavClose" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Width="30" Height="30" Padding="0">
+                        <materialDesign:PackIcon Kind="Close" Foreground="Red"/>
+                    </Button>
+                </Grid>
+
+                <Grid x:Name="GridMainWindow" Opacity="100">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid  
+                        Grid.Row="0" 
+                        Background="{StaticResource DarkBlue1}"
+                        Panel.ZIndex="-5"
+                    >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="50"/>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <Image 
+                                Width="50" 
+                                Height="50" 
+                                Grid.Column="0"
+                                Source="/imgs/virtulib-logo.png"
+                                RenderOptions.BitmapScalingMode="Fant"/>
+                        <Button
+                            x:Name="SideNavOpen"
+				            Style="{StaticResource MaterialDesignFlatButton}"
+                            Grid.Column="1"
+			            >
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <fa:ImageAwesome 
+                                        Icon="Bars" 
+                                        VerticalAlignment="Center" 
+                                        HorizontalAlignment="Center" 
+                                        Foreground="White"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
+                        <TextBox 
+                                Grid.Column="2" 
+                                Grid.ColumnSpan="7"
+                                HorizontalAlignment="Left" 
+                                VerticalAlignment="Center" 
+                                TextWrapping="Wrap"
+                                Width="900"
+                                Height="25"
+                                Text=""
+                                Background="AliceBlue"
+                                Margin="10, 0, 0, 0"
+                                VerticalContentAlignment="Center"/>
+
+                        <materialDesign:PackIcon 
+                                Kind="HelpCircleOutline"
+                                Grid.Column="8"
+                                Grid.ColumnSpan="2"
+                                Foreground="#FFF08033" 
+                                VerticalAlignment="Center" 
+                                HorizontalAlignment="Center" 
+                                Width="30" 
+                                Height="30"
+                                Margin="20, 0, 0, 0"/>
+
+
+                        <Button
+			                    Style="{StaticResource MaterialDesignFlatButton}"
+			                    Grid.Column="9"
+			                    Height="50"
+			                    Width="50"
+                                Click="Open_Cart"
+		                    >
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <fa:ImageAwesome 
+                                            Icon="ShoppingCart" 
+                                            VerticalAlignment="Center" 
+                                            HorizontalAlignment="Center" 
+                                            Width="30" 
+                                            Height="30"
+                                            Foreground="White"
+                                            Grid.Column="9"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </Grid>
+
+                    <Frame 
+                        Grid.Row="1"
+                        x:Name="Main"
+                        DataContext=""
+                        NavigationUIVisibility="Hidden" Panel.ZIndex="1"/>
+                </Grid>
+            </Grid>
+        </materialDesign:DialogHost>
+
     </Grid>
 </Window>
