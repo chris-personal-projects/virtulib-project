@@ -45,7 +45,7 @@ namespace virtulib_project
 
         private void Open_Cart(object sender, RoutedEventArgs e)
         {
-            object checkoutControl = new CheckoutControl();
+            object checkoutControl = new CheckoutControl(_main);
             _main.SetDialog(checkoutControl);
         }
 
