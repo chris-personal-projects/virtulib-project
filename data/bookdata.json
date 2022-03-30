@@ -8,7 +8,7 @@
       "publish_date": "1892",
       "media_type": "Digital",
       "review_score": 1,
-      "copies": 14,
+      "copies": 0,
       "description": null,
       "image_location": "/imgs/bookImgs/Juliette-et-Romeo.jpg"
     },
@@ -80,7 +80,7 @@
       "publish_date": "1971",
       "media_type": "Digital",
       "review_score": 1,
-      "copies": 3,
+      "copies": 0,
       "description": null,
       "image_location": "/imgs/bookImgs/placeholder.jpg"
     },
@@ -116,7 +116,7 @@
       "publish_date": "1963",
       "media_type": "Digital",
       "review_score": 1,
-      "copies": 1,
+      "copies": 0,
       "description": "A biography of \"the great Reformer\" who led the Protestant Reformation in Germany.",
       "image_location": "/imgs/bookImgs/placeholder.jpg"
     },
@@ -368,7 +368,7 @@
       "publish_date": "2003",
       "media_type": "Digital",
       "review_score": 2,
-      "copies": 5,
+      "copies": 0,
       "description": null,
       "image_location": "/imgs/bookImgs/The-making-of-a-matriot.jpg"
     },
@@ -452,7 +452,7 @@
       "publish_date": "1982",
       "media_type": "Physical",
       "review_score": 3,
-      "copies": 8,
+      "copies": 0,
       "description": null,
       "image_location": "/imgs/bookImgs/placeholder.jpg"
     },
@@ -464,7 +464,7 @@
       "publish_date": "1958",
       "media_type": "Digital",
       "review_score": 5,
-      "copies": 6,
+      "copies": 0,
       "description": null,
       "image_location": "/imgs/bookImgs/placeholder.jpg"
     },

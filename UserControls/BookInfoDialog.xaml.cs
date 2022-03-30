@@ -17,14 +17,14 @@ using virtulib_project.Events;
 
 namespace virtulib_project.UserControls
 {
-    /// <summary>
-    /// Interaction logic for BookInfo.xaml
-    /// </summary>
     public partial class BookInfoDialog : UserControl
     {
         private const int MAX_REVIEW_SCORE = 5;
         private int _bookInfoDialogReviewScore;
         public int BookInfoDialogReviewScore { get => _bookInfoDialogReviewScore; set => _bookInfoDialogReviewScore = value; }
+
+        private int _bookInfoDialogCopies = 0;
+        public int BookInfoDialogCopies { get => _bookInfoDialogCopies; set => _bookInfoDialogCopies = value; }
 
         public string BookInfoDialogImage
         {
@@ -86,6 +86,35 @@ namespace virtulib_project.UserControls
             DependencyProperty.Register("BookInfoDialogMediaType", typeof(string),
             typeof(BookInfoDialog), new PropertyMetadata(""));
 
+        public string BookInfoDialogStockTag
+        {
+            get { return (String)GetValue(BookInfoDialogStockTagProperty); }
+            set { SetValue(BookInfoDialogStockTagProperty, value); }
+        }
+
+        public static readonly DependencyProperty BookInfoDialogStockTagProperty =
+            DependencyProperty.Register("BookInfoDialogStockTag", typeof(string),
+            typeof(BookInfoDialog), new PropertyMetadata(""));
+
+        public Brush InStockColor
+        {
+            get { return (Brush)GetValue(InStockColorProperty); }
+            set { SetValue(InStockColorProperty, value); }
+        }
+
+        public static readonly DependencyProperty InStockColorProperty =
+            DependencyProperty.Register("InStockColor", typeof(Brush),
+            typeof(BookInfoDialog), new PropertyMetadata(new SolidColorBrush(Colors.Black)));
+
+        public string BookInfoDialogDescription
+        {
+            get { return (String)GetValue(BookInfoDialogDescriptionProperty); }
+            set { SetValue(BookInfoDialogDescriptionProperty, value); }
+        }
+
+        public static readonly DependencyProperty BookInfoDialogDescriptionProperty =
+            DependencyProperty.Register("BookInfoDialogDescription", typeof(string),
+            typeof(BookInfoDialog), new PropertyMetadata(""));
 
         public BookInfoDialog(VirtulibBookSelectedEventArgs args)
         {
@@ -98,23 +127,65 @@ namespace virtulib_project.UserControls
             BookInfoDialogPublishDate = args.VirtulibBook.Publish_Date;
             BookInfoDialogMediaType = args.VirtulibBook.Media_Type;
             BookInfoDialogReviewScore = (int)args.VirtulibBook.Review_Score;
+            BookInfoDialogCopies = args.VirtulibBook.Copies;
+            BookInfoDialogDescription = generateDescription(args.VirtulibBook.Description);
 
-            generateReviewStars();
+            List<StackPanel> reviewPanels = new List<StackPanel>();
+            reviewPanels.Add(ReviewPanel);
+            reviewPanels.Add(BotReviewsPanel);
+            generateReviewStars(reviewPanels);
+
+            generateInStockTag();
         }
 
-        private void generateReviewStars()
-        {
-            int starCount = 0;
-            for (; starCount < BookInfoDialogReviewScore; starCount++)
-            {
-                PackIcon fullStar = initReviewStar(false);
-                ReviewPanel.Children.Add(fullStar);
-            }
 
-            for (; starCount < MAX_REVIEW_SCORE; starCount++)
+
+        private string generateDescription(string bookDescription)
+        {
+            string bookDetails = bookDescription;
+
+            if (bookDescription == null)
             {
-                PackIcon emptyStar = initReviewStar(true);
-                ReviewPanel.Children.Add(emptyStar);
+                bookDetails = "No description for this book at the moment.";
+            }
+            
+            return bookDetails;
+        }
+
+        private void generateInStockTag()
+        {
+            if (BookInfoDialogCopies > 0)
+            {
+                BookInfoDialogStockTag  = "Available - Arrives in 2-3 Days";
+                InStockColor = (Brush)Application.Current.Resources["PrimaryHueDarkBrush"];
+            }
+            else 
+            {
+                BookInfoDialogStockTag = "No Copies Available";
+                InStockColor = new SolidColorBrush(Colors.Red);
+            } 
+        }
+
+        private void generateReviewStars(List<StackPanel> reviewPanels)
+        {
+            PackIcon fullStar;
+            PackIcon emptyStar;
+            int starCount;
+
+            foreach (StackPanel panel in reviewPanels)
+            {
+                starCount = 0;
+                for (; starCount < BookInfoDialogReviewScore; starCount++)
+                {
+                    fullStar = initReviewStar(false);
+                    panel.Children.Add(fullStar);
+                }
+
+                for (; starCount < MAX_REVIEW_SCORE; starCount++)
+                {
+                    emptyStar = initReviewStar(true);
+                    panel.Children.Add(emptyStar);
+                }
             }
         }
 

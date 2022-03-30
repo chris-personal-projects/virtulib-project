@@ -106,30 +106,20 @@
 
                             <TextBlock 
                                 Text="{Binding BookInfoDialogTitle}"
-                                Foreground="Gray"
+                                Foreground="Black"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Left"
                                 FontSize="25"
                                 FontWeight="Bold"
                                 Grid.Row="0"/>
-                            <StackPanel Grid.Row="1" Orientation="Horizontal">
-                                <TextBlock 
-                                    Text="{Binding BookInfoDialogItemType}"
-                                    Foreground="Gray"
-                                    VerticalAlignment="Center"
-                                    HorizontalAlignment="Left"
-                                    FontSize="18"
-                                    FontWeight="Medium"/>
-                                <TextBlock 
-                                    Text="{Binding BookInfoDialogAuthor}"
-                                    Foreground="Gray"
-                                    VerticalAlignment="Center"
-                                    HorizontalAlignment="Left"
-                                    FontSize="18"
-                                    FontWeight="Medium"
-                                    Grid.Row="1"
-                                    Margin="30, 0, 0 , 0"/>
-                            </StackPanel>
+                            <TextBlock 
+                                Text="{Binding BookInfoDialogAuthor}"
+                                Foreground="Gray"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Left"
+                                FontSize="18"
+                                FontWeight="Medium"
+                                Grid.Row="1"/>
                             <StackPanel Orientation="Horizontal"  Grid.Row="2">
                                 <TextBlock 
                                     Text="Published"
@@ -157,38 +147,27 @@
                                     HorizontalAlignment="Left"
                                     FontSize="18"
                                     FontWeight="Medium"/>
-
                                 <StackPanel x:Name="ReviewPanel"  Orientation="Horizontal" Margin="30, 0, 0, 0">
                                 </StackPanel>
                             </StackPanel>
 
                             <TextBlock 
-                                Text="Available - arrives in 2-3d"
-                                Foreground="{StaticResource PrimaryHueDarkBrush}"
+                                Text="{Binding BookInfoDialogItemType}"
+                                Foreground="Gray"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Left"
+                                Grid.Row ="4"
+                                FontSize="18"
+                                FontWeight="Medium"/>
+
+                            <TextBlock 
+                                Text="{Binding BookInfoDialogStockTag}"
+                                Foreground="{Binding InStockColor}"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Left"
                                 FontSize="20"
-                                FontWeight="Medium"
-                                Grid.Row="4"/>
-
-                            <StackPanel Grid.Row="5" Orientation="Horizontal">
-                                <TextBlock 
-                                    Text="Novel"
-                                    Foreground="Gray"
-                                    VerticalAlignment="Center"
-                                    HorizontalAlignment="Left"
-                                    FontSize="18"
-                                    FontWeight="Medium"/>
-                                <TextBlock 
-                                    Text="Bennett, Brit"
-                                    Foreground="Gray"
-                                    VerticalAlignment="Center"
-                                    HorizontalAlignment="Left"
-                                    FontSize="18"
-                                    FontWeight="Medium"
-                                    Grid.Row="1"
-                                    Margin="30, 0, 0 , 0"/>
-                            </StackPanel>
+                                FontWeight="Bold"
+                                Grid.Row="5"/>
 
                             <Button
 						        Style="{StaticResource MaterialDesignFlatButton}"
@@ -234,7 +213,7 @@
 
                 <TextBlock 
                     Text="Description"
-                    Foreground="Gray"
+                    Foreground="Black"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left"
                     FontSize="25"
@@ -242,7 +221,7 @@
                     Grid.Row="0"/>
 
                 <TextBlock 
-                    Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum"
+                    Text="{Binding BookInfoDialogDescription}"
                     Foreground="Gray"
                     VerticalAlignment="Top"
                     HorizontalAlignment="Left"
@@ -268,97 +247,23 @@
 
                     <TextBlock 
                         Text="Reviews"
-                        Foreground="Gray"
+                        Foreground="Black"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Left"
                         FontSize="25"
                         FontWeight="Bold"
                         Grid.Column="0"/>
-
-                    <Button
-						Style="{StaticResource MaterialDesignFlatButton}"
-                        Grid.Column="1"
-                        Width="200"
-                        Height="20"
-                        Margin="75, 0, 0, 0"
-					>
-                        <Button.Template>
-                            <ControlTemplate>
-                                <StackPanel Orientation="Horizontal">
-                                    <fa:ImageAwesome 
-                                        Icon="Plus" 
-                                        VerticalAlignment="Center" 
-                                        HorizontalAlignment="Center" 
-                                        Foreground="Gray"/>
-
-                                    <TextBlock 
-                                        Text="Add a Review"
-                                        Foreground="Gray"
-                                        VerticalAlignment="Center"
-                                        HorizontalAlignment="Left"
-                                        FontSize="20"
-                                        FontWeight="Bold"
-                                        Grid.Column="0"
-                                        Margin="15, 0, 0, 0"/>
-                                </StackPanel>
-                            </ControlTemplate>
-                        </Button.Template>
-                        
-                    </Button>
                 </Grid>
 
-
-                <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <StackPanel x:Name="BotReviewsPanel" Grid.Row="1" Orientation="Horizontal" Margin="0, 0, 0, 0">
                     <TextBlock 
-                                    Text="Overall Score"
-                                    Foreground="Gray"
-                                    VerticalAlignment="Center"
-                                    HorizontalAlignment="Left"
-                                    FontSize="18"
-                                    FontWeight="Medium"/>
-
-                    <StackPanel Orientation="Horizontal" Margin="30, 0, 0, 0">
-                        <materialDesign:PackIcon
-										Kind="Star"
-										Width="30"
-										Height="30"
-										Foreground="#ccb100"
-										VerticalAlignment="Center"
-										HorizontalAlignment="Center"
-									/>
-                        <materialDesign:PackIcon
-										Kind="Star"
-										Width="30"
-										Height="30"
-										Foreground="#ccb100"
-										VerticalAlignment="Center"
-										HorizontalAlignment="Center"
-									/>
-                        <materialDesign:PackIcon
-										Kind="Star"
-										Width="30"
-										Height="30"
-										Foreground="#ccb100"
-										VerticalAlignment="Center"
-										HorizontalAlignment="Center"
-									/>
-                        <materialDesign:PackIcon
-										Kind="Star"
-										Width="30"
-										Height="30"
-										Foreground="#ccb100"
-										VerticalAlignment="Center"
-										HorizontalAlignment="Center"
-									/>
-                        <materialDesign:PackIcon
-										Kind="StarOutline"
-										Width="30"
-										Height="30"
-										Foreground="#ccb100"
-										VerticalAlignment="Center"
-										HorizontalAlignment="Center"
-									/>
-                    </StackPanel>
+                        Text="Overall Score"
+                        Foreground="Gray"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        FontSize="18"
+                        FontWeight="Medium"
+                        Margin="0, 0, 10, 0"/>
                 </StackPanel>
             </Grid>
         </Border>

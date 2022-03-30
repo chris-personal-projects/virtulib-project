@@ -74,25 +74,8 @@ namespace virtulib_project.Pages
 
         private void Book_Summary(object sender, RoutedEventArgs e)
         {
-            // object bookSumControl = new BookInfo();
-            // _mainViewModel.SetDialog(bookSumControl);
-            // _mainViewModel.SetDialog(bookSumControl);
-
             VirtulibBookSelectedEventArgs args = (VirtulibBookSelectedEventArgs)e;
-            //BookInfoDialog bookInfoDialog = new BookInfoDialog();
             BookInfoDialog bookInfoDialog = new BookInfoDialog(args);
-
-
-            //bookInfoDialog.BookInfoDialogImage = args.VirtulibBook.Image_Location;
-            //bookInfoDialog.BookInfoDialogTitle = args.VirtulibBook.Title;
-            //bookInfoDialog.BookInfoDialogItemType = args.VirtulibBook.Item_Type;
-            //bookInfoDialog.BookInfoDialogAuthor = args.VirtulibBook.Author;
-            //bookInfoDialog.BookInfoDialogPublishDate = args.VirtulibBook.Publish_Date;
-            //bookInfoDialog.BookInfoDialogMediaType = args.VirtulibBook.Media_Type;
-            //bookInfoDialog.BookInfoDialogMediaType = args.VirtulibBook.Media_Type;
-            //bookInfoDialog.BookInfoDialogReviewScore = (int) args.VirtulibBook.Review_Score;
-
-
             _mainViewModel.SetDialog(bookInfoDialog);
         }
     }
