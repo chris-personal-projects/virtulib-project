@@ -21,10 +21,7 @@
       "media_type": "Physical",
       "review_score": 2,
       "copies": 23,
-      "description": {
-        "type": "/type/text",
-        "value": "Feeling unattractive, untalented, and misunderstood by her parents, a New York City teenager realizes that she is someone special through her friendship with a homeless street performer."
-      },
+      "description": "Feeling unattractive, untalented, and misunderstood by her parents, a New York City teenager realizes that she is someone special through her friendship with a homeless street performer.",
       "image_location": "/imgs/bookImgs/placeholder.jpg"
     },
     {
@@ -120,10 +117,7 @@
       "media_type": "Digital",
       "review_score": 1,
       "copies": 1,
-      "description": {
-        "type": "/type/text",
-        "value": "A biography of \"the great Reformer\" who led the Protestant Reformation in Germany."
-      },
+      "description": "A biography of \"the great Reformer\" who led the Protestant Reformation in Germany.",
       "image_location": "/imgs/bookImgs/placeholder.jpg"
     },
     {

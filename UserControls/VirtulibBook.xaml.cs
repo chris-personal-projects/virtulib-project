@@ -54,6 +54,8 @@ namespace virtulib_project.UserControls
         {
             InitializeComponent();
             virtulibBookData = virtulibBook;
+
+            // SetValue(BookImageProperty, virtulibBook.Image_Location);
         }
 
         void RaiseVirtulibBookSelectedEvent(VirtulibBookModel virtulibBook)

@@ -21,6 +21,9 @@ namespace virtulib_project.UserControls
     public partial class NetflixScroll : UserControl
     {
         private double scrollItemOffset = 0;
+        private string _categoryName = "";
+
+        public string CategoryName { get => _categoryName; set => _categoryName = value; }
 
         public NetflixScroll()
         {

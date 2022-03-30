@@ -198,7 +198,9 @@
     <Resource Include="fonts\Dosis.ttf" />
     <None Include=".gitignore" />
     <None Include="bin\Debug\virtulib-project.exe.config" />
-    <None Include="data\bookdata.json" />
+    <None Include="data\bookdata.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

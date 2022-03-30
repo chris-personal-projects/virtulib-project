@@ -46,7 +46,7 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock 
-                    Text="Popular"
+                    Text="{Binding CategoryName}"
                     Foreground="White"
                     FontSize="30"
                     Grid.Row="0"
