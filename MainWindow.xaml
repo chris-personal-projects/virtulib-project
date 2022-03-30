@@ -36,7 +36,7 @@
             <BeginStoryboard Storyboard="{StaticResource OpenMenu}"/>
         </EventTrigger>
     </Window.Triggers>
-    
+
     <Grid MouseDown="Grid_MouseDown" >
         <materialDesign:DialogHost 
             BorderBrush="{DynamicResource MaterialDesignDivider}"
@@ -63,58 +63,73 @@
                         </Grid>
 
                         <ListView Foreground="White" FontFamily="Champagne &amp; Limousines" FontSize="18">
-                            <ListViewItem Height="100" Margin="10 0">
-                                <StackPanel Orientation="Vertical" Margin="00">
-                                    <TextBlock Text="Welcome back," Foreground="White" FontSize="20" TextAlignment="Left"/>
-                                    <TextBlock Text="Dorothy" Foreground="White" FontSize="28"/>
-                                </StackPanel>
+                            <Border Background="#00000000" MouseLeftButtonUp="ProfilePanelClick" Cursor="Hand">
+                                <ListViewItem Height="100" Padding="0" Width="232" RenderTransformOrigin="0.502,0.55">
+                                    <StackPanel Orientation="Vertical" Margin="00">
+                                        <TextBlock Text="Welcome back," Foreground="White" FontSize="20" TextAlignment="Left"/>
+                                        <TextBlock Text="Dorothy" Foreground="White" FontSize="28"/>
+                                    </StackPanel>
+                                </ListViewItem>
+                            </Border>
+
+                            
+                            <ListViewItem Height="45" Padding="0" Width="250">
+                                <Border Background="#00000000" MouseLeftButtonUp="homePage" Cursor="Hand" Width="250">
+                                    <StackPanel Orientation="Horizontal" Margin="10 0">
+                                        <materialDesign:PackIcon Kind="Home" Width="20" Height="20" Foreground="{StaticResource PrimaryHueDarkBrush}" Margin="5" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Home" Margin="10"/>
+                                    </StackPanel>
+                                </Border>
+                            </ListViewItem>
+
+                            
+                            <ListViewItem Height="45" Padding="0" Width="250">
+                                <Border Background="#00000000" MouseLeftButtonUp="Open_Cart" Cursor="Hand" Width="250">
+                                    <StackPanel Orientation="Horizontal" Margin="10 0">
+                                        <fa:ImageAwesome Icon="ShoppingCart" HorizontalAlignment="Center" Width="20" Height="20" Foreground="White" Grid.Column="9" Margin="5" VerticalAlignment="Center"/>
+                                        <TextBlock Text="My Cart" Margin="10"/>
+                                    </StackPanel>
+                                </Border>
+                            </ListViewItem>
+                            
+                    
+                            <ListViewItem Height="45" Padding="0">
+                                <Border Background="#00000000" MouseLeftButtonUp="myItemsClick" Cursor="Hand" Width="250">
+                                    <StackPanel Orientation="Horizontal" Margin="10 0">
+                                        <materialDesign:PackIcon Kind="BagCarryOn" Width="20" Height="20" Foreground="#FFE6A701" Margin="5" VerticalAlignment="Center"/>
+                                        <TextBlock Text="My Items" Margin="10"/>
+                                    </StackPanel>
+                                </Border>
                             </ListViewItem>
 
                             <ListViewItem Height="45" Padding="0">
-                                <StackPanel Orientation="Horizontal" Margin="10 0">
-                                    <materialDesign:PackIcon Kind="Home" Width="20" Height="20" Foreground="{StaticResource PrimaryHueDarkBrush}" Margin="5" VerticalAlignment="Center"/>
-                                    <TextBlock Text="Home" Margin="10"/>
-                                </StackPanel>
+                                <Border Background="#00000000" MouseLeftButtonUp="ProfilePanelClick" Cursor="Hand" Width="250">
+                                    <StackPanel Orientation="Horizontal" Margin="10 0">
+                                        <materialDesign:PackIcon Kind="Settings" Width="20" Height="20" Foreground="#FF0069C1" Margin="5" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Settings" Margin="10"/>
+                                    </StackPanel>
+                                </Border>
                             </ListViewItem>
 
                             <ListViewItem Height="45" Padding="0">
-                                <StackPanel Orientation="Horizontal" Margin="10 0">
-                                    <fa:ImageAwesome Icon="ShoppingCart" HorizontalAlignment="Center" Width="20" Height="20" Foreground="White" Grid.Column="9" Margin="5" VerticalAlignment="Center"/>
-                                    <TextBlock Text="My Cart" Margin="10"/>
-                                </StackPanel>
-                            </ListViewItem>
-
-                            <ListViewItem Height="45" Padding="0">
-                                <StackPanel Orientation="Horizontal" Margin="10 0">
-                                    <materialDesign:PackIcon Kind="BagCarryOn" Width="20" Height="20" Foreground="#FFE6A701" Margin="5" VerticalAlignment="Center"/>
-                                    <TextBlock Text="My Items" Margin="10"/>
-                                </StackPanel>
-                            </ListViewItem>
-
-                            <ListViewItem Height="45" Padding="0">
-                                <StackPanel Orientation="Horizontal" Margin="10 0">
-                                    <materialDesign:PackIcon Kind="Settings" Width="20" Height="20" Foreground="#FF0069C1" Margin="5" VerticalAlignment="Center"/>
-                                    <TextBlock Text="Settings" Margin="10"/>
-                                </StackPanel>
-                            </ListViewItem>
-
-                            <ListViewItem Height="45" Padding="0">
-                                <Button
-                                    x:Name="helpNav"
-				                    Style="{StaticResource MaterialDesignFlatButton}"
-                                    Width="250"
-                                    Height="Auto" Click="helpButtonClick"
+                                <Border Background="#00000000" MouseLeftButtonUp="helpButtonClick" Cursor="Hand" Width="250">
+                                    <Button
+                                        x:Name="helpNav"
+				                        Style="{StaticResource MaterialDesignFlatButton}"
+                                        Width="250"
+                                        Height="Auto" Click="helpButtonClick" MouseLeftButtonUp="helpButtonClick"
                                     
-			                    >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <StackPanel Orientation="Horizontal" Margin="10 0">
-                                                <materialDesign:PackIcon Kind="HelpCircleOutline" Width="20" Height="20" Foreground="#FFF08033" Margin="5" VerticalAlignment="Center"/>
-                                                <AccessText FontWeight="Light" FontSize="16" FontFamily="Champagne &amp;" Foreground="AliceBlue" Margin="10" VerticalAlignment="Center" Text="Help" TextWrapping="Wrap" TextAlignment="Center"/>
-                                            </StackPanel>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
+			                        >
+                                        <Button.Template>
+                                            <ControlTemplate>
+                                                <StackPanel Orientation="Horizontal" Margin="10 0">
+                                                    <materialDesign:PackIcon Kind="HelpCircleOutline" Width="20" Height="20" Foreground="#FFF08033" Margin="5" VerticalAlignment="Center"/>
+                                                    <AccessText FontWeight="Light" FontSize="16" FontFamily="Champagne &amp;" Foreground="AliceBlue" Margin="10" VerticalAlignment="Center" Text="Help" TextWrapping="Wrap" TextAlignment="Center"/>
+                                                </StackPanel>
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                </Border>
                             </ListViewItem>
 
                             <ListViewItem Height="45" Padding="0">

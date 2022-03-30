@@ -12,26 +12,28 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using virtulib_project.UserControls;
-using System.Runtime.CompilerServices;
-using System.ComponentModel;
+using virtulib_project.Models;
 
 namespace virtulib_project.Pages
 {
     /// <summary>
-    /// Interaction logic for SearchResult.xaml
+    /// Interaction logic for Page1.xaml
     /// </summary>
-    public partial class SearchResult : Page
+    public partial class Checkout : Page
     {
-        public SearchResult()
+        private MainViewModel _main = new MainViewModel();
+        public Checkout(MainViewModel mainViewModel)
         {
             InitializeComponent();
-            DataContext = this;
+
+            _main = mainViewModel;
+            CheckoutRoot.DataContext = mainViewModel;
         }
 
-        private void Book_Summary(object sender, RoutedEventArgs e)
+        private void CheckoutBack(object sender, RoutedEventArgs e)
         {
-
+            //Main.Navigate(new Browse(_main));
+            NavigationService.Navigate(new Browse(_main));
         }
     }
 }

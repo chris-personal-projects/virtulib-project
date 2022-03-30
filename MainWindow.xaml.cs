@@ -45,13 +45,28 @@ namespace virtulib_project
 
         private void Open_Cart(object sender, RoutedEventArgs e)
         {
-            object checkoutControl = new CheckoutControl();
+            object checkoutControl = new CheckoutControl(_main);
             _main.SetDialog(checkoutControl);
         }
 
         private void helpButtonClick(object sender, RoutedEventArgs e)
         {
             Main.Navigate(new Help());
+        }
+        
+        private void ProfilePanelClick(object sender, RoutedEventArgs e)
+        {
+            Main.Navigate(new Profile());
+        }
+
+        private void myItemsClick(object sender, MouseButtonEventArgs e)
+        {
+            Main.Navigate(new MyItems());
+        }
+
+        private void homePage(object sender, MouseButtonEventArgs e)
+        {
+            Main.Navigate(new Browse(_main));
         }
     }
 }

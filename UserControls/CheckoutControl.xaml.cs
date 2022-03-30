@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using virtulib_project.Pages;
+using virtulib_project.Models;
 
 namespace virtulib_project.UserControls
 {
@@ -20,10 +22,18 @@ namespace virtulib_project.UserControls
     /// </summary>
     public partial class CheckoutControl : UserControl
     {
-        public CheckoutControl()
+        MainViewModel viewModel;
+        public CheckoutControl(MainViewModel mainViewModel)
         {
             InitializeComponent();
             DataContext = this;
+            viewModel = mainViewModel;
+        }
+
+        private void CheckoutRedirect(object sender, RoutedEventArgs e)
+        {
+            MainViewModel mainViewModel = new MainViewModel();
+            ((MainWindow)App.Current.MainWindow).Main.Navigate(new Checkout(viewModel));
         }
     }
 }

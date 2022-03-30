@@ -422,7 +422,7 @@
 				Margin="4"
 				VerticalAlignment="Center"
 				Grid.Column="7"
-				Grid.ColumnSpan="3">
+				Grid.ColumnSpan="3" Click="CheckoutRedirect">
                 Check Out
             </Button>
         </Grid>
