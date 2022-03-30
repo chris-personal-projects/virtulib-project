@@ -12,17 +12,28 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using virtulib_project.Models;
 
 namespace virtulib_project.Pages
 {
     /// <summary>
     /// Interaction logic for Page1.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class Checkout : Page
     {
-        public Page1()
+        private MainViewModel _main = new MainViewModel();
+        public Checkout(MainViewModel mainViewModel)
         {
             InitializeComponent();
+
+            _main = mainViewModel;
+            CheckoutRoot.DataContext = mainViewModel;
+        }
+
+        private void CheckoutBack(object sender, RoutedEventArgs e)
+        {
+            //Main.Navigate(new Browse(_main));
+            NavigationService.Navigate(new Browse(_main));
         }
     }
 }

@@ -79,6 +79,9 @@
     <Compile Include="Models\MainViewModel.cs" />
     <Compile Include="Models\ObservableObject.cs" />
     <Compile Include="Models\VirtulibBookModel.cs" />
+    <Compile Include="Pages\Checkout.xaml.cs">
+      <DependentUpon>Checkout.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MyItems.xaml.cs">
       <DependentUpon>MyItems.xaml</DependentUpon>
     </Compile>
@@ -109,6 +112,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\Checkout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\MyItems.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

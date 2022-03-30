@@ -10,76 +10,15 @@
       Title="Checkout"
       Background="#181735">
 
-    <Grid>
+    <Grid x:Name="CheckoutRoot">
         
         
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
+ 
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Grid 
-            Grid.Row="0" 
-            Background="#0F0F2D"
-        >
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="60"/>
-                <ColumnDefinition Width="50"/>
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
-            </Grid.ColumnDefinitions>
-
-            <Image 
-                Width="50" 
-                Height="50" 
-                Grid.Column="0"
-                Source="/imgs/virtulib-logo.png"
-                RenderOptions.BitmapScalingMode="Fant"
-            />
-
-            <fa:ImageAwesome
-                Icon="Bars"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center"
-                Width="30"
-                Height="30"
-                Foreground="White"
-                Grid.Column="1"
-            ></fa:ImageAwesome>
-            
-
         
-            
-            <TextBox 
-                Grid.Column="2" 
-                Grid.ColumnSpan="7"
-                HorizontalAlignment="Left" 
-                VerticalAlignment="Center" 
-                TextWrapping="Wrap"
-                Width="900"
-                Height="25"
-                Text=""
-                VerticalContentAlignment="Center"
-            >
-            </TextBox>
-
-            <fa:ImageAwesome
-                Icon="ShoppingCart"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center"
-                Width="30"
-                Height="30" 
-                Foreground="Red"
-                Grid.Column="9"
-            ></fa:ImageAwesome>
-        </Grid>  <!--Top Row functional buttons and Search bar-->
 
         <StackPanel Grid.Row="1" VerticalAlignment="top" HorizontalAlignment="Center" Margin="50">
             <TextBlock
@@ -283,7 +222,7 @@
                 VerticalAlignment="Bottom"
                 Margin="50,150,500,30"
                 FontSize="30"
-                Foreground="Yellow"
+                Foreground="Yellow" Click="CheckoutBack"
             >
                 <Button.Style>
                     <Style TargetType="Button">
