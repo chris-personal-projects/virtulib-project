@@ -13,15 +13,15 @@ namespace virtulib_project.Models
 {
     public class MainViewModel : ObservableObject
     {
-        private string dataPath = @"/data/bookdata.json";
         private VirtulibBookModel[] bookList;
 
         public DialogViewModel MainDialog { get; private set; }
+        public VirtulibBookModel[] BookList { get => bookList; }
 
         public MainViewModel()
         {
             MainDialog = new DialogViewModel();
-            // ParseBookData();
+            ParseBookData();
             
         }
 
@@ -31,18 +31,18 @@ namespace virtulib_project.Models
             MainDialog.IsShow = !MainDialog.IsShow; // Toggle the Dialog on or off
         }
 
-        //private void ParseBookData()
-        //{
-        //    using(StreamReader file = File.OpenText(dataPath))
-        //    {
-        //        string jsonstring = file.ReadToEnd();
-        //        JObject jsonObj = JObject.Parse(jsonstring);
-        //        var jsonArray = JArray.Parse(jsonObj["virtulib_data"].ToString());
-        //        bookList = jsonArray.ToObject<List<VirtulibBookModel>>().ToArray();
+        // Read library book data from the JSON file 
+        private void ParseBookData()
+        {
+            string dataPath = "./data/bookdata.json";
+            using (StreamReader file = new StreamReader(dataPath))
+            {
+                string jsonstring = file.ReadToEnd();
+                JObject jsonObj = JObject.Parse(jsonstring);
+                var jsonArray = JArray.Parse(jsonObj["virtulib_data"].ToString());
+                bookList = jsonArray.ToObject<List<VirtulibBookModel>>().ToArray();
+            }
 
-        //        Console.WriteLine(bookList[0]);
-        //    }
-
-        //}
+        }
     }
 }
