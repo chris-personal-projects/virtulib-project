@@ -19,6 +19,7 @@
             <SolidColorBrush x:Key="DarkBlue3" Color="#232247"/>
             <SolidColorBrush x:Key="DarkBlue4" Color="#343275"/>
             <SolidColorBrush x:Key="Purple1" Color="#6865c7"/>
+            <SolidColorBrush x:Key="StarColor" Color="#ccb100"/>
 
             <Style TargetType="TextBlock">
                 <Setter Property="FontFamily" Value="fonts/Dosis.ttf #Dosis ExtraLight"/>
