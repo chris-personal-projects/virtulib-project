@@ -350,96 +350,9 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Grid 
-                    Grid.Row="0" 
-                    Background="#0F0F2D"
-                >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="60"/>
-                        <ColumnDefinition Width="50"/>
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
 
-                    <Image 
-                        Width="50" 
-                        Height="50" 
-                        Grid.Column="0"
-                        Source="/imgs/virtulib-logo.png"
-                        RenderOptions.BitmapScalingMode="Fant"
-                    />
-
-                    <Button
-						Style="{StaticResource MaterialDesignFlatButton}"
-						Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
-                        Grid.Column="1"
-					>
-                        <Button.Template>
-                            <ControlTemplate>
-                                <fa:ImageAwesome 
-                                    Icon="Bars" 
-                                    VerticalAlignment="Center" 
-                                    HorizontalAlignment="Center" 
-                                    Foreground="White"
-                                ></fa:ImageAwesome>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-
-                    <TextBox 
-                        Grid.Column="2" 
-                        Grid.ColumnSpan="7"
-                        HorizontalAlignment="Left" 
-                        VerticalAlignment="Center" 
-                        TextWrapping="Wrap"
-                        Width="900"
-                        Height="25"
-                        Text=""
-                        Margin="10, 0, 0, 0"
-                        VerticalContentAlignment="Center"
-                    ></TextBox>
-                    <fa:ImageAwesome 
-                        Icon="QuestionCircle" 
-                        VerticalAlignment="Center" 
-                        HorizontalAlignment="Center" 
-                        Width="30" 
-                        Height="30"
-                        Foreground="White"
-                        Grid.Column="8"
-                        Grid.ColumnSpan="2"
-                        Margin="20, 0, 0, 0"
-                    ></fa:ImageAwesome>
-
-                    <Button
-						Style="{StaticResource MaterialDesignFlatButton}"
-						Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
-						Grid.Column="9"
-						Height="50"
-						Width="50"
-					>
-                        <Button.Template>
-                            <ControlTemplate>
-                                <fa:ImageAwesome 
-                                    Icon="ShoppingCart" 
-                                    VerticalAlignment="Center" 
-                                    HorizontalAlignment="Center" 
-                                    Width="30" 
-                                    Height="30"
-                                    Foreground="White"
-                                    Grid.Column="9"
-                                ></fa:ImageAwesome>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-                </Grid>
-                <TextBox HorizontalAlignment="Left" Height="70" Margin="10,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Your Books" VerticalAlignment="Top" Width="260" FontWeight="Bold" Foreground="White" FontSize="48" Padding="0" BorderThickness="0"/>
-                <TextBox HorizontalAlignment="Left" Height="30" Margin="675,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="All          Loans          Holds           Wishlist            More" VerticalAlignment="Top" Width="525" FontWeight="Bold" Foreground="White" FontSize="20" Padding="0" BorderThickness="0"/>
+                <TextBox HorizontalAlignment="Left" Height="70" Margin="10,30,0,0" TextWrapping="Wrap" Text="Your Books" VerticalAlignment="Top" Width="260" FontWeight="Bold" Foreground="White" FontSize="48" Padding="0" BorderThickness="0" Grid.RowSpan="2"/>
+                <TextBox HorizontalAlignment="Left" Height="30" Margin="675,40,0,0" TextWrapping="Wrap" Text="All          Loans          Holds           Wishlist            More" VerticalAlignment="Top" Width="525" FontWeight="Bold" Foreground="White" FontSize="20" Padding="0" BorderThickness="0" Grid.RowSpan="2"/>
 
             </Grid>
         </materialDesign:DialogHost>
