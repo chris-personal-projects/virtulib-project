@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Media.Animation;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using virtulib_project.Pages;
@@ -47,26 +48,36 @@ namespace virtulib_project
         {
             object checkoutControl = new CheckoutControl(_main);
             _main.SetDialog(checkoutControl);
+            Storyboard sb = this.FindResource("CloseMenu") as Storyboard;
+            sb.Begin();
         }
 
         private void helpButtonClick(object sender, RoutedEventArgs e)
         {
             Main.Navigate(new Help());
+            Storyboard sb = this.FindResource("CloseMenu") as Storyboard;
+            sb.Begin();
         }
         
         private void ProfilePanelClick(object sender, RoutedEventArgs e)
         {
             Main.Navigate(new Profile());
+            Storyboard sb = this.FindResource("CloseMenu") as Storyboard;
+            sb.Begin();
         }
 
         private void myItemsClick(object sender, MouseButtonEventArgs e)
         {
             Main.Navigate(new MyItems());
+            Storyboard sb = this.FindResource("CloseMenu") as Storyboard;
+            sb.Begin();
         }
 
         private void homePage(object sender, MouseButtonEventArgs e)
         {
             Main.Navigate(new Browse(_main));
+            Storyboard sb = this.FindResource("CloseMenu") as Storyboard;
+            sb.Begin();
         }
     }
 }
