@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 using virtulib_project.UserControls;
 using System.Runtime.CompilerServices;
 using System.ComponentModel;
+using virtulib_project.Models;
+using virtulib_project.Events;
 
 namespace virtulib_project.Pages
 {
@@ -23,15 +25,42 @@ namespace virtulib_project.Pages
     /// </summary>
     public partial class SearchResult : Page
     {
-        public SearchResult()
+        private MainViewModel _mainViewModel;
+        private VirtulibBookModel[] BookList;
+
+        public SearchResult(MainViewModel mainViewModel)
         {
             InitializeComponent();
-            DataContext = this;
+            BookList = mainViewModel.BookList;
+            DataContext = mainViewModel;
+            _mainViewModel = mainViewModel;
+
+            InitSearchResults();
+
+        }
+
+        private void InitSearchResults()
+        {
+            Border virtuBorder = null;
+            VirtulibBook virtulibBook = null;
+            foreach (VirtulibBookModel book in BookList)
+            {
+                virtulibBook = new VirtulibBook(book);
+
+                virtulibBook.BookImage = book.Image_Location;
+                virtulibBook.VirtulibBookSelected += Book_Summary;
+
+                virtuBorder = new Border();
+                virtuBorder.Child = virtulibBook;
+                SearchBookShelf.Children.Add(virtuBorder);
+            }
         }
 
         private void Book_Summary(object sender, RoutedEventArgs e)
         {
-
+            VirtulibBookSelectedEventArgs args = (VirtulibBookSelectedEventArgs)e;
+            BookInfoDialog bookInfoDialog = new BookInfoDialog(args);
+            _mainViewModel.SetDialog(bookInfoDialog);
         }
     }
 }

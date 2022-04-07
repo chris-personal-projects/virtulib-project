@@ -83,12 +83,6 @@ namespace virtulib_project
             sb.Begin();
         }
 
-        private void LoadSearchResults()
-        {
-            Main.Navigate(new SearchResult());
-            // throw new NotImplementedException();
-        }
-
         private void InitSearchResults(object sender, TextChangedEventArgs e)
         {
             InitSearchTimer(sender, e);
@@ -127,6 +121,12 @@ namespace virtulib_project
             }
 
             timer.Stop();
+        }
+
+        private void LoadSearchResults()
+        {
+            Main.Navigate(new SearchResult(_main));
+            // throw new NotImplementedException();
         }
     }
 }
