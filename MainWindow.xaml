@@ -195,6 +195,7 @@
                         </Button>
 
                         <TextBox 
+                                x:Name="mainSearch"
                                 Grid.Column="2" 
                                 Grid.ColumnSpan="7"
                                 HorizontalAlignment="Left" 
@@ -205,7 +206,7 @@
                                 Text=""
                                 Background="AliceBlue"
                                 Margin="10, 0, 0, 0"
-                                VerticalContentAlignment="Center"/>
+                                VerticalContentAlignment="Center" TextChanged="InitSearchResults"/>
 
                         <materialDesign:PackIcon 
                                 Kind="HelpCircleOutline"

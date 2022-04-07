@@ -18,6 +18,8 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using virtulib_project.UserControls;
 using virtulib_project.Models;
+using System.Timers;
+using System.Windows.Threading;
 
 namespace virtulib_project
 {
@@ -27,13 +29,14 @@ namespace virtulib_project
     public partial class MainWindow : Window
     {
         private MainViewModel _main = new MainViewModel();
+        private DispatcherTimer searchInputTimer;
+        private const int TIMER_DELAY = 200;
 
         public MainWindow()
         {
             InitializeComponent();
             Main.Navigate(new Browse(_main));
             DataContext = _main;
-
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
@@ -78,6 +81,52 @@ namespace virtulib_project
             Main.Navigate(new Browse(_main));
             Storyboard sb = this.FindResource("CloseMenu") as Storyboard;
             sb.Begin();
+        }
+
+        private void LoadSearchResults()
+        {
+            Main.Navigate(new SearchResult());
+            // throw new NotImplementedException();
+        }
+
+        private void InitSearchResults(object sender, TextChangedEventArgs e)
+        {
+            InitSearchTimer(sender, e);
+        }
+
+        private void InitSearchTimer(object sender, TextChangedEventArgs e)
+        {
+            if (searchInputTimer == null)
+            {
+                searchInputTimer = new DispatcherTimer();
+                searchInputTimer.Interval = TimeSpan.FromMilliseconds(TIMER_DELAY);
+                searchInputTimer.Tick += new EventHandler(this.handleInitSearchResults);
+            }
+            searchInputTimer.Stop(); // Resets the timer
+            searchInputTimer.Tag = (sender as TextBox).Text; // This should be done with EventArgs
+            searchInputTimer.Start();
+        }
+
+        private void handleInitSearchResults(object sender, EventArgs e) 
+        {
+            var timer = sender as DispatcherTimer;
+            if (timer == null)
+            {
+                return;
+            }
+
+            if (String.IsNullOrEmpty(mainSearch.Text))
+            {
+                // Console.WriteLine("Caker!");
+                Main.Navigate(new Browse(_main));
+            }
+            else
+            {
+                // Console.WriteLine("Nada!");
+                LoadSearchResults();
+            }
+
+            timer.Stop();
         }
     }
 }
