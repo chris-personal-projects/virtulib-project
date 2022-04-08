@@ -42,5 +42,20 @@ namespace virtulib_project.Pages
 
 
         }
+
+        private void Button_Clicksecond(object sender, RoutedEventArgs e)
+        { 
+            second.Children.Clear();
+        }
+
+        private void Button_Clickthird(object sender, RoutedEventArgs e)
+        {
+            thrid.Children.Clear();
+        }
+
+        private void Button_Clickfourth(object sender, RoutedEventArgs e)
+        {
+            fourth.Children.Clear();    
+        }
     }
 }
