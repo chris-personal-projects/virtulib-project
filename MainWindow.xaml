@@ -208,17 +208,28 @@
                                 Margin="10, 0, 0, 0"
                                 VerticalContentAlignment="Center" TextChanged="InitSearchResults"/>
 
-                        <materialDesign:PackIcon 
-                                Kind="HelpCircleOutline"
-                                Grid.Column="8"
+                        <Button
+			                    Style="{StaticResource MaterialDesignFlatButton}"
+			                    Grid.Column="8"
                                 Grid.ColumnSpan="2"
-                                Foreground="#FFF08033" 
-                                VerticalAlignment="Center" 
-                                HorizontalAlignment="Center" 
-                                Width="30" 
-                                Height="30"
-                                Margin="20, 0, 0, 0"/>
-
+			                    Height="50"
+			                    Width="50"
+                                Click="Open_Help_From_Nav"
+		                    >
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <materialDesign:PackIcon 
+                                        Kind="HelpCircleOutline"
+                                        Grid.Column="8"
+                                        Grid.ColumnSpan="2"
+                                        Foreground="#FFF08033" 
+                                        VerticalAlignment="Center" 
+                                        HorizontalAlignment="Center" 
+                                        Width="30" 
+                                        Height="30"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
 
                         <Button
 			                    Style="{StaticResource MaterialDesignFlatButton}"

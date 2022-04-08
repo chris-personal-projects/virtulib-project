@@ -38,9 +38,21 @@ namespace virtulib_project.UserControls
             DependencyProperty.Register("HelpSummaryDescription", typeof(string),
             typeof(HelpItem), new PropertyMetadata(""));
 
+        public event RoutedEventHandler HelpItsemSelectedSelected
+        {
+            add { AddHandler(HelpItsemSelectedSelectedEvent, value); }
+            remove { RemoveHandler(HelpItsemSelectedSelectedEvent, value); }
+        }
+
+        public static readonly RoutedEvent HelpItsemSelectedSelectedEvent =
+            EventManager.RegisterRoutedEvent("HelpItsemSelectedSelected",
+                RoutingStrategy.Bubble, typeof(RoutedEventHandler),
+                typeof(HelpItem));
+
         private void Help_Details_Click(object sender, RoutedEventArgs e)
         {
-            
+            RoutedEventArgs helpSelected = new RoutedEventArgs(HelpItem.HelpItsemSelectedSelectedEvent, e);
+            RaiseEvent(helpSelected);
         }
     }
 }
