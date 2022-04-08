@@ -84,7 +84,7 @@
 
                             
                             <ListViewItem Height="45" Padding="0" Width="250">
-                                <Border Background="#00000000" MouseLeftButtonUp="Open_Cart" Cursor="Hand" Width="250">
+                                <Border Background="#00000000" MouseLeftButtonUp="Open_Cart_Page" Cursor="Hand" Width="250">
                                     <StackPanel Orientation="Horizontal" Margin="10 0">
                                         <fa:ImageAwesome Icon="ShoppingCart" HorizontalAlignment="Center" Width="20" Height="20" Foreground="White" Grid.Column="9" Margin="5" VerticalAlignment="Center"/>
                                         <TextBlock Text="My Cart" Margin="10"/>
@@ -225,7 +225,7 @@
 			                    Grid.Column="9"
 			                    Height="50"
 			                    Width="50"
-                                Click="Open_Cart"
+                                Click="Open_Cart_Dialog"
 		                    >
                             <Button.Template>
                                 <ControlTemplate>

@@ -49,12 +49,18 @@ namespace virtulib_project
             }
         }
 
-        private void Open_Cart(object sender, RoutedEventArgs e)
+        private void Open_Cart_Dialog(object sender, RoutedEventArgs e)
         {
             object checkoutControl = new CheckoutControl(_main);
             _main.SetDialog(checkoutControl);
+
+        }
+
+        private void Open_Cart_Page(object sender, MouseButtonEventArgs e)
+        {
             Storyboard sb = this.FindResource("CloseMenu") as Storyboard;
             sb.Begin();
+            Main.Navigate(new Checkout(_main));
         }
 
         private void helpButtonClick(object sender, RoutedEventArgs e)
@@ -130,5 +136,7 @@ namespace virtulib_project
             Main.Navigate(new SearchResult(_main));
             // throw new NotImplementedException();
         }
+
+
     }
 }
