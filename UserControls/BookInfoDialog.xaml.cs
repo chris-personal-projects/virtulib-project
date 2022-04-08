@@ -158,11 +158,15 @@ namespace virtulib_project.UserControls
             {
                 BookInfoDialogStockTag  = "Available - Arrives in 2-3 Days";
                 InStockColor = (Brush)Application.Current.Resources["PrimaryHueDarkBrush"];
+
             }
             else 
             {
                 BookInfoDialogStockTag = "No Copies Available";
                 InStockColor = new SolidColorBrush(Colors.Red);
+
+                AddCartButton.Visibility = Visibility.Hidden;
+                AddCartButton.IsEnabled = false;
             } 
         }
 

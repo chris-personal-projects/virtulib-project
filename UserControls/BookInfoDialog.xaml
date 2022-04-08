@@ -52,20 +52,24 @@
 				Style="{StaticResource MaterialDesignFlatButton}"
 				Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
 				Grid.Column="13"
-				Height="25"
-				Width="25"
+				Height="35"
+				Width="35"
+                BorderBrush="{x:Null}"
+                Margin="0"
+                Background="Transparent"
+                Padding="0"
+                BorderThickness="0"
+                HorizontalAlignment="Center"
+                HorizontalContentAlignment="Center"
+                VerticalContentAlignment="Center"
             >
-                <Button.Template>
-                    <ControlTemplate>
-                        <materialDesign:PackIcon
-							Kind="WindowClose"
-							Foreground="Red"
-							Width="35"
-							Height="35"
-							VerticalAlignment="Center"
-							HorizontalAlignment="Center"/>
-                    </ControlTemplate>
-                </Button.Template>
+                <materialDesign:PackIcon
+					Kind="WindowClose"
+					Foreground="Red"
+					Width="25"
+					Height="25"
+					VerticalAlignment="Center"
+					HorizontalAlignment="Center"/>
             </Button>
         </Grid>
 
@@ -170,33 +174,33 @@
                                 Grid.Row="5"/>
 
                             <Button
+                                x:Name="AddCartButton"
 						        Style="{StaticResource MaterialDesignFlatButton}"
                                 Grid.Row="6"
                                 Width="200"
-                                HorizontalAlignment="Left" Click="CloseAndNotify"
-					        >   
-                                <Button.Template>
-                                    <ControlTemplate>
-                                        <StackPanel Orientation="Horizontal">
-                                            <fa:ImageAwesome 
-                                                Icon="ShoppingCart" 
-                                                VerticalAlignment="Center" 
-                                                HorizontalAlignment="Center" 
-                                                Foreground="{StaticResource PrimaryHueDarkBrush}"/>
-
-                                            <TextBlock 
-                                                Text="Add to Cart"
-                                                Foreground="Gray"
-                                                VerticalAlignment="Center"
-                                                HorizontalAlignment="Left"
-                                                FontSize="20"
-                                                FontWeight="Bold"
-                                                Grid.Column="0"
-                                                Margin="15, 0, 0, 0"/>
-                                        </StackPanel>
-                                    </ControlTemplate>
-                                </Button.Template>
-
+                                Padding="0"
+                                Margin="0"
+                                HorizontalAlignment="Left" 
+                                Click="CloseAndNotify"
+                                
+					        >
+                                <StackPanel Orientation="Horizontal" Width="200">
+                                    <fa:ImageAwesome 
+                                        Icon="ShoppingCart" 
+                                        VerticalAlignment="Center" 
+                                        HorizontalAlignment="Left" 
+                                        Margin="0"
+                                        Foreground="{StaticResource PrimaryHueDarkBrush}"/>
+                                    <TextBlock 
+                                        Text="Add to Cart"
+                                        Foreground="Gray"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Left"
+                                        FontSize="20"
+                                        FontWeight="Bold"
+                                        Grid.Column="0"
+                                        Margin="15, 0, 0, 0"/>
+                                </StackPanel>
                             </Button>
                         </Grid>
                     </Border>
