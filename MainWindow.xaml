@@ -241,7 +241,14 @@
                             </Button.Template>
                         </Button>
                     </Grid>
-                    <materialDesign:Snackbar Grid.Row="1" MessageQueue="{Binding BookMessageQueue}" Panel.ZIndex="5" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                    <materialDesign:Snackbar 
+                        Grid.Row="1" 
+                        MessageQueue="{Binding BookMessageQueue}" 
+                        Panel.ZIndex="5" 
+                        VerticalAlignment="Top" 
+                        HorizontalAlignment="Center"
+                        Width="3000"
+                        Background="{StaticResource Purple1}"/>
                     <Frame 
                         Grid.Row="1"
                         x:Name="Main"
