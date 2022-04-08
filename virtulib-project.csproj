@@ -129,10 +129,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\DialogCheckoutTest.xaml">
-      <SubType>Designer</SubType>
-      <Generator>XamlIntelliSenseFileGenerator</Generator>
-    </Page>
     <Page Include="Pages\Help.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -168,10 +164,6 @@
     </Compile>
     <Compile Include="Pages\Browse.xaml.cs">
       <DependentUpon>Browse.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\DialogCheckoutTest.xaml.cs">
-      <DependentUpon>DialogCheckoutTest.xaml</DependentUpon>
-      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Pages\Help.xaml.cs">
       <DependentUpon>Help.xaml</DependentUpon>
