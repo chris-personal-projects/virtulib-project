@@ -10,13 +10,14 @@
              d:DesignHeight="800" d:DesignWidth="1200">
     <Grid Width="500" Height="700" HorizontalAlignment="Center" VerticalAlignment="Top">
         <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
             <RowDefinition Height="50"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
 
-        <Grid Grid.Row="0">
+        <Grid Grid.Row="1">
             <StackPanel Orientation="Horizontal">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -33,32 +34,29 @@
                     </Grid.ColumnDefinitions>
 
                     <Button
-							Style="{StaticResource MaterialDesignFlatButton}"
-							Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
-							Grid.Column="9"
-							Height="50"
+						Style="{StaticResource MaterialDesignFlatButton}"
+						Command="{x:Static materialDesign:DialogHost.CloseDialogCommand}"
+						Grid.Column="9"
+						Height="50"
+						Width="50"
+						Padding="0"
+						Margin="-10, 0, 0, 0"
+					>
+                        <materialDesign:PackIcon
+							Kind="WindowClose"
+							Foreground="Red"
 							Width="50"
-						>
-                        <Button.Template>
-                            <ControlTemplate>
-                                <materialDesign:PackIcon
-										Kind="WindowClose"
-										Foreground="Red"
-										Width="50"
-										Height="50"
-										VerticalAlignment="Center"
-										HorizontalAlignment="Center"
-									/>
-                            </ControlTemplate>
-                        </Button.Template>
+							Height="50"
+							VerticalAlignment="Center"
+							HorizontalAlignment="Center"/>
                     </Button>
                 </Grid>
             </StackPanel>
         </Grid>
-        <Grid Grid.Row="1">
+        <Grid Grid.Row="2">
             <TextBlock Text="Your Cart" Foreground="{StaticResource PrimaryHueDarkBrush}" FontSize="50" HorizontalAlignment="Center"></TextBlock>
         </Grid>
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="3">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="15*"/>
@@ -391,7 +389,7 @@
 
 
         </Grid>
-        <Grid Grid.Row="3">
+        <Grid Grid.Row="4">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="50"/>
                 <ColumnDefinition Width="50"/>
