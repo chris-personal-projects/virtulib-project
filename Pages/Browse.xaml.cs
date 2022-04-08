@@ -28,8 +28,8 @@ namespace virtulib_project.Pages
     {
         private MainViewModel _mainViewModel;
         private VirtulibBookModel[] BookList;
-
         private SnackbarMessageQueue bookMessageQueue;
+
         public Browse(MainViewModel mainViewModel)
         {
             InitializeComponent();
@@ -40,9 +40,8 @@ namespace virtulib_project.Pages
             string[] categoryList = { "Best Sellers", "Staff Picks", "Virtulib Picks", "Fiction", "Non-Fiction" };
 
             generateNetflixScrolls(categoryList);
-
             bookMessageQueue = _mainViewModel.BookMessageQueue;
-            bookMessageQueue.Enqueue("Caker 2 testing!");
+
         }
 
         private void generateNetflixScrolls(string[] categoryList)
@@ -80,7 +79,15 @@ namespace virtulib_project.Pages
         {
             VirtulibBookSelectedEventArgs args = (VirtulibBookSelectedEventArgs)e;
             BookInfoDialog bookInfoDialog = new BookInfoDialog(args);
+            bookInfoDialog.SnackbarMessageInit += InitSnackbarMessage;
+
             _mainViewModel.SetDialog(bookInfoDialog);
+        }
+
+        private void InitSnackbarMessage(object sender, RoutedEventArgs e)
+        {
+            SnackbarMessageEventArg args = (SnackbarMessageEventArg) e;
+            bookMessageQueue.Enqueue(args.SnackMessage);
         }
     }
 }

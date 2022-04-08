@@ -17,6 +17,7 @@ using System.Runtime.CompilerServices;
 using System.ComponentModel;
 using virtulib_project.Models;
 using virtulib_project.Events;
+using MaterialDesignThemes.Wpf;
 
 namespace virtulib_project.Pages
 {
@@ -27,6 +28,7 @@ namespace virtulib_project.Pages
     {
         private MainViewModel _mainViewModel;
         private VirtulibBookModel[] BookList;
+        private SnackbarMessageQueue bookMessageQueue;
 
         public SearchResult(MainViewModel mainViewModel)
         {
@@ -36,6 +38,7 @@ namespace virtulib_project.Pages
             _mainViewModel = mainViewModel;
 
             InitSearchResults();
+            bookMessageQueue = _mainViewModel.BookMessageQueue;
 
         }
 
@@ -60,7 +63,14 @@ namespace virtulib_project.Pages
         {
             VirtulibBookSelectedEventArgs args = (VirtulibBookSelectedEventArgs)e;
             BookInfoDialog bookInfoDialog = new BookInfoDialog(args);
+            bookInfoDialog.SnackbarMessageInit += InitSnackbarMessage;
             _mainViewModel.SetDialog(bookInfoDialog);
+        }
+
+        private void InitSnackbarMessage(object sender, RoutedEventArgs e)
+        {
+            SnackbarMessageEventArg message = (SnackbarMessageEventArg)e;
+            bookMessageQueue.Enqueue(message.SnackMessage);
         }
     }
 }

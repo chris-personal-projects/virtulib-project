@@ -73,6 +73,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Events\BookSummaryEventArgs.cs" />
+    <Compile Include="Events\SnackbarMessageEventArg.cs" />
     <Compile Include="Events\VirtulibBookSelectedEventArgs.cs" />
     <Compile Include="Models\BrowseViewModel.cs" />
     <Compile Include="Models\DialogViewModel.cs" />

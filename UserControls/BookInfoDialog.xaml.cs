@@ -208,6 +208,27 @@ namespace virtulib_project.UserControls
         private void CloseAndNotify(object sender, RoutedEventArgs e)
         {
             DialogHost.CloseDialogCommand.Execute(null, null);
+            RaiseSnackbarMessageInitEvent();
         }
+
+        private void RaiseSnackbarMessageInitEvent()
+        {
+            string snackMessage = $"\"{BookInfoDialogTitle}\" has been added to your cart.";
+
+            RoutedEventArgs newEventArg = new SnackbarMessageEventArg(BookInfoDialog.SnackbarMessageInitEvent, snackMessage);
+            RaiseEvent(newEventArg);
+            // throw new NotImplementedException();
+        }
+
+        public event RoutedEventHandler SnackbarMessageInit
+        {
+            add { AddHandler(SnackbarMessageInitEvent, value); }
+            remove { RemoveHandler(SnackbarMessageInitEvent, value); }
+        }
+
+        public static readonly RoutedEvent SnackbarMessageInitEvent =
+            EventManager.RegisterRoutedEvent("SnackbarMessageInit",
+                RoutingStrategy.Bubble, typeof(RoutedEventHandler),
+                typeof(string));
     }
 }
