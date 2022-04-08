@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="virtulib_project.UserControls.HelpItem"
+             x:Name= "HelpItemControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:virtulib_project.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="500">
+    <Grid DataContext="{Binding ElementName=HelpItemControl}">
+        <Button
+		    Style="{StaticResource MaterialDesignFlatButton}"
+            
+            Height="130"
+            Click="Help_Details_Click"
+	>
+            <Button.Template>
+                <ControlTemplate>
+                    <Grid>
+                        <Rectangle
+                            Width="450"
+                            Stroke="AliceBlue"
+                            Fill="AliceBlue"
+                    />
+                        <Border BorderBrush="Black"  BorderThickness="1" HorizontalAlignment="Center" Height="130" VerticalAlignment="Top" Width="450">
+                            <Grid>
+                                <TextBlock x:Name="summaryLabel" TextWrapping="Wrap" Text="{Binding HelpSummaryDescription}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="black" FontSize="45"  />
+                            </Grid>
+                        </Border>
+
+                    </Grid>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</UserControl>
