@@ -17,6 +17,7 @@ using System.Runtime.CompilerServices;
 using virtulib_project.UserControls;
 using virtulib_project.Models;
 using virtulib_project.Events;
+using MaterialDesignThemes.Wpf;
 
 namespace virtulib_project.Pages
 {
@@ -28,6 +29,7 @@ namespace virtulib_project.Pages
         private MainViewModel _mainViewModel;
         private VirtulibBookModel[] BookList;
 
+        private SnackbarMessageQueue bookMessageQueue;
         public Browse(MainViewModel mainViewModel)
         {
             InitializeComponent();
@@ -39,6 +41,8 @@ namespace virtulib_project.Pages
 
             generateNetflixScrolls(categoryList);
 
+            bookMessageQueue = _mainViewModel.BookMessageQueue;
+            bookMessageQueue.Enqueue("Caker 2 testing!");
         }
 
         private void generateNetflixScrolls(string[] categoryList)

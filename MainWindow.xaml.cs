@@ -20,6 +20,7 @@ using virtulib_project.UserControls;
 using virtulib_project.Models;
 using System.Timers;
 using System.Windows.Threading;
+using MaterialDesignThemes.Wpf;
 
 namespace virtulib_project
 {
@@ -37,6 +38,7 @@ namespace virtulib_project
             InitializeComponent();
             Main.Navigate(new Browse(_main));
             DataContext = _main;
+
         }
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
