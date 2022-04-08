@@ -173,7 +173,7 @@
 						        Style="{StaticResource MaterialDesignFlatButton}"
                                 Grid.Row="6"
                                 Width="200"
-                                HorizontalAlignment="Left"
+                                HorizontalAlignment="Left" Click="CloseAndNotify"
 					        >   
                                 <Button.Template>
                                     <ControlTemplate>

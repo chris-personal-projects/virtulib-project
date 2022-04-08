@@ -200,5 +200,10 @@ namespace virtulib_project.UserControls
             starIcon.HorizontalAlignment = HorizontalAlignment.Center;
             return starIcon;
         }
+
+        private void CloseAndNotify(object sender, RoutedEventArgs e)
+        {
+            DialogHost.CloseDialogCommand.Execute(null, null);
+        }
     }
 }
