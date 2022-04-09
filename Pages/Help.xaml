@@ -11,7 +11,36 @@
       Background="{StaticResource DarkBlue2}">
 
     <Grid x:Name="HelpRoot">
-        <ScrollViewer >
+        <StackPanel Orientation="Vertical">
+            <DockPanel>
+                <TextBlock Text="Get Help" FontSize="30" Foreground="White" VerticalAlignment="Center" DockPanel.Dock="Left" Padding="10 10 5 5"/>
+                <Button
+                                x:Name="ContactSupportButton"
+						        Style="{StaticResource MaterialDesignFlatButton}"
+                                Click="Contact_Form_Click"
+                                HorizontalAlignment="Right"
+                                
+                                
+					        >
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome 
+                                        Icon="Envelope" 
+                                        VerticalAlignment="Center" 
+                                        HorizontalAlignment="Left" 
+                                        Margin="0"
+                                        Foreground="White"/>
+                        <TextBlock 
+                                        Text="Contact Support"
+                                        Foreground="White"
+                                        VerticalAlignment="Center"
+                                        FontSize="30"
+                                        FontWeight="Bold"
+                                        Grid.Column="0"
+                                        Margin="15, 0, 0, 0"/>
+                    </StackPanel>
+                </Button>
+            </DockPanel>
+            <ScrollViewer >
             <StackPanel Orientation="Vertical" x:Name="HelpRootPanel">
                 <WrapPanel Grid.Row="1" Width="1100" x:Name="HelpArticleGrid">
                     <WrapPanel.Resources>
@@ -22,7 +51,7 @@
                 </WrapPanel>
             </StackPanel>
         </ScrollViewer>
-
+           </StackPanel>
     </Grid>
 
 </Page>

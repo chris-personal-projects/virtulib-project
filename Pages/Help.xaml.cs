@@ -61,5 +61,19 @@ namespace virtulib_project.Pages
             HelpDialog helpDialog = new HelpDialog();
             _mainViewModel.SetDialog(helpDialog);
         }
+
+
+
+        private void Contact_Form_Click(object sender, RoutedEventArgs e)
+        {
+            // VirtulibBookSelectedEventArgs args = (VirtulibBookSelectedEventArgs)e;
+            // BookInfoDialog bookInfoDialog = new BookInfoDialog(args);
+            // bookInfoDialog.SnackbarMessageInit += InitSnackbarMessage;
+
+            ContactDialog contactDialog = new ContactDialog();
+            _mainViewModel.SetDialog(contactDialog);
+        }
+
+        
     }
 }
