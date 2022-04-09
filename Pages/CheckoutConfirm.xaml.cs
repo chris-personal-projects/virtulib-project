@@ -36,5 +36,10 @@ namespace virtulib_project.Pages
             NavigationService.Navigate(new Browse(_main));
         }
 
+        private void GoToAccount(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new Profile());
+        }
+
     }
 }
