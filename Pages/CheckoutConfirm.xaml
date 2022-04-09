@@ -169,7 +169,7 @@
                 Margin="0"
                 FontSize="30"
                 Foreground="Yellow" Click="BackToHome"
-                Padding="20"
+                Padding="13"
             >
                 <Button.Style>
                     <Style TargetType="Button">
@@ -192,7 +192,7 @@
                 Margin="0"
                 FontSize="30"
                 Foreground="GreenYellow" Click="GoToAccount"
-                Padding="20"
+                Padding="13"
             >
                 <Button.Style>
                     <Style TargetType="Button">

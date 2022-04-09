@@ -310,7 +310,7 @@
                 Margin="0"
                 FontSize="30"
                 Foreground="Yellow" Click="CheckoutBack"
-                Padding="20"
+                Padding="13"
             >
                 <Button.Style>
                     <Style TargetType="Button">
@@ -334,7 +334,7 @@
                 Margin="0"
                 FontSize="30"
                 Foreground="GreenYellow" Click="CheckoutConfirmed"
-                Padding="20"
+                Padding="13"
             >
                 <Button.Style>
                     <Style TargetType="Button">
