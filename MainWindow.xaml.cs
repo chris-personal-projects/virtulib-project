@@ -65,11 +65,16 @@ namespace virtulib_project
 
         private void helpButtonClick(object sender, RoutedEventArgs e)
         {
-            Main.Navigate(new Help());
+            Main.Navigate(new Help(_main));
             Storyboard sb = this.FindResource("CloseMenu") as Storyboard;
             sb.Begin();
         }
-        
+
+        private void Open_Help_From_Nav(object sender, RoutedEventArgs e)
+        {
+            Main.Navigate(new Help(_main));
+        }
+
         private void ProfilePanelClick(object sender, RoutedEventArgs e)
         {
             Main.Navigate(new Profile());

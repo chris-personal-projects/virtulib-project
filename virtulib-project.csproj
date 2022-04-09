@@ -98,6 +98,15 @@
     <Compile Include="UserControls\CheckoutControl.xaml.cs">
       <DependentUpon>CheckoutControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ContactDialog.xaml.cs">
+      <DependentUpon>ContactDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\HelpDialog.xaml.cs">
+      <DependentUpon>HelpDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\HelpItem.xaml.cs">
+      <DependentUpon>HelpItem.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\NetflixScroll.xaml.cs">
       <DependentUpon>NetflixScroll.xaml</DependentUpon>
     </Compile>
@@ -153,6 +162,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\CheckoutControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ContactDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\HelpDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\HelpItem.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
