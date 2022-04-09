@@ -5,222 +5,309 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:virtulib_project.Pages"
       xmlns:fa="http://schemas.fontawesome.io/icons/"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       mc:Ignorable="d" 
       d:DesignHeight="800" d:DesignWidth="1200"
       Title="Checkout"
       Background="#181735">
 
     <Grid x:Name="CheckoutRoot">
-        
-        
         <Grid.RowDefinitions>
- 
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
 
-        
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-        <StackPanel Grid.Row="1" VerticalAlignment="top" HorizontalAlignment="Center" Margin="50">
-            <TextBlock
-                Text="Check Out"
-                Foreground="LightGray"
-                Grid.Column="3"
-                FontSize="50"
-                VerticalAlignment="Center"
-            />
-            
-        </StackPanel>
+            <StackPanel Grid.Row="0" VerticalAlignment="top" HorizontalAlignment="Center" Margin="0">
+                <TextBlock
+                    Text="Check Out"
+                    Foreground="LightGray"
+                    Grid.Column="3"
+                    FontSize="50"
+                    Margin="0, 20, 0, 10"
+                    VerticalAlignment="Center"
+                />
 
-        <Grid   Grid.Row="1"  VerticalAlignment="Top" Margin="150">
-            <Rectangle
-                Width="600"
-                Height="60"
-                Stroke="AliceBlue"
-                Fill="AliceBlue"
-                VerticalAlignment="Top"
-                Margin="0,0,0,0"
-            ></Rectangle>
+            </StackPanel>
 
-            <TextBlock
-                Text="1.   Catcher in the rye"
+        </Grid>
+
+        <Grid Grid.Row="1" VerticalAlignment="Center">
+            <StackPanel Grid.Row="0" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="50" Orientation="Vertical" x:Name="first">
+                <StackPanel
+                    Width="600"
+                    Height="60"
+                    Background="AliceBlue"
+                    VerticalAlignment="Center"
+                    Margin="0,-45,0,0"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Left"
+                >
+                    <TextBlock
+                Text="   Catcher in the rye"
                 Foreground="Black"
                 FontSize="25"
                 FontWeight="UltraBold"
                 HorizontalAlignment="Left"
-                Margin="180,10,0,20"
+                Margin="0,10,0,0"
             ></TextBlock>
 
-            <TextBlock
-                Text="Digital"
-                Foreground="BlueViolet"
-                FontSize="15"
-                HorizontalAlignment="Left"
-                Margin="205,40,0,0"
-            ></TextBlock>
 
-            <TextBlock
+
+                    <TextBlock
                 Text="Avaliable Instantly"
                 Foreground="Green"
                 FontSize="18"
-                HorizontalAlignment="Left"
-                Margin="450,35,0,0"
+                HorizontalAlignment="Right"
+                Margin="150,35,0,0"
             ></TextBlock>
 
-            <fa:ImageAwesome
-                Icon="trash"
-                Width="40"
+                    <Button
+                Style="{StaticResource MaterialDesignFlatButton}"
+                Grid.Column="9"
                 Height="40"
-                HorizontalAlignment="Right"
-                Foreground="Red"
-                VerticalAlignment="Top"
-                Margin="0,10,160,0"        
-            ></fa:ImageAwesome>
+                Width="40"
+                Padding="0"
+                Click="Button_Click"
+             >
+                        <Button.Template>
+                            <ControlTemplate>
+                                <materialDesign:PackIcon
+                            Kind="Bin"
+                            Width="40"
+                            Height="40"
+                            Foreground="Red"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Right"
+                            Grid.Column="9"
+                            Margin="0,0,-100,0"
+                            
+                            />
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                </StackPanel>
+            </StackPanel>
 
 
-            <Rectangle
-                Width="600"
-                Height="60"
-                Stroke="AliceBlue"
-                Fill="AliceBlue"
-                 VerticalAlignment="Top"
-                Margin="0,100,0,0"
-            ></Rectangle>
-
-            <TextBlock
-                Text="2.  Invisible Man"
+            <StackPanel Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="100" Orientation="Vertical" x:Name="second">
+                <StackPanel
+                    Width="600"
+                    Height="60"
+                    Background="AliceBlue"
+                    VerticalAlignment="Center"
+                    Margin="0,0,0,0"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Left"
+                >
+                    <TextBlock
+                Text="  Invisible Man"
                 Foreground="Black"
                 FontSize="25"
                 FontWeight="Bold"
                 HorizontalAlignment="Left"
-                Margin="180,110,0,0"
+                Margin="10,10,0,0"
             ></TextBlock>
 
-            <TextBlock
-                Text="Digital"
-                Foreground="BlueViolet"
-                FontSize="15"
+
+                    <TextBlock
+                Text="Place Hold- Expected by March 4"
+                Foreground="Red"
+                FontSize="18"
                 HorizontalAlignment="Left"
-                Margin="205,140,0,0"
+                Margin="100,30,0,0"
             ></TextBlock>
+
+                <Button
+                Style="{StaticResource MaterialDesignFlatButton}"
+                Grid.Column="9"
+                Height="40"
+                Width="40"
+                Padding="0"
+                Click="Button_Clicksecond"
+             >
+                        <Button.Template>
+                            <ControlTemplate>
+                                <materialDesign:PackIcon
+                            Kind="Bin"
+                            Width="40"
+                            Height="40"
+                            Foreground="Red"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Right"
+                            Grid.Column="9"
+                            Margin="0,0,-90,0"
+                            
+                            />
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+
+
+                </StackPanel>
+            </StackPanel>
+
+
+
+            <StackPanel Grid.Row="2" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="100"  Orientation="Vertical" x:Name="thrid">
+                <StackPanel
+                    Width="600"
+                    Height="60"
+                    Background="AliceBlue"
+                    VerticalAlignment="Center"
+                    Margin="0,100,0,0"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Left"
+                >
+                    <TextBlock
+                Text="  The Simpsons Movie"
+                Foreground="Black"
+                FontSize="25"
+                FontWeight="Bold"
+                HorizontalAlignment="Left"
+                Margin="0,10,0,0"
+            ></TextBlock>
+
+
 
             <TextBlock
                 Text="Place Hold- Expected by March 4"
                 Foreground="Red"
                 FontSize="18"
                 HorizontalAlignment="Left"
-                Margin="450,135,0,0"
+                Margin="40,30,0,0"
             ></TextBlock>
 
-            <fa:ImageAwesome
-                Icon="trash"
-                Width="40"
+                    <Button
+                Style="{StaticResource MaterialDesignFlatButton}"
+                Grid.Column="9"
                 Height="40"
-                HorizontalAlignment="Right"
-                Foreground="Red"
-                VerticalAlignment="Top"
-                Margin="0,110,160,0"        
-            ></fa:ImageAwesome>
+                Width="40"
+                Padding="0"
+                Click="Button_Clickthird"
+             >
+                        <Button.Template>
+                            <ControlTemplate>
+                                <materialDesign:PackIcon
+                            Kind="Bin"
+                            Width="40"
+                            Height="40"
+                            Foreground="Red"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Right"
+                            Grid.Column="9"
+                            Margin="0,0,-90,0"
+                            />
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
 
 
-
-            <Rectangle
-                Width="600"
-                Height="60"
-                Stroke="AliceBlue"
-                Fill="AliceBlue"
-                 VerticalAlignment="Top"
-                Margin="0,200,0,0"
-            ></Rectangle>
-
-
-            <TextBlock
-                Text="3.  The Simpsons Movie"
+            <StackPanel Grid.Row="3" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="100" Orientation="Vertical" x:Name="fourth">
+                <StackPanel
+                    Width="600"
+                    Height="60"
+                    Background="AliceBlue"
+                    VerticalAlignment="Center"
+                    Margin="0,200,0,0"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Left"
+                >
+                    <TextBlock
+                Text="  Everyday Italian"
                 Foreground="Black"
                 FontSize="25"
                 FontWeight="Bold"
                 HorizontalAlignment="Left"
-                Margin="180,210,0,0"
+                Margin="0,10,0,0"
             ></TextBlock>
 
-            <TextBlock
-                Text="Digital"
-                Foreground="BlueViolet"
-                FontSize="15"
-                HorizontalAlignment="Left"
-                Margin="205,240,0,0"
-            ></TextBlock>
 
-            <TextBlock
-                Text="Place Hold- Expected by March 4"
-                Foreground="Red"
-                FontSize="18"
-                HorizontalAlignment="Left"
-                Margin="450,235,0,0"
-            ></TextBlock>
-
-            <fa:ImageAwesome
-                Icon="trash"
-                Width="40"
-                Height="40"
-                HorizontalAlignment="Right"
-                Foreground="Red"
-                VerticalAlignment="Top"
-                Margin="0,210,160,0"        
-            ></fa:ImageAwesome>
-
-            <Rectangle
-                Width="600"
-                Height="60"
-                Stroke="AliceBlue"
-                Fill="AliceBlue"
-                VerticalAlignment="Top"
-                Margin="0,300,0,0"
-            ></Rectangle>
-
-
-            <TextBlock
-                Text="4.  Everyday Italian"
-                Foreground="Black"
-                FontSize="25"
-                FontWeight="Bold"
-                HorizontalAlignment="Left"
-                Margin="180,310,0,0"
-            ></TextBlock>
-
-            <TextBlock
-                Text="Digital"
-                Foreground="BlueViolet"
-                FontSize="15"
-                HorizontalAlignment="Left"
-                Margin="205,340,0,0"
-            ></TextBlock>
-
-            <TextBlock
+                    <TextBlock
                 Text="Availiable-Arrives Feb. 14-16"
                 Foreground="Green"
                 FontSize="18"
                 HorizontalAlignment="Left"
-                Margin="450,335,0,0"
+                Margin="122,30,0,0"
             ></TextBlock>
 
-            <fa:ImageAwesome
-                Icon="trash"
-                Width="40"
+
+            <Button
+                Style="{StaticResource MaterialDesignFlatButton}"
+                Grid.Column="9"
                 Height="40"
-                HorizontalAlignment="Right"
-                Foreground="Red"
-                VerticalAlignment="Top"
-                Margin="0,310,160,0"        
-            ></fa:ImageAwesome>
+                Width="40"
+                Padding="0"
+                Click="Button_Clickfourth"
+             >
+                <Button.Template>
+                        <ControlTemplate>
+                          <materialDesign:PackIcon
+                            Kind="Bin"
+                            Width="40"
+                            Height="40"
+                            Foreground="Red"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Right"
+                            Grid.Column="9"
+                            Margin="0,0,-90,0"
+                            />
+                        </ControlTemplate>
+                </Button.Template>
+             </Button>
+
+
+
+
+
+
+
+                </StackPanel>
+
+            </StackPanel>
+            
+            
+            
+         
+            
+            
+
+          
+
+         
+        
+
+
+          
+
+
+           
+
+        
+
+
+            
+        
+        
         </Grid>
 
-        <Grid Grid.Row="2" VerticalAlignment="Bottom" Margin="0,10">
+        <Grid Grid.Row="2" Margin="0">
             <Line Stretch="Fill" Stroke="White" X2="1"></Line>
             <Button
                 Content="Go Back"
                 HorizontalAlignment="Left"
                 VerticalAlignment="Bottom"
-                Margin="50,150,500,30"
+                Margin="0"
                 FontSize="30"
                 Foreground="Yellow" Click="CheckoutBack"
             >
@@ -235,7 +322,7 @@
                             </Trigger>
                         </Style.Triggers>
                     </Style>
-                </Button.Style> 
+                </Button.Style>
             </Button>
 
 
@@ -243,7 +330,7 @@
                 Content="Confirm"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
-                Margin="50,150,50,30"
+                Margin="0"
                 FontSize="30"
                 Foreground="GreenYellow"
             >
@@ -261,10 +348,6 @@
                 </Button.Style>
             </Button>
         </Grid>
-
-
-
-
 
     </Grid>
 </Page>
