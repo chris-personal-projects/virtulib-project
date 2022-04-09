@@ -36,6 +36,11 @@ namespace virtulib_project.Pages
             NavigationService.Navigate(new Browse(_main));
         }
 
+        private void CheckoutConfirmed(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new CheckoutConfirm(_main));
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             first.Children.Clear();

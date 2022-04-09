@@ -83,6 +83,9 @@
     <Compile Include="Pages\Checkout.xaml.cs">
       <DependentUpon>Checkout.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\CheckoutConfirm.xaml.cs">
+      <DependentUpon>CheckoutConfirm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MyItems.xaml.cs">
       <DependentUpon>MyItems.xaml</DependentUpon>
     </Compile>
@@ -116,6 +119,10 @@
     <Page Include="Pages\Checkout.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\CheckoutConfirm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\MyItems.xaml">
       <Generator>MSBuild:Compile</Generator>

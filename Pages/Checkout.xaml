@@ -332,7 +332,7 @@
                 VerticalAlignment="Bottom"
                 Margin="0"
                 FontSize="30"
-                Foreground="GreenYellow"
+                Foreground="GreenYellow" Click="CheckoutConfirmed"
             >
                 <Button.Style>
                     <Style TargetType="Button">
