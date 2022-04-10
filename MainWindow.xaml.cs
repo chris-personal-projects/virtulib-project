@@ -142,6 +142,9 @@ namespace virtulib_project
             // throw new NotImplementedException();
         }
 
+        private void User_Login(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 }

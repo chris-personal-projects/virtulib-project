@@ -201,7 +201,7 @@
                                 HorizontalAlignment="Left" 
                                 VerticalAlignment="Center" 
                                 TextWrapping="Wrap"
-                                Width="900"
+                                Width="825"
                                 Height="25"
                                 Text=""
                                 Background="AliceBlue"
@@ -210,46 +210,63 @@
 
                         <Button
 			                    Style="{StaticResource MaterialDesignFlatButton}"
+			                    Grid.Column="7"
+                                Grid.ColumnSpan="2"
+			                    Height="50"
+			                    Width="50"
+                                Click="User_Login"
+                                Margin="135, 0, 0, 0"
+                                Padding="0"
+		                >
+                            <materialDesign:PackIcon 
+                                Kind="User"
+                                Grid.Column="8"
+                                Grid.ColumnSpan="2"
+                                Foreground="{StaticResource Purple1}" 
+                                VerticalAlignment="Center" 
+                                HorizontalAlignment="Center" 
+                                Width="30" 
+                                Height="30"/>
+                        </Button>
+
+                        <Button
+			                    Style="{StaticResource MaterialDesignFlatButton}"
 			                    Grid.Column="8"
                                 Grid.ColumnSpan="2"
 			                    Height="50"
 			                    Width="50"
                                 Click="Open_Help_From_Nav"
-		                    >
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <materialDesign:PackIcon 
-                                        Kind="HelpCircleOutline"
-                                        Grid.Column="8"
-                                        Grid.ColumnSpan="2"
-                                        Foreground="#FFF08033" 
-                                        VerticalAlignment="Center" 
-                                        HorizontalAlignment="Center" 
-                                        Width="30" 
-                                        Height="30"/>
-                                </ControlTemplate>
-                            </Button.Template>
+                                Padding="0"
+		                >
+                            <materialDesign:PackIcon 
+                                Kind="HelpCircleOutline"
+                                Grid.Column="8"
+                                Grid.ColumnSpan="2"
+                                Foreground="#FFF08033" 
+                                VerticalAlignment="Center" 
+                                HorizontalAlignment="Center" 
+                                Width="30" 
+                                Height="30"/>
                         </Button>
 
                         <Button
-			                    Style="{StaticResource MaterialDesignFlatButton}"
-			                    Grid.Column="9"
-			                    Height="50"
-			                    Width="50"
-                                Click="Open_Cart_Dialog"
-		                    >
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <fa:ImageAwesome 
-                                            Icon="ShoppingCart" 
-                                            VerticalAlignment="Center" 
-                                            HorizontalAlignment="Center" 
-                                            Width="30" 
-                                            Height="30"
-                                            Foreground="White"
-                                            Grid.Column="9"/>
-                                </ControlTemplate>
-                            </Button.Template>
+                            Style="{DynamicResource MaterialDesignFlatButton}"
+			                Grid.Column="9"
+			                Height="50"
+			                Width="50"
+                            Click="Open_Cart_Dialog"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Padding="0"
+		                >
+                            <fa:ImageAwesome 
+                                Icon="ShoppingCart" 
+                                VerticalAlignment="Center" 
+                                HorizontalAlignment="Center" 
+                                Width="30" 
+                                Height="30"
+                                Foreground="White"
+/>
                         </Button>
                     </Grid>
                     <materialDesign:Snackbar 
