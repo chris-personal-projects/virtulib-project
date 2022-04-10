@@ -107,6 +107,9 @@
     <Compile Include="UserControls\HelpItem.xaml.cs">
       <DependentUpon>HelpItem.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\LoginDialog.xaml.cs">
+      <DependentUpon>LoginDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\NetflixScroll.xaml.cs">
       <DependentUpon>NetflixScroll.xaml</DependentUpon>
     </Compile>
@@ -174,6 +177,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\HelpItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\LoginDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

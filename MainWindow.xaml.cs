@@ -144,7 +144,8 @@ namespace virtulib_project
 
         private void User_Login(object sender, RoutedEventArgs e)
         {
-
+            LoginDialog userLoginDialog = new LoginDialog();
+            _main.SetDialog(userLoginDialog);
         }
     }
 }
