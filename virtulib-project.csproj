@@ -73,6 +73,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Events\BookSummaryEventArgs.cs" />
+    <Compile Include="Events\SnackbarMessageEventArg.cs" />
     <Compile Include="Events\VirtulibBookSelectedEventArgs.cs" />
     <Compile Include="Models\BrowseViewModel.cs" />
     <Compile Include="Models\DialogViewModel.cs" />
@@ -81,6 +82,9 @@
     <Compile Include="Models\VirtulibBookModel.cs" />
     <Compile Include="Pages\Checkout.xaml.cs">
       <DependentUpon>Checkout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CheckoutConfirm.xaml.cs">
+      <DependentUpon>CheckoutConfirm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MyItems.xaml.cs">
       <DependentUpon>MyItems.xaml</DependentUpon>
@@ -93,6 +97,18 @@
     </Compile>
     <Compile Include="UserControls\CheckoutControl.xaml.cs">
       <DependentUpon>CheckoutControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ContactDialog.xaml.cs">
+      <DependentUpon>ContactDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\HelpDialog.xaml.cs">
+      <DependentUpon>HelpDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\HelpItem.xaml.cs">
+      <DependentUpon>HelpItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\LoginDialog.xaml.cs">
+      <DependentUpon>LoginDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\NetflixScroll.xaml.cs">
       <DependentUpon>NetflixScroll.xaml</DependentUpon>
@@ -116,6 +132,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Pages\CheckoutConfirm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\MyItems.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -127,10 +147,6 @@
     <Page Include="Pages\Browse.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\DialogCheckoutTest.xaml">
-      <SubType>Designer</SubType>
-      <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
     <Page Include="Pages\Help.xaml">
       <SubType>Designer</SubType>
@@ -152,6 +168,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\ContactDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\HelpDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\HelpItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\LoginDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\NetflixScroll.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -167,10 +199,6 @@
     </Compile>
     <Compile Include="Pages\Browse.xaml.cs">
       <DependentUpon>Browse.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\DialogCheckoutTest.xaml.cs">
-      <DependentUpon>DialogCheckoutTest.xaml</DependentUpon>
-      <SubType>Code</SubType>
     </Compile>
     <Compile Include="Pages\Help.xaml.cs">
       <DependentUpon>Help.xaml</DependentUpon>

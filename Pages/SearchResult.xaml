@@ -15,676 +15,91 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <ScrollViewer>
+            <Grid Grid.Row="1">
+                <Grid.Resources >
+                    <Style TargetType="Border" >
+                        <Setter Property="Padding" Value="40 15 40 40" />
+                    </Style>
+                </Grid.Resources>
 
-        <Grid Grid.Row="1">
-            <Grid.Resources >
-                <Style TargetType="Border" >
-                    <Setter Property="Padding" Value="40 35" />
-                </Style>
-            </Grid.Resources>
+                <Border>
+                    <Grid x:Name="MainSearchGrid">
+                        <Grid.Resources >
+                            <Style TargetType="Border" >
+                                <Setter Property="Padding" Value="10, 0, 10, 0" />
+                            </Style>
+                        </Grid.Resources>
 
-            <Border>
-                <Grid>
-                    <Grid.Resources >
-                        <Style TargetType="Border" >
-                            <Setter Property="Padding" Value="10" />
-                        </Style>
-                    </Grid.Resources>
-                    
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="50"></RowDefinition>
-                        <RowDefinition Height="210"></RowDefinition>
-                        <RowDefinition Height="210"></RowDefinition>
-                        <RowDefinition Height="210"></RowDefinition>
-                    </Grid.RowDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"></RowDefinition>
+                            <RowDefinition Height="10*"></RowDefinition>
 
-                    <Border Grid.Row="0">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="220"></ColumnDefinition>
-                                <ColumnDefinition Width="220"></ColumnDefinition>
-                                <ColumnDefinition Width="220"></ColumnDefinition>
-                                <ColumnDefinition Width="220"></ColumnDefinition>
-                                <ColumnDefinition Width="220"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
+                        </Grid.RowDefinitions>
 
-                            <Grid Grid.Column="0">
-                                <Grid.Resources >
-                                    <Style TargetType="Border" >
-                                        <Setter Property="Padding" Value="10 0" />
-                                    </Style>
-                                </Grid.Resources>
+                        <Border Grid.Row="0">
+                            <Grid Margin="0, 0, 0, 20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="220"></ColumnDefinition>
+                                    <ColumnDefinition Width="220"></ColumnDefinition>
+                                    <ColumnDefinition Width="220"></ColumnDefinition>
+                                    <ColumnDefinition Width="220"></ColumnDefinition>
+                                    <ColumnDefinition Width="220"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
 
-                                <Border>
-                                    <StackPanel Orientation="Horizontal">
-                                        <Button
-						                    Style="{StaticResource MaterialDesignFlatButton}"
-                                            Grid.Column="1"
-                                            Width="30"
-					                    >
-                                            <Button.Template>
-                                                <ControlTemplate>
+                                <Grid Grid.Column="0" Grid.ColumnSpan="3">
+                                    <TextBlock
+                                        Text="Search Results"
+                                        Foreground="AliceBlue"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Left"
+                                        FontSize="50"
+                                    /> 
+
+                                </Grid>
+
+                                <Grid Grid.Column="4">
+                                    <Grid.Resources >
+                                        <Style TargetType="Border" >
+                                            <Setter Property="Padding" Value="10" />
+                                        </Style>
+                                    </Grid.Resources>
+
+                                    <Button>
+                                        <Button.Template>
+                                            <ControlTemplate>
+                                                <StackPanel Orientation="Horizontal"  Background="AliceBlue">
                                                     <fa:ImageAwesome 
-                                                    Icon="List" 
-                                                    VerticalAlignment="Center" 
-                                                    HorizontalAlignment="Center" 
-                                                    Foreground="White"/>
-                                                </ControlTemplate>
-                                            </Button.Template>
-                                        </Button>
-
-                                        <Button
-						                    Style="{StaticResource MaterialDesignFlatButton}"
-                                            Grid.Column="1"
-                                            Margin="10, 0, 0, 0"
-                                            Width="30"
-					                    >
-                                            <Button.Template>
-                                                <ControlTemplate>
-                                                    <fa:ImageAwesome 
-                                                        Icon="Table" 
-                                                        VerticalAlignment="Center" 
-                                                        HorizontalAlignment="Center" 
-                                                        Foreground="White"/>
-                                                </ControlTemplate>
-                                            </Button.Template>
-                                        </Button>
-
-                                    </StackPanel>
-                                </Border>
-
-                            </Grid>
-
-                            <Grid Grid.Column="4">
-                                <Grid.Resources >
-                                    <Style TargetType="Border" >
-                                        <Setter Property="Padding" Value="10" />
-                                    </Style>
-                                </Grid.Resources>
-                                
-                                <Button>
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <StackPanel Orientation="Horizontal"  Background="AliceBlue">
-                                                <fa:ImageAwesome 
                                                     Margin="10 5"
                                                     Icon="Filter" 
                                                     VerticalAlignment="Center" 
                                                     HorizontalAlignment="Center" 
                                                     Foreground="Black"/>
-                                                <TextBlock 
+                                                    <TextBlock 
                                                     Text="Filter"
                                                     VerticalAlignment="Center"
                                                     FontSize="20"/>
-                                            </StackPanel>
+                                                </StackPanel>
 
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-
+                                            </ControlTemplate>
+                                        </Button.Template>
+                                    </Button>
+                                </Grid>
                             </Grid>
-                        </Grid>
-                    </Border>
-                    <Border Grid.Row="1">
-                        <Grid Grid.Row="0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
+                        </Border>
 
-                            <Border Grid.Column="0">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="115"
-                                                    Stroke="AliceBlue"
-                                                    Fill="AliceBlue">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
+                        <WrapPanel Grid.Row="1" Width="1100" x:Name="SearchBookShelf">
+                            <WrapPanel.Resources>
+                                <Style TargetType="Border" >
+                                    <Setter Property="Padding" Value="8.75, 5, 8.75, 5" />
+                                </Style>
+                            </WrapPanel.Resources>
+                        </WrapPanel>
+                    </Grid>
+                </Border>
+            </Grid>
 
-                            <Border Grid.Column="1">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="115"
-                                                    Stroke="#709B5D"
-                                                    Fill="#709B5D">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-                            <Border Grid.Column="2">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="115"
-                                                    Stroke="#E72396"
-                                                    Fill="#E72396">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-                            <Border Grid.Column="3">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="115"
-                                                    Stroke="#102949"
-                                                    Fill="#102949">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-                            <Border Grid.Column="4">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="115"
-                                                    Stroke="#F91C32"
-                                                    Fill="#F91C32">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-                            <Border Grid.Column="5">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="135"
-                                                    Stroke="#9015B1"
-                                                    Fill="#9015B1">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-                            <Border Grid.Column="6">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="115"
-                                                    Stroke="#067FD3"
-                                                    Fill="#067FD3">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-
-                            <Border Grid.Column="7">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="135"
-                                                    Stroke="#753E5A"
-                                                    Fill="#753E5A">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-
-                        </Grid>
-                    </Border>
-
-                    <Border Grid.Row="2">
-                        <Grid Grid.Row="0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-
-                            <Border Grid.Column="0">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="115"
-                                                    Stroke="AliceBlue"
-                                                    Fill="AliceBlue">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-                            <Border Grid.Column="1">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="115"
-                                                    Stroke="#709B5D"
-                                                    Fill="#709B5D">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-                            <Border Grid.Column="2">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="115"
-                                                    Stroke="#E72396"
-                                                    Fill="#E72396">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-                            <Border Grid.Column="3">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="115"
-                                                    Stroke="#102949"
-                                                    Fill="#102949">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-                            <Border Grid.Column="4">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="115"
-                                                    Stroke="#F91C32"
-                                                    Fill="#F91C32">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-                            <Border Grid.Column="5">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="135"
-                                                    Stroke="#9015B1"
-                                                    Fill="#9015B1">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-                            <Border Grid.Column="6">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="115"
-                                                    Stroke="#067FD3"
-                                                    Fill="#067FD3">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-
-                            <Border Grid.Column="7">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="135"
-                                                    Stroke="#753E5A"
-                                                    Fill="#753E5A">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-
-                        </Grid>
-                    </Border>
-
-                    <Border Grid.Row="3">
-                        <Grid Grid.Row="0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                                <ColumnDefinition Width="135"></ColumnDefinition>
-                            </Grid.ColumnDefinitions>
-
-                            <Border Grid.Column="0">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="115"
-                                                    Stroke="AliceBlue"
-                                                    Fill="AliceBlue">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-                            <Border Grid.Column="1">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="115"
-                                                    Stroke="#709B5D"
-                                                    Fill="#709B5D">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-                            <Border Grid.Column="2">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="115"
-                                                    Stroke="#E72396"
-                                                    Fill="#E72396">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-                            <Border Grid.Column="3">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="115"
-                                                    Stroke="#102949"
-                                                    Fill="#102949">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-                            <Border Grid.Column="4">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="115"
-                                                    Stroke="#F91C32"
-                                                    Fill="#F91C32">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-                            <Border Grid.Column="5">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="135"
-                                                    Stroke="#9015B1"
-                                                    Fill="#9015B1">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-                            <Border Grid.Column="6">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="115"
-                                                    Stroke="#067FD3"
-                                                    Fill="#067FD3">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-
-                            <Border Grid.Column="7">
-                                <Button
-						            Style="{StaticResource MaterialDesignFlatButton}"
-                                    Height="170"
-                                    Width="115"
-                                    Click="Book_Summary"
-					            >
-                                    <Button.Template>
-                                        <ControlTemplate>
-                                            <Border>
-                                                <Rectangle
-                                                    Width="135"
-                                                    Stroke="#753E5A"
-                                                    Fill="#753E5A">
-                                                </Rectangle>
-                                            </Border>
-                                        </ControlTemplate>
-                                    </Button.Template>
-                                </Button>
-                            </Border>
-
-
-                        </Grid>
-                    </Border>
-                </Grid>
-            </Border>
-        </Grid>
+        </ScrollViewer>
 
     </Grid>
 </Page>

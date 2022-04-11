@@ -350,96 +350,9 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Grid 
-                    Grid.Row="0" 
-                    Background="#0F0F2D"
-                >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="60"/>
-                        <ColumnDefinition Width="50"/>
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
 
-                    <Image 
-                        Width="50" 
-                        Height="50" 
-                        Grid.Column="0"
-                        Source="/imgs/virtulib-logo.png"
-                        RenderOptions.BitmapScalingMode="Fant"
-                    />
-
-                    <Button
-						Style="{StaticResource MaterialDesignFlatButton}"
-						Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
-                        Grid.Column="1"
-					>
-                        <Button.Template>
-                            <ControlTemplate>
-                                <fa:ImageAwesome 
-                                    Icon="Bars" 
-                                    VerticalAlignment="Center" 
-                                    HorizontalAlignment="Center" 
-                                    Foreground="White"
-                                ></fa:ImageAwesome>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-
-                    <TextBox 
-                        Grid.Column="2" 
-                        Grid.ColumnSpan="7"
-                        HorizontalAlignment="Left" 
-                        VerticalAlignment="Center" 
-                        TextWrapping="Wrap"
-                        Width="900"
-                        Height="25"
-                        Text=""
-                        Margin="10, 0, 0, 0"
-                        VerticalContentAlignment="Center"
-                    ></TextBox>
-                    <fa:ImageAwesome 
-                        Icon="QuestionCircle" 
-                        VerticalAlignment="Center" 
-                        HorizontalAlignment="Center" 
-                        Width="30" 
-                        Height="30"
-                        Foreground="White"
-                        Grid.Column="8"
-                        Grid.ColumnSpan="2"
-                        Margin="20, 0, 0, 0"
-                    ></fa:ImageAwesome>
-
-                    <Button
-						Style="{StaticResource MaterialDesignFlatButton}"
-						Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
-						Grid.Column="9"
-						Height="50"
-						Width="50"
-					>
-                        <Button.Template>
-                            <ControlTemplate>
-                                <fa:ImageAwesome 
-                                    Icon="ShoppingCart" 
-                                    VerticalAlignment="Center" 
-                                    HorizontalAlignment="Center" 
-                                    Width="30" 
-                                    Height="30"
-                                    Foreground="White"
-                                    Grid.Column="9"
-                                ></fa:ImageAwesome>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-                </Grid>
-                <TextBox HorizontalAlignment="Left" Height="70" Margin="10,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Your Books" VerticalAlignment="Top" Width="260" FontWeight="Bold" Foreground="White" FontSize="48" Padding="0" BorderThickness="0"/>
-                <TextBox HorizontalAlignment="Left" Height="30" Margin="675,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="All          Loans          Holds           Wishlist            More" VerticalAlignment="Top" Width="525" FontWeight="Bold" Foreground="White" FontSize="20" Padding="0" BorderThickness="0"/>
+                <TextBlock HorizontalAlignment="Left" Height="70" Margin="10,30,0,0" TextWrapping="Wrap" Text="Your Books" VerticalAlignment="Top" Width="260" FontWeight="Bold" Foreground="White" FontSize="48" Padding="0" Grid.RowSpan="2"/>
+                <TextBlock HorizontalAlignment="Left" Height="30" Margin="675,40,0,0" TextWrapping="Wrap" Text="All          Loans          Holds           Wishlist            More" VerticalAlignment="Top" Width="525" FontWeight="Bold" Foreground="White" FontSize="20" Padding="0"  Grid.RowSpan="2"/>
 
             </Grid>
         </materialDesign:DialogHost>
@@ -464,13 +377,13 @@
         <Rectangle Fill="#FF4DDACD" HorizontalAlignment="Left" Height="135" Margin="58,170,0,0" Stroke="Black" StrokeThickness="4" VerticalAlignment="Top" Width="115"/>
         <Rectangle Fill="#FFDA5A4D" HorizontalAlignment="Left" Height="135" Margin="58,365,0,0" Stroke="Black" StrokeThickness="4" VerticalAlignment="Top" Width="115"/>
         <Rectangle Fill="#FFDAD44D" HorizontalAlignment="Left" Height="135" Margin="58,570,0,0" Stroke="Black" StrokeThickness="4" VerticalAlignment="Top" Width="115"/>
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="188,170,0,0" TextWrapping="Wrap" Text="The Catcher in the Rye" VerticalAlignment="Top" Width="237" FontSize="22" FontWeight="Bold" BorderThickness="0"/>
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="188,365,0,0" TextWrapping="Wrap" Text="The Hunger Games" VerticalAlignment="Top" Width="237" FontSize="22" FontWeight="Bold" BorderThickness="0"/>
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="188,570,0,0" TextWrapping="Wrap" Text="Computer Networks" VerticalAlignment="Top" Width="237" FontSize="22" FontWeight="Bold" BorderThickness="0"/>
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="188,216,0,0" TextWrapping="Wrap" Text="Expires in: &#xD;&#xA;" VerticalAlignment="Top" Width="112" FontSize="22" FontWeight="Bold" BorderThickness="0"/>
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="300,216,0,0" TextWrapping="Wrap" Text="6 days&#xA;" VerticalAlignment="Top" Width="112" FontSize="22" FontWeight="Bold" BorderThickness="0"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="188,170,0,0" TextWrapping="Wrap" Text="The Catcher in the Rye" VerticalAlignment="Top" Width="237" FontSize="22" FontWeight="Bold" />
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="188,365,0,0" TextWrapping="Wrap" Text="The Hunger Games" VerticalAlignment="Top" Width="237" FontSize="22" FontWeight="Bold" />
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="188,570,0,0" TextWrapping="Wrap" Text="Computer Networks" VerticalAlignment="Top" Width="237" FontSize="22" FontWeight="Bold"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="188,216,0,0" TextWrapping="Wrap" Text="Expires in: &#xD;&#xA;" VerticalAlignment="Top" Width="112" FontSize="22" FontWeight="Bold" />
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="300,216,0,0" TextWrapping="Wrap" Text="6 days&#xA;" VerticalAlignment="Top" Width="112" FontSize="22" FontWeight="Bold" />
         <ProgressBar HorizontalAlignment="Left" Height="20" Margin="188,270,0,0" VerticalAlignment="Top" Width="447" Foreground="#FF4D9B30" BorderBrush="Black" Value="80" Background="White"/>
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="640,258,0,0" TextWrapping="Wrap" Text="80% Complete&#xA;" VerticalAlignment="Top" Width="165" FontSize="22" FontWeight="Bold" BorderThickness="0"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="640,258,0,0" TextWrapping="Wrap" Text="80% Complete&#xA;" VerticalAlignment="Top" Width="165" FontSize="22" FontWeight="Bold" />
         <fa:ImageAwesome 
             Icon="Refresh" 
             VerticalAlignment="Center" 
@@ -489,12 +402,12 @@
             Foreground="#FF136BEA"
             Margin="945,193,170,547"
                     />
-        <TextBox HorizontalAlignment="Left" Height="32" Margin="835,258,0,0" TextWrapping="Wrap" Text="Renew" VerticalAlignment="Top" Width="75" FontSize="22" FontWeight="Bold" BorderThickness="0" Foreground="#FF326E0F"/>
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="960,258,0,0" TextWrapping="Wrap" Text="Read" VerticalAlignment="Top" Width="55" FontSize="22" FontWeight="Bold" BorderThickness="0" Foreground="#FF136BEA"/>
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="635,170,0,0" TextWrapping="Wrap" Text=" Digital Version&#xA;" VerticalAlignment="Top" Width="170" FontSize="22" FontWeight="Bold" BorderThickness="0"/>
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="188,411,0,0" TextWrapping="Wrap" Text="On Hold&#xA;" VerticalAlignment="Top" Width="112" FontSize="22" FontWeight="Bold" BorderThickness="0"/>
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="635,365,0,0" TextWrapping="Wrap" Text=" Physical Version&#xA;" VerticalAlignment="Top" Width="180" FontSize="22" FontWeight="Bold" BorderThickness="0"/>
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="188,460,0,0" TextWrapping="Wrap" Text="12 Users in Waitlist - Expected Date March 4th&#xA;" VerticalAlignment="Top" Width="512" FontSize="22" FontWeight="Bold" BorderThickness="0"/>
+        <TextBlock HorizontalAlignment="Left" Height="32" Margin="835,258,0,0" TextWrapping="Wrap" Text="Renew" VerticalAlignment="Top" Width="75" FontSize="22" FontWeight="Bold" Foreground="#FF326E0F"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="960,258,0,0" TextWrapping="Wrap" Text="Read" VerticalAlignment="Top" Width="55" FontSize="22" FontWeight="Bold"  Foreground="#FF136BEA"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="635,170,0,0" TextWrapping="Wrap" Text=" Digital Version&#xA;" VerticalAlignment="Top" Width="170" FontSize="22" FontWeight="Bold" />
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="188,411,0,0" TextWrapping="Wrap" Text="On Hold&#xA;" VerticalAlignment="Top" Width="112" FontSize="22" FontWeight="Bold" />
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="635,365,0,0" TextWrapping="Wrap" Text=" Physical Version&#xA;" VerticalAlignment="Top" Width="180" FontSize="22" FontWeight="Bold" />
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="188,460,0,0" TextWrapping="Wrap" Text="12 Users in Waitlist - Expected Date March 4th&#xA;" VerticalAlignment="Top" Width="512" FontSize="22" FontWeight="Bold" />
         <fa:ImageAwesome 
             Icon="TrashOutline" 
             VerticalAlignment="Center" 
@@ -504,9 +417,9 @@
             Foreground="#FF992910"
             Margin="990,383,125,357"
                     />
-        <TextBox HorizontalAlignment="Left" Height="32" Margin="990,448,0,0" TextWrapping="Wrap" Text="Remove" VerticalAlignment="Top" Width="90" FontSize="22" FontWeight="Bold" BorderThickness="0" Foreground="#FF992910"/>
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="188,625,0,0" TextWrapping="Wrap" Text="Due in: &#xA;" VerticalAlignment="Top" Width="112" FontSize="22" FontWeight="Bold" BorderThickness="0"/>
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="275,625,0,0" TextWrapping="Wrap" Text="5 days" VerticalAlignment="Top" Width="112" FontSize="22" FontWeight="Bold" BorderThickness="0"/>
+        <TextBlock HorizontalAlignment="Left" Height="32" Margin="990,448,0,0" TextWrapping="Wrap" Text="Remove" VerticalAlignment="Top" Width="90" FontSize="22" FontWeight="Bold"  Foreground="#FF992910"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="188,625,0,0" TextWrapping="Wrap" Text="Due in: &#xA;" VerticalAlignment="Top" Width="112" FontSize="22" FontWeight="Bold" />
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="275,625,0,0" TextWrapping="Wrap" Text="5 days" VerticalAlignment="Top" Width="112" FontSize="22" FontWeight="Bold" />
         <fa:ImageAwesome 
             Icon="Refresh" 
             VerticalAlignment="Center" 
@@ -524,8 +437,8 @@
             Foreground="#FF916D21"
             Margin="1042,577,73,163" Icon="Send"
                     />
-        <TextBox HorizontalAlignment="Left" Height="32" Margin="940,650,0,0" TextWrapping="Wrap" Text="Renew" VerticalAlignment="Top" Width="75" FontSize="22" FontWeight="Bold" BorderThickness="0" Foreground="#FF326E0F"/>
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="1051,642,0,0" TextWrapping="Wrap" Text="Return" VerticalAlignment="Top" Width="74" FontSize="22" FontWeight="Bold" BorderThickness="0" Foreground="#FF916D21"/>
+        <TextBlock HorizontalAlignment="Left" Height="32" Margin="940,650,0,0" TextWrapping="Wrap" Text="Renew" VerticalAlignment="Top" Width="75" FontSize="22" FontWeight="Bold"  Foreground="#FF326E0F"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="1051,642,0,0" TextWrapping="Wrap" Text="Return" VerticalAlignment="Top" Width="74" FontSize="22" FontWeight="Bold"  Foreground="#FF916D21"/>
         <fa:ImageAwesome 
             VerticalAlignment="Center" 
             HorizontalAlignment="Center" 
@@ -534,6 +447,6 @@
             Foreground="#FF916D21"
             Margin="1051,193,64,547" Icon="Send"
                     />
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="1060,258,0,0" TextWrapping="Wrap" Text="Return" VerticalAlignment="Top" Width="74" FontSize="22" FontWeight="Bold" BorderThickness="0" Foreground="#FF916D21"/>
+        <TextBlock HorizontalAlignment="Left" Height="40" Margin="1060,258,0,0" TextWrapping="Wrap" Text="Return" VerticalAlignment="Top" Width="74" FontSize="22" FontWeight="Bold" Foreground="#FF916D21"/>
     </Grid>
 </Page>

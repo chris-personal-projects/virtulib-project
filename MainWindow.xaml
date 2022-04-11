@@ -84,7 +84,7 @@
 
                             
                             <ListViewItem Height="45" Padding="0" Width="250">
-                                <Border Background="#00000000" MouseLeftButtonUp="Open_Cart" Cursor="Hand" Width="250">
+                                <Border Background="#00000000" MouseLeftButtonUp="Open_Cart_Page" Cursor="Hand" Width="250">
                                     <StackPanel Orientation="Horizontal" Margin="10 0">
                                         <fa:ImageAwesome Icon="ShoppingCart" HorizontalAlignment="Center" Width="20" Height="20" Foreground="White" Grid.Column="9" Margin="5" VerticalAlignment="Center"/>
                                         <TextBlock Text="My Cart" Margin="10"/>
@@ -183,19 +183,50 @@
                         </Button>
 
                         <TextBox 
+                                x:Name="mainSearch"
                                 Grid.Column="2" 
                                 Grid.ColumnSpan="7"
                                 HorizontalAlignment="Left" 
                                 VerticalAlignment="Center" 
                                 TextWrapping="Wrap"
-                                Width="900"
+                                Width="825"
                                 Height="25"
                                 Text=""
                                 Background="AliceBlue"
                                 Margin="10, 0, 0, 0"
-                                VerticalContentAlignment="Center"/>
+                                VerticalContentAlignment="Center" TextChanged="InitSearchResults"/>
 
-                        <materialDesign:PackIcon 
+                        <Button
+			                    Style="{StaticResource MaterialDesignFlatButton}"
+			                    Grid.Column="7"
+                                Grid.ColumnSpan="2"
+			                    Height="50"
+			                    Width="50"
+                                Click="User_Login"
+                                Margin="135, 0, 0, 0"
+                                Padding="0"
+		                >
+                            <materialDesign:PackIcon 
+                                Kind="User"
+                                Grid.Column="8"
+                                Grid.ColumnSpan="2"
+                                Foreground="{StaticResource Purple1}" 
+                                VerticalAlignment="Center" 
+                                HorizontalAlignment="Center" 
+                                Width="30" 
+                                Height="30"/>
+                        </Button>
+
+                        <Button
+			                    Style="{StaticResource MaterialDesignFlatButton}"
+			                    Grid.Column="8"
+                                Grid.ColumnSpan="2"
+			                    Height="50"
+			                    Width="50"
+                                Click="Open_Help_From_Nav"
+                                Padding="0"
+		                >
+                            <materialDesign:PackIcon 
                                 Kind="HelpCircleOutline"
                                 Grid.Column="8"
                                 Grid.ColumnSpan="2"
@@ -203,32 +234,37 @@
                                 VerticalAlignment="Center" 
                                 HorizontalAlignment="Center" 
                                 Width="30" 
-                                Height="30"
-                                Margin="20, 0, 0, 0"/>
-
+                                Height="30"/>
+                        </Button>
 
                         <Button
-			                    Style="{StaticResource MaterialDesignFlatButton}"
-			                    Grid.Column="9"
-			                    Height="50"
-			                    Width="50"
-                                Click="Open_Cart"
-		                    >
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <fa:ImageAwesome 
-                                            Icon="ShoppingCart" 
-                                            VerticalAlignment="Center" 
-                                            HorizontalAlignment="Center" 
-                                            Width="30" 
-                                            Height="30"
-                                            Foreground="White"
-                                            Grid.Column="9"/>
-                                </ControlTemplate>
-                            </Button.Template>
+                            Style="{DynamicResource MaterialDesignFlatButton}"
+			                Grid.Column="9"
+			                Height="50"
+			                Width="50"
+                            Click="Open_Cart_Dialog"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            Padding="0"
+		                >
+                            <fa:ImageAwesome 
+                                Icon="ShoppingCart" 
+                                VerticalAlignment="Center" 
+                                HorizontalAlignment="Center" 
+                                Width="30" 
+                                Height="30"
+                                Foreground="White"
+/>
                         </Button>
                     </Grid>
-
+                    <materialDesign:Snackbar 
+                        Grid.Row="1" 
+                        MessageQueue="{Binding BookMessageQueue}" 
+                        Panel.ZIndex="5" 
+                        VerticalAlignment="Top" 
+                        HorizontalAlignment="Center"
+                        Width="3000"
+                        Background="{StaticResource Purple1}"/>
                     <Frame 
                         Grid.Row="1"
                         x:Name="Main"

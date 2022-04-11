@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using Newtonsoft.Json;
 using System.IO;
 using Newtonsoft.Json.Linq;
+using MaterialDesignThemes.Wpf;
 
 namespace virtulib_project.Models
 {
@@ -17,6 +18,12 @@ namespace virtulib_project.Models
 
         public DialogViewModel MainDialog { get; private set; }
         public VirtulibBookModel[] BookList { get => bookList; }
+
+        private SnackbarMessageQueue bookMessageQueue = new SnackbarMessageQueue(TimeSpan.FromMilliseconds(2500));
+        public SnackbarMessageQueue BookMessageQueue
+        {
+            get => bookMessageQueue;
+        }
 
         public MainViewModel()
         {

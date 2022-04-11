@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace virtulib_project.Pages
+namespace virtulib_project.UserControls
 {
     /// <summary>
-    /// Interaction logic for ChrisTest.xaml
+    /// Interaction logic for ContactDialog.xaml
     /// </summary>
-    public partial class DialogCheckoutTest : Page
+    public partial class ContactDialog : UserControl
     {
-        public DialogCheckoutTest()
+        public ContactDialog()
         {
             InitializeComponent();
         }

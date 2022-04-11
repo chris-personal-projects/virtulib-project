@@ -350,109 +350,22 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <Grid 
-                    Grid.Row="0" 
-                    Background="#0F0F2D"
-                >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="60"/>
-                        <ColumnDefinition Width="50"/>
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
-
-                    <Image 
-                        Width="50" 
-                        Height="50" 
-                        Grid.Column="0"
-                        Source="/imgs/virtulib-logo.png"
-                        RenderOptions.BitmapScalingMode="Fant"
-                    />
-
-                    <Button
-						Style="{StaticResource MaterialDesignFlatButton}"
-						Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
-                        Grid.Column="1"
-					>
-                        <Button.Template>
-                            <ControlTemplate>
-                                <fa:ImageAwesome 
-                                    Icon="Bars" 
-                                    VerticalAlignment="Center" 
-                                    HorizontalAlignment="Center" 
-                                    Foreground="White"
-                                ></fa:ImageAwesome>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-
-                    <TextBox 
-                        Grid.Column="2" 
-                        Grid.ColumnSpan="7"
-                        HorizontalAlignment="Left" 
-                        VerticalAlignment="Center" 
-                        TextWrapping="Wrap"
-                        Width="900"
-                        Height="25"
-                        Text=""
-                        Margin="10, 0, 0, 0"
-                        VerticalContentAlignment="Center"
-                    ></TextBox>
-                    <fa:ImageAwesome 
-                        Icon="QuestionCircle" 
-                        VerticalAlignment="Center" 
-                        HorizontalAlignment="Center" 
-                        Width="30" 
-                        Height="30"
-                        Foreground="White"
-                        Grid.Column="8"
-                        Grid.ColumnSpan="2"
-                        Margin="20, 0, 0, 0"
-                    ></fa:ImageAwesome>
-
-                    <Button
-						Style="{StaticResource MaterialDesignFlatButton}"
-						Command="{x:Static materialDesign:DialogHost.OpenDialogCommand}"
-						Grid.Column="9"
-						Height="50"
-						Width="50"
-					>
-                        <Button.Template>
-                            <ControlTemplate>
-                                <fa:ImageAwesome 
-                                    Icon="ShoppingCart" 
-                                    VerticalAlignment="Center" 
-                                    HorizontalAlignment="Center" 
-                                    Width="30" 
-                                    Height="30"
-                                    Foreground="White"
-                                    Grid.Column="9"
-                                ></fa:ImageAwesome>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
-                </Grid>
+                
                 <Rectangle Fill="#FFD8D8D7" HorizontalAlignment="Left" Height="160" Margin="160,100,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="880" StrokeThickness="4"/>
                 <Rectangle Fill="#FFD8D8D7" HorizontalAlignment="Left" Height="160" Margin="160,295,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="880" StrokeThickness="4"/>
                 <Rectangle Fill="#FFD8D8D7" HorizontalAlignment="Left" Height="160" Margin="160,495,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="880" StrokeThickness="4"/>
                 <Rectangle Fill="#FF89D366" HorizontalAlignment="Left" Height="130" Margin="200,115,0,0" Grid.Row="1" Stroke="Black" StrokeThickness="4" VerticalAlignment="Top" Width="130"/>
-                <TextBox HorizontalAlignment="Left" Height="85" Margin="390,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Profile Settings" VerticalAlignment="Top" Width="405" FontWeight="Bold" Foreground="White" FontSize="48"/>
-                <TextBox HorizontalAlignment="Left" Height="143" Margin="425,115,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Dorothy Smith&#xD;&#xA;&#xD;&#xA;dsmith98@gmail.com&#x9;&#xD;&#xA;&#xD;&#xA;(123) 456 - 7890&#xD;&#xA; &#xD;&#xA;123 Applewood Street NW, Calgary Alberta T4G 2O1" VerticalAlignment="Top" Width="600" BorderThickness="0" FontSize="14"/>
-                <TextBox HorizontalAlignment="Left" Height="145" Margin="360,115,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Name:&#xA;&#xA;Email:&#xD;&#xA;&#xD;&#xA;Phone: &#xD;&#xA;&#xA;Address: " VerticalAlignment="Top" Width="80" FontWeight="Bold" BorderThickness="0" FontSize="14"/>
-                <TextBox HorizontalAlignment="Left" Height="30" Margin="175,305,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Membership Information:" VerticalAlignment="Top" Width="200" FontWeight="Bold" FontSize="16" BorderThickness="0" TextDecorations="Underline"/>
-                <TextBox HorizontalAlignment="Left" Height="40" Margin="175,360,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Premium Membership, $11.99/month" VerticalAlignment="Top" Width="560" FontWeight="Bold" FontSize="20" BorderThickness="0"/>
+                <TextBlock HorizontalAlignment="Left" Height="85" Margin="390,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Profile Settings" VerticalAlignment="Top" Width="405" FontWeight="Bold" Foreground="White" FontSize="48"/>
+                <TextBlock HorizontalAlignment="Left" Height="143" Margin="425,115,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Dorothy Smith&#xD;&#xA;&#xD;&#xA;dsmith98@gmail.com&#x9;&#xD;&#xA;&#xD;&#xA;(123) 456 - 7890&#xD;&#xA; &#xD;&#xA;123 Applewood Street NW, Calgary Alberta T4G 2O1" VerticalAlignment="Top" Width="600"  FontSize="14"/>
+                <TextBlock HorizontalAlignment="Left" Height="145" Margin="360,115,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Name:&#xA;&#xA;Email:&#xD;&#xA;&#xD;&#xA;Phone: &#xD;&#xA;&#xA;Address: " VerticalAlignment="Top" Width="80" FontWeight="Bold"  FontSize="14"/>
+                <TextBlock HorizontalAlignment="Left" Height="30" Margin="175,305,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Membership Information:" VerticalAlignment="Top" Width="200" FontWeight="Bold" FontSize="16" TextDecorations="Underline"/>
+                <TextBlock HorizontalAlignment="Left" Height="40" Margin="175,360,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Premium Membership, $11.99/month" VerticalAlignment="Top" Width="560" FontWeight="Bold" FontSize="20" />
                 <Button Content="Change?" HorizontalAlignment="Left" Height="30" Margin="935,314,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90"/>
                 <Button Content="Change?" HorizontalAlignment="Left" Height="30" Margin="935,115,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90"/>
-                <TextBox HorizontalAlignment="Left" Height="30" Margin="175,505,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Security &amp; Privacy" VerticalAlignment="Top" Width="200" FontWeight="Bold" FontSize="16" BorderThickness="0" TextDecorations="Underline"/>
+                <TextBlock HorizontalAlignment="Left" Height="30" Margin="175,505,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Security &amp; Privacy" VerticalAlignment="Top" Width="200" FontWeight="Bold" FontSize="16"  TextDecorations="Underline"/>
                 <Button Content="Change?" HorizontalAlignment="Left" Height="30" Margin="935,514,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90"/>
-                <TextBox HorizontalAlignment="Left" Height="105" Margin="175,535,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Password:&#xD;&#xA;&#xD;&#xA;2-Step Verification:&#xD;&#xA;&#xD;&#xA;Payment Settings:&#xD;&#xA;" VerticalAlignment="Top" Width="135" FontWeight="Bold" FontSize="14" BorderThickness="0"/>
-                <TextBox HorizontalAlignment="Left" Height="25" Margin="240,535,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" FontWeight="Bold" FontSize="16" BorderThickness="0" Text=" *********&#xD;&#xA;&#xD;&#xA;"/>
+                <TextBlock HorizontalAlignment="Left" Height="105" Margin="175,535,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Password:&#xD;&#xA;&#xD;&#xA;2-Step Verification:&#xD;&#xA;&#xD;&#xA;Payment Settings:&#xD;&#xA;" VerticalAlignment="Top" Width="135" FontWeight="Bold" FontSize="14"/>
+                <TextBlock HorizontalAlignment="Left" Height="25" Margin="240,535,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" FontWeight="Bold" FontSize="16" Text=" *********&#xD;&#xA;&#xD;&#xA;"/>
 
             </Grid>
         </materialDesign:DialogHost>
@@ -467,7 +380,7 @@
             </Image.RenderTransform>
         </Image>
         <TextBlock HorizontalAlignment="Left" Height="20" Margin="305,635,0,0" TextWrapping="Wrap" Text="ENABLED" VerticalAlignment="Top" Width="90" FontWeight="Bold" Foreground="#FF1A7216" FontSize="18"/>
-        <TextBlock HorizontalAlignment="Left" Height="20" Margin="298,675,0,0" TextWrapping="Wrap" Text="Go to store" VerticalAlignment="Top" Width="145" FontWeight="Bold" Foreground="#FF162F72" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="299,674,0,0" TextWrapping="Wrap" Text="Go to store" VerticalAlignment="Top" Width="145" FontWeight="Bold" Foreground="#FF162F72" FontSize="18"/>
         <Image HorizontalAlignment="Left" Height="120" VerticalAlignment="Top" Width="70" Margin="230,180,0,0" RenderTransformOrigin="1.95,0.9" Source="/virtulib-project;component/imgs/dorothy.png"/>
     </Grid>
 </Page>

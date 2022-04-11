@@ -17,6 +17,7 @@ using System.Runtime.CompilerServices;
 using virtulib_project.UserControls;
 using virtulib_project.Models;
 using virtulib_project.Events;
+using MaterialDesignThemes.Wpf;
 
 namespace virtulib_project.Pages
 {
@@ -27,6 +28,7 @@ namespace virtulib_project.Pages
     {
         private MainViewModel _mainViewModel;
         private VirtulibBookModel[] BookList;
+        private SnackbarMessageQueue bookMessageQueue;
 
         public Browse(MainViewModel mainViewModel)
         {
@@ -38,6 +40,7 @@ namespace virtulib_project.Pages
             string[] categoryList = { "Best Sellers", "Staff Picks", "Virtulib Picks", "Fiction", "Non-Fiction" };
 
             generateNetflixScrolls(categoryList);
+            bookMessageQueue = _mainViewModel.BookMessageQueue;
 
         }
 
@@ -76,7 +79,15 @@ namespace virtulib_project.Pages
         {
             VirtulibBookSelectedEventArgs args = (VirtulibBookSelectedEventArgs)e;
             BookInfoDialog bookInfoDialog = new BookInfoDialog(args);
+            bookInfoDialog.SnackbarMessageInit += InitSnackbarMessage;
+
             _mainViewModel.SetDialog(bookInfoDialog);
+        }
+
+        private void InitSnackbarMessage(object sender, RoutedEventArgs e)
+        {
+            SnackbarMessageEventArg args = (SnackbarMessageEventArg) e;
+            bookMessageQueue.Enqueue(args.SnackMessage);
         }
     }
 }
