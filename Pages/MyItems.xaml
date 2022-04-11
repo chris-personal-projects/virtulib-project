@@ -377,7 +377,8 @@
         <Rectangle Fill="#FF4DDACD" HorizontalAlignment="Left" Height="135" Margin="58,170,0,0" Stroke="Black" StrokeThickness="4" VerticalAlignment="Top" Width="115"/>
         <Rectangle Fill="#FFDA5A4D" HorizontalAlignment="Left" Height="135" Margin="58,365,0,0" Stroke="Black" StrokeThickness="4" VerticalAlignment="Top" Width="115"/>
         <Rectangle Fill="#FFDAD44D" HorizontalAlignment="Left" Height="135" Margin="58,570,0,0" Stroke="Black" StrokeThickness="4" VerticalAlignment="Top" Width="115"/>
-        <TextBlock HorizontalAlignment="Left" Height="40" Margin="188,170,0,0" TextWrapping="Wrap" Text="The Catcher in the Rye" VerticalAlignment="Top" Width="237" FontSize="22" FontWeight="Bold" />
+        <Label HorizontalAlignment="Left" Height="40" Margin="188,170,0,0" Content="The Catcher in the Rye" VerticalAlignment="Top" Width="272" FontSize="22" FontWeight="Bold" />
+        
         <TextBlock HorizontalAlignment="Left" Height="40" Margin="188,365,0,0" TextWrapping="Wrap" Text="The Hunger Games" VerticalAlignment="Top" Width="237" FontSize="22" FontWeight="Bold" />
         <TextBlock HorizontalAlignment="Left" Height="40" Margin="188,570,0,0" TextWrapping="Wrap" Text="Computer Networks" VerticalAlignment="Top" Width="237" FontSize="22" FontWeight="Bold"/>
         <TextBlock HorizontalAlignment="Left" Height="40" Margin="188,216,0,0" TextWrapping="Wrap" Text="Expires in: &#xD;&#xA;" VerticalAlignment="Top" Width="112" FontSize="22" FontWeight="Bold" />

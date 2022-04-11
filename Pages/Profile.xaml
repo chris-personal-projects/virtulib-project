@@ -350,22 +350,60 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                
+
                 <Rectangle Fill="#FFD8D8D7" HorizontalAlignment="Left" Height="160" Margin="160,100,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="880" StrokeThickness="4"/>
                 <Rectangle Fill="#FFD8D8D7" HorizontalAlignment="Left" Height="160" Margin="160,295,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="880" StrokeThickness="4"/>
                 <Rectangle Fill="#FFD8D8D7" HorizontalAlignment="Left" Height="160" Margin="160,495,0,0" Grid.Row="1" Stroke="Black" VerticalAlignment="Top" Width="880" StrokeThickness="4"/>
                 <Rectangle Fill="#FF89D366" HorizontalAlignment="Left" Height="130" Margin="200,115,0,0" Grid.Row="1" Stroke="Black" StrokeThickness="4" VerticalAlignment="Top" Width="130"/>
                 <TextBlock HorizontalAlignment="Left" Height="85" Margin="390,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Profile Settings" VerticalAlignment="Top" Width="405" FontWeight="Bold" Foreground="White" FontSize="48"/>
-                <TextBlock HorizontalAlignment="Left" Height="143" Margin="425,115,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Dorothy Smith&#xD;&#xA;&#xD;&#xA;dsmith98@gmail.com&#x9;&#xD;&#xA;&#xD;&#xA;(123) 456 - 7890&#xD;&#xA; &#xD;&#xA;123 Applewood Street NW, Calgary Alberta T4G 2O1" VerticalAlignment="Top" Width="600"  FontSize="14"/>
-                <TextBlock HorizontalAlignment="Left" Height="145" Margin="360,115,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Name:&#xA;&#xA;Email:&#xD;&#xA;&#xD;&#xA;Phone: &#xD;&#xA;&#xA;Address: " VerticalAlignment="Top" Width="80" FontWeight="Bold"  FontSize="14"/>
-                <TextBlock HorizontalAlignment="Left" Height="30" Margin="175,305,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Membership Information:" VerticalAlignment="Top" Width="200" FontWeight="Bold" FontSize="16" TextDecorations="Underline"/>
-                <TextBlock HorizontalAlignment="Left" Height="40" Margin="175,360,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Premium Membership, $11.99/month" VerticalAlignment="Top" Width="560" FontWeight="Bold" FontSize="20" />
-                <Button Content="Change?" HorizontalAlignment="Left" Height="30" Margin="935,314,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90"/>
-                <Button Content="Change?" HorizontalAlignment="Left" Height="30" Margin="935,115,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90"/>
-                <TextBlock HorizontalAlignment="Left" Height="30" Margin="175,505,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Security &amp; Privacy" VerticalAlignment="Top" Width="200" FontWeight="Bold" FontSize="16"  TextDecorations="Underline"/>
-                <Button Content="Change?" HorizontalAlignment="Left" Height="30" Margin="935,514,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90"/>
-                <TextBlock HorizontalAlignment="Left" Height="105" Margin="175,535,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Password:&#xD;&#xA;&#xD;&#xA;2-Step Verification:&#xD;&#xA;&#xD;&#xA;Payment Settings:&#xD;&#xA;" VerticalAlignment="Top" Width="135" FontWeight="Bold" FontSize="14"/>
-                <TextBlock HorizontalAlignment="Left" Height="25" Margin="240,535,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" FontWeight="Bold" FontSize="16" Text=" *********&#xD;&#xA;&#xD;&#xA;"/>
+
+                <TextBlock HorizontalAlignment="Left" Height="30" Margin="345,115,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Name:" VerticalAlignment="Top" Width="79"  FontSize="18" FontFamily="Dosis" FontWeight="Bold"/>
+                <TextBox Name="NameBox" Visibility="Hidden" IsReadOnly="True" HorizontalAlignment="Left" Height="34" Margin="429,110,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Dorothy Smith" VerticalAlignment="Top" Width="470" TextChanged="TextBox_TextChanged" FontSize="18"/>
+                <TextBlock x:Name="NameText" HorizontalAlignment="Left" Height="30" Margin="429,113,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="501"  FontSize="18" FontFamily="Segoe UI"><Run Text= "{Binding Path=Text, ElementName=NameBox}"/></TextBlock>
+
+                <TextBox x:Name="EmailBox" Visibility="Hidden" IsReadOnly="True" HorizontalAlignment="Left" Height="34" Margin="429,145,0,0" Grid.Row="1" TextWrapping="Wrap" Text="dsmith98@gmail.com" VerticalAlignment="Top" Width="470" TextChanged="TextBox_TextChanged" FontSize="18"/>
+                <TextBlock HorizontalAlignment="Left" Height="30" Margin="345,150,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Email: " VerticalAlignment="Top" Width="84" FontWeight="Bold"  FontSize="18" FontFamily="Dosis"/>
+                <TextBlock x:Name="EmailText" HorizontalAlignment="Left" Height="30" Margin="429,149,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="501"  FontSize="18" FontFamily="Segoe UI"><Run Text= "{Binding Text, ElementName=EmailBox}"/></TextBlock>
+
+
+                <TextBox x:Name="PhoneBox" Visibility="Hidden" IsReadOnly="True" HorizontalAlignment="Left" Height="34" Margin="429,177,0,0" Grid.Row="1" TextWrapping="Wrap" Text="(123) 456 - 7890" VerticalAlignment="Top" Width="470" TextChanged="TextBox_TextChanged" FontSize="18"/>
+                <TextBlock HorizontalAlignment="Left" Height="30" Margin="345,182,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" FontWeight="Bold"  FontSize="18"><Run FontFamily="Dosis" Text="Phone"/><Run Text=": "/></TextBlock>
+                <TextBlock x:Name="PhoneText" HorizontalAlignment="Left" Height="30" Margin="429,181,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="501"  FontSize="18" FontFamily="Segoe UI"><Run Text= "{Binding Text, ElementName=PhoneBox}"/></TextBlock>
+
+                <TextBlock HorizontalAlignment="Left" Height="30" Margin="345,215,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="84" FontWeight="Bold"  FontSize="18"><Run FontFamily="Dosis" Text="Address"/><Run Text=": "/></TextBlock>
+                <TextBox x:Name="AddressBox" Visibility="Hidden" IsReadOnly="True" HorizontalAlignment="Left" Height="34" Margin="429,210,0,0" Grid.Row="1" TextWrapping="Wrap" Text="123 Applewood Street NW, Calgary Alberta T4G 2O1&#xD;&#xA;" VerticalAlignment="Top" Width="610" TextChanged="TextBox_TextChanged" FontSize="18"/>
+                <TextBlock x:Name="AddressText" HorizontalAlignment="Left" Height="30" Margin="429,214,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="501"  FontSize="18" FontFamily="Segoe UI"><Run Text= "{Binding Text, ElementName=AddressBox}"/></TextBlock>
+
+
+                <TextBlock HorizontalAlignment="Left" Height="30" Margin="175,305,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Membership Information:" VerticalAlignment="Top" Width="350" FontWeight="Bold" FontSize="22" TextDecorations="Underline" FontFamily="Dosis"/>
+                <TextBlock HorizontalAlignment="Left" Height="40" Margin="175,360,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="375" FontWeight="Bold" FontSize="20" />
+
+                <Button x:Name="Membership_Button" Content="Change?" HorizontalAlignment="Left" Height="30" Margin="935,314,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" Click="MembershipChange"/>
+                <Button x:Name="Personal_Button" Content="Change?" HorizontalAlignment="Left" Height="30" Margin="935,115,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" Click="PersonalEdit" FontFamily="Dosis" FontWeight="Bold"/>
+                <TextBlock HorizontalAlignment="Left" Height="30" Margin="175,505,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Security &amp; Privacy" VerticalAlignment="Top" Width="200" FontWeight="Bold" FontSize="22"  TextDecorations="Underline"/>
+                <Button x:Name="Privacy_Button" Content="Change?" HorizontalAlignment="Left" Height="30" Margin="935,514,0,0" Grid.Row="1" VerticalAlignment="Top" Width="90" Click="PrivacyChange"/>
+                <ComboBox Name="MembershipBox" HorizontalAlignment="Left" Margin="175,360,0,0" Grid.Row="1" VerticalAlignment="Top" Width="475" IsReadOnly="True" Height="40" IsSynchronizedWithCurrentItem="True" FontWeight="ExtraBold"  FontSize="25" IsEnabled="False" FontFamily="Segoe UI Black">
+                    <ComboBoxItem Content="Free Membership $0.00/month" FontWeight="Bold"  FontSize="18"/>
+                    <ComboBoxItem Content="Regular Membership $5.99/month" FontWeight="Bold"  FontSize="18"/>
+                    <ComboBoxItem Content="Premium Membership $11.99/month" IsSelected="True" FontWeight="Bold"  FontSize="18"/>
+                </ComboBox>
+                <TextBlock HorizontalAlignment="Left" Height="30" Margin="175,572,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Width="79"  FontSize="18" FontFamily="Dosis" FontWeight="Bold" RenderTransformOrigin="0.506,0.5"/>
+                <TextBlock HorizontalAlignment="Left" Height="45" Margin="515,590,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Payment Settings: " VerticalAlignment="Top" Width="110"  FontSize="18" FontFamily="Dosis" FontWeight="Bold" RenderTransformOrigin="0.506,0.5"/>
+                <TextBlock HorizontalAlignment="Left" Height="45" Margin="515,526,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"  FontSize="18" FontFamily="Dosis" FontWeight="Bold" RenderTransformOrigin="0.506,0.5"><Run Text="2-Factor "/><LineBreak/><Run Text="Authentication: "/></TextBlock>
+                <PasswordBox Name="PasswordBox" HorizontalAlignment="Left" Margin="269,572,0,0" Grid.Row="1" VerticalAlignment="Top" Width="160" Password="password" UseLayoutRounding="False" IsHitTestVisible="False" IsManipulationEnabled="True"/>
+                <TextBox Name="PasswordText" HorizontalAlignment="Left"  Visibility ="Hidden" Height="33" Margin="269,569,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding Path=Password, ElementName=PasswordBox}" VerticalAlignment="Top" Width="160" FontSize="18"/>
+
+
+
+                <ComboBox Name="TwoFactorBox" HorizontalAlignment="Left" Margin="660,535,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" FontWeight="Bold" IsReadOnly="True" IsSynchronizedWithCurrentItem="True" FontSize="18" IsEnabled="False" Foreground="#FF1B8B0A">
+                    <ComboBoxItem Content="ENABLED" IsSelected="True" Foreground="#FF1B8B0A"/>
+                    <ComboBoxItem Background="Transparent" ContentStringFormat="DISABLED" Foreground="Red" Content="DISABLED"/>
+                </ComboBox>
+                <Button Content="Go to Payment Manager" HorizontalAlignment="Left" Margin="660,603,0,0" Grid.Row="1" VerticalAlignment="Top" Width="190" Background="#FF1326EE" BorderBrush="#FF1326EE" Foreground="#DDFFFFFF"/>
+
+
+
+
 
             </Grid>
         </materialDesign:DialogHost>
@@ -379,8 +417,6 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-        <TextBlock HorizontalAlignment="Left" Height="20" Margin="305,635,0,0" TextWrapping="Wrap" Text="ENABLED" VerticalAlignment="Top" Width="90" FontWeight="Bold" Foreground="#FF1A7216" FontSize="18"/>
-        <TextBlock HorizontalAlignment="Left" Height="20" Margin="299,674,0,0" TextWrapping="Wrap" Text="Go to store" VerticalAlignment="Top" Width="145" FontWeight="Bold" Foreground="#FF162F72" FontSize="18"/>
         <Image HorizontalAlignment="Left" Height="120" VerticalAlignment="Top" Width="70" Margin="230,180,0,0" RenderTransformOrigin="1.95,0.9" Source="/virtulib-project;component/imgs/dorothy.png"/>
     </Grid>
 </Page>
