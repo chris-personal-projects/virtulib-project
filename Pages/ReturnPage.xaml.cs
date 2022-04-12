@@ -39,6 +39,11 @@ namespace virtulib_project.Pages
             DataContext = _mainViewModel;
         }
 
-        
+        private void Return1(object sender, MouseButtonEventArgs e)
+        {
+            Panel1.Children.Clear();
+            Panel2.Margin = new Thickness(70, 175, 0, 0);
+                
+        }
     }
 }

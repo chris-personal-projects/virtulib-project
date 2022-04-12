@@ -370,7 +370,7 @@
                     Width="65" 
                     Height="60"
                     Foreground="#FF326E0F"
-                    Margin="771,62,-756,-2"  Cursor="Hand"
+                    Margin="771,62,-756,-2"  Cursor="Hand" MouseLeftButtonDown="Return1"
                 />
                 <TextBlock Name="Book1Date" HorizontalAlignment="Left" Height="32" Margin="82,104,-309,-16" TextWrapping="Wrap" VerticalAlignment="Top" Width="307" FontSize="22" FontWeight="Bold" ><Run Text="Expires in: "/><Run Text="6 days&#xA;"/><LineBreak/><Run Text="&#xA;"/></TextBlock>
 
