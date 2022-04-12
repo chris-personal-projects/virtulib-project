@@ -357,18 +357,64 @@
 
             </Grid>
         </materialDesign:DialogHost>
-        <Image x:Name="Profile_Picture" HorizontalAlignment="Left" Height="120" Margin="230,180,0,0" VerticalAlignment="Top" Width="75" Source="/imgs/dorothy.png" RenderTransformOrigin="1.063,0.555">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.029"/>
-                    <TranslateTransform X="0.006" Y="-0.039"/>
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
+        <StackPanel x:Name="Panel1" HorizontalAlignment="Left" Height="140" Margin="70,175,0,0" VerticalAlignment="Top" Width="1070" Background="#FFD8D8D7">
+            <Grid Height="120" Margin="64,0,926,0">
+                <Image  Source="/imgs\bookImgs\harry-potter-3.jpg" Margin="-44,6,34,-16" />
+                <Label Name="Book1Title" HorizontalAlignment="Left" Height="40" Margin="77,5,-439,0" Content="Harry Potter and the Prisoner of Azkaban" VerticalAlignment="Top" Width="442" FontSize="22" FontWeight="Bold" />
+                <Label HorizontalAlignment="Left" Height="40" Margin="742,17,-817,0" Content="Digital Return" VerticalAlignment="Top" Width="155" FontSize="22" FontWeight="Bold" />
+                <fa:ImageAwesome
+                    Name="dropoff"
+                    Icon="Send" 
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Width="65" 
+                    Height="60"
+                    Foreground="#FF326E0F"
+                    Margin="771,62,-756,-2"  Cursor="Hand"
+                />
+                <TextBlock Name="Book1Date" HorizontalAlignment="Left" Height="32" Margin="82,104,-309,-16" TextWrapping="Wrap" VerticalAlignment="Top" Width="307" FontSize="22" FontWeight="Bold" ><Run Text="Expires in: "/><Run Text="6 days&#xA;"/><LineBreak/><Run Text="&#xA;"/></TextBlock>
 
-        <StackPanel Orientation="Vertical" RenderTransformOrigin="0.546,0.544">
+                <TextBlock Name="Book1Version" HorizontalAlignment="Left" Height="24" Margin="75,60,-155,0" TextWrapping="Wrap" Text=" Digital Version&#xA;" VerticalAlignment="Top" Width="160" FontSize="22" FontWeight="Bold" />
+
+            </Grid>
+
+        </StackPanel>
+
+        <StackPanel x:Name="Panel2" HorizontalAlignment="Left" Height="140" Margin="70,375,0,0" VerticalAlignment="Top" Width="1070" Background="#FFD8D8D7">
+            <Grid Height="120" Margin="64,0,926,0">
+                <Image  Source="/imgs\bookImgs\A-History-of-Apprenticeship-Nurse-Training-in-Ireland.jpg" Margin="-44,6,34,-16" />
+                <Label Name="Book2Title" HorizontalAlignment="Left" Height="40" Margin="77,5,-571,0" Content="A History of Apprenticeship Nurse Training in Ireland" VerticalAlignment="Top" Width="574" FontSize="22" FontWeight="Bold" />
+                <Label HorizontalAlignment="Left" Height="40" Margin="671,17,-696,0" Content="Drop-Off" VerticalAlignment="Top" Width="105" FontSize="22" FontWeight="Bold" />
+                <fa:ImageAwesome
+                    Name="dropoff2"
+                    Icon="Inbox" 
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Width="65" 
+                    Height="60"
+                    Foreground="#FF326E0F"
+                    Margin="686,62,-671,-2"  Cursor="Hand"
+                />
+                <TextBlock x:Name="Book2Date" HorizontalAlignment="Left" Height="32" Margin="82,104,-309,-16" TextWrapping="Wrap" VerticalAlignment="Top" Width="307" FontSize="22" FontWeight="Bold" ><Run Text="Due in: "/><Run Text="6 days&#xA;"/><LineBreak/><Run Text="&#xA;"/></TextBlock>
+
+                <TextBlock x:Name="Book2Version" HorizontalAlignment="Left" Height="25" Margin="80,60,-166,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" FontSize="22" FontWeight="Bold" Text="Physical Version&#xA;" />
+                <Label HorizontalAlignment="Left" Height="40" Margin="787,17,-927,0" Content="Print Shipping Label" VerticalAlignment="Top" Width="220" FontSize="22" FontWeight="Bold" />
+                <fa:ImageAwesome
+                    x:Name="dropoff2_Copy"
+                    Icon="Truck" 
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Width="65" 
+                    Height="60"
+                    Foreground="#FF326E0F"
+                    Margin="866,62,-851,-2"  Cursor="Hand"
+                />
+
+            </Grid>
+
+        </StackPanel>
+
+        <!--<StackPanel Orientation="Vertical" RenderTransformOrigin="0.546,0.544">
             <Rectangle Name="Book1Background" Fill="#FFD8D8D7" HorizontalAlignment="Left" Height="160" Margin="35,155,0,0" Stroke="Black" VerticalAlignment="Top" Width="1125" StrokeThickness="4"/>
             <Rectangle Name="Book1Img" HorizontalAlignment="Left" Height="135" Margin="58,-147,0,0" Stroke="Black" StrokeThickness="4" VerticalAlignment="Top" Width="115">
                 <Rectangle.Fill>
@@ -445,6 +491,6 @@
             Margin="1060,193,77,547" Icon="Send"
                     />
         <TextBlock Name="Book1Return" HorizontalAlignment="Left" Height="40" Margin="1060,258,0,0" TextWrapping="Wrap" Text="Return" VerticalAlignment="Top" Width="74" FontSize="22" FontWeight="Bold" Foreground="#FF916D21"/>
-        <TextBlock x:Name="Book2Version_Copy" HorizontalAlignment="Left" Height="40" Margin="655,361,0,0" TextWrapping="Wrap" Text=" Physical Version&#xA;" VerticalAlignment="Top" Width="180" FontSize="22" FontWeight="Bold" />
+        <TextBlock x:Name="Book2Version_Copy" HorizontalAlignment="Left" Height="40" Margin="655,361,0,0" TextWrapping="Wrap" Text=" Physical Version&#xA;" VerticalAlignment="Top" Width="180" FontSize="22" FontWeight="Bold" />-->
     </Grid>
 </Page>

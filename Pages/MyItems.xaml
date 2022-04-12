@@ -474,17 +474,6 @@
         <TextBlock Name="Book2Date" HorizontalAlignment="Left" Height="40" Margin="188,411,0,0" TextWrapping="Wrap" Text="On Hold&#xA;" VerticalAlignment="Top" Width="112" FontSize="22" FontWeight="Bold" />
         <TextBlock Name="Book2Version" HorizontalAlignment="Left" Height="40" Margin="645,365,0,0" TextWrapping="Wrap" Text=" Physical Version&#xA;" VerticalAlignment="Top" Width="180" FontSize="22" FontWeight="Bold" />
         <TextBlock Name="Book2Waitlist" HorizontalAlignment="Left" Height="40" Margin="188,460,0,0" TextWrapping="Wrap" Text="12 Users in Waitlist - Expected Date March 4th&#xA;" VerticalAlignment="Top" Width="512" FontSize="22" FontWeight="Bold" />
-        <fa:ImageAwesome 
-            Name="Remove2"
-            Icon="TrashOutline"
-            VerticalAlignment="Center" 
-            HorizontalAlignment="Center" 
-            Width="55" 
-            Height="60"
-            Foreground="#FF992910"
-            Margin="1005,383,140,357"
-                    />
-        <TextBlock Name="Book2Remove" HorizontalAlignment="Left" Height="32" Margin="990,448,0,0" TextWrapping="Wrap" Text="Remove" VerticalAlignment="Top" Width="90" FontSize="22" FontWeight="Bold"  Foreground="#FF992910"/>
         <TextBlock Name="Book3Date" HorizontalAlignment="Left" Height="40" Margin="188,625,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" FontSize="22" FontWeight="Bold" ><Run Text="Due in: "/><Run Text="6 days&#xA;"/><LineBreak/><Run/></TextBlock>
         <fa:ImageAwesome 
             Cursor="Hand"

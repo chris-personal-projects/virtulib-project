@@ -49,20 +49,20 @@
                     HorizontalAlignment="Left"
                 >
                     <TextBlock
-                Text="   Catcher in the rye"
                 Foreground="Black"
                 FontSize="25"
                 FontWeight="UltraBold"
                 HorizontalAlignment="Left"
-                Margin="0,10,0,0"
-            ></TextBlock>
-                    
-                    
+                Margin="0,14,0,12" Width="550"
+            Text="Harry Potter and the Prisoner of Azkaban"
+            />
 
 
 
-                 
-               
+
+
+
+
 
                 </StackPanel>
             </StackPanel>
@@ -79,7 +79,7 @@
                     HorizontalAlignment="Left"
                 >
                     <TextBlock
-                Text="  Invisible Man"
+                Text="Kakuro for DUMMIES"
                 Foreground="Black"
                 FontSize="25"
                 FontWeight="Bold"
@@ -135,17 +135,16 @@
                     HorizontalAlignment="Left"
                 >
                     <TextBlock
-                Text="  Everyday Italian"
                 Foreground="Black"
                 FontSize="25"
                 FontWeight="Bold"
                 HorizontalAlignment="Left"
-                Margin="0,10,0,0"
-            ></TextBlock>
+                Margin="0,1"
+            ><Run Text="A History of Apprenticeship Nurse Training in "/><LineBreak/><Run Text="Ireland"/></TextBlock>
 
 
 
-                    
+
 
 
 
