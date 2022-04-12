@@ -348,14 +348,74 @@
             </materialDesign:DialogHost.DialogContent>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="90"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock HorizontalAlignment="Left" Height="70" Margin="10,30,0,0" TextWrapping="Wrap" Text="Your Books" VerticalAlignment="Top" Width="260" FontWeight="Bold" Foreground="White" FontSize="48" Padding="0" Grid.RowSpan="2"/>
+                    <StackPanel Orientation="Horizontal" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                        <Button
+                            Style="{StaticResource MaterialDesignFlatButton}"
+                            Padding="0"
+                            Width="100"
+                        >
+                            <TextBlock
+                                Text="All"
+                                Foreground="AliceBlue"
+                                FontSize="25"/>
+                        </Button>
 
-                <TextBlock HorizontalAlignment="Left" Height="70" Margin="10,30,0,0" TextWrapping="Wrap" Text="Your Books" VerticalAlignment="Top" Width="260" FontWeight="Bold" Foreground="White" FontSize="48" Padding="0" Grid.RowSpan="2"/>
-                <TextBlock HorizontalAlignment="Left" Height="30" Margin="675,40,0,0" TextWrapping="Wrap" Text="All          Loans          Holds           Wishlist            More" VerticalAlignment="Top" Width="525" FontWeight="Bold" Foreground="White" FontSize="20" Padding="0"  Grid.RowSpan="2"/>
+                        <Button
+                            Style="{StaticResource MaterialDesignFlatButton}"
+                            Padding="0"
+                            Width="100"
+                        >
+                            <TextBlock
+                                Text="Cake"
+                                Foreground="AliceBlue"
+                                FontSize="25"/>
+                        </Button>
 
+                        <Button
+                            Style="{StaticResource MaterialDesignFlatButton}"
+                            Padding="0"
+                            Width="100"
+                        >
+                            <TextBlock
+                                Text="Holds"
+                                Foreground="AliceBlue"
+                                FontSize="25"/>
+                        </Button>
+
+                        <Button
+                            Style="{StaticResource MaterialDesignFlatButton}"
+                            Padding="0"
+                            Width="100"
+                        >
+                            <TextBlock
+                                Text="Wish"
+                                Foreground="AliceBlue"
+                                FontSize="25"/>
+                        </Button>
+
+                        <Button
+                            Style="{StaticResource MaterialDesignFlatButton}"
+                            Padding="0"
+                            Width="100"
+                        >
+                            <TextBlock
+                                Text="Returns"
+                                Foreground="AliceBlue"
+                                FontSize="25"/>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+               
             </Grid>
         </materialDesign:DialogHost>
         <Image x:Name="Profile_Picture" HorizontalAlignment="Left" Height="120" Margin="230,180,0,0" VerticalAlignment="Top" Width="75" Source="/imgs/dorothy.png" RenderTransformOrigin="1.063,0.555">
@@ -406,21 +466,10 @@
             Width="65" 
             Height="60"
             Foreground="#FF326E0F"
-            Margin="855,193,280,547" MouseLeftButtonDown="RenewBook1" Cursor="Hand"
+            Margin="939,193,196,547" MouseLeftButtonDown="RenewBook1" Cursor="Hand"
                     />
-        <fa:ImageAwesome 
-            Cursor="Hand"
-            Name="Read1"
-            Icon="Book" 
-            VerticalAlignment="Center" 
-            HorizontalAlignment="Center" 
-            Width="70" 
-            Height="60"
-            Foreground="#FF136BEA"
-            Margin="963,193,167,547" RenderTransformOrigin="0.457,0.533"
-                    />
-        <TextBlock Name="Book1Renew" HorizontalAlignment="Left" Height="32" Margin="855,258,0,0" TextWrapping="Wrap" Text="Renew" VerticalAlignment="Top" Width="75" FontSize="22" FontWeight="Bold" Foreground="#FF326E0F"/>
-        <TextBlock Name="Book1Read" HorizontalAlignment="Left" Height="32" Margin="970,258,0,0" TextWrapping="Wrap" Text="Read" VerticalAlignment="Top" Width="55" FontSize="22" FontWeight="Bold"  Foreground="#FF136BEA"/>
+
+        <TextBlock Name="Book1Renew" HorizontalAlignment="Left" Height="32" Margin="929,258,0,0" TextWrapping="Wrap" Text="Renew" VerticalAlignment="Top" Width="75" FontSize="22" FontWeight="Bold" Foreground="#FF326E0F"/>
         <TextBlock Name="Book1Version" HorizontalAlignment="Left" Height="24" Margin="645,179,0,0" TextWrapping="Wrap" Text=" Digital Version&#xA;" VerticalAlignment="Top" Width="160" FontSize="22" FontWeight="Bold" />
         <TextBlock Name="Book2Date" HorizontalAlignment="Left" Height="40" Margin="188,411,0,0" TextWrapping="Wrap" Text="On Hold&#xA;" VerticalAlignment="Top" Width="112" FontSize="22" FontWeight="Bold" />
         <TextBlock Name="Book2Version" HorizontalAlignment="Left" Height="40" Margin="645,365,0,0" TextWrapping="Wrap" Text=" Physical Version&#xA;" VerticalAlignment="Top" Width="180" FontSize="22" FontWeight="Bold" />
