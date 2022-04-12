@@ -160,26 +160,31 @@
                             <ColumnDefinition />
                         </Grid.ColumnDefinitions>
 
-                        <Image 
+                        <Button
+                            Style="{StaticResource MaterialDesignFlatButton}"
+                            Grid.Column="0"
+                            Width="50" 
+                            Height="50" 
+                            Padding="0" Click="NavToHome"
+                        >
+                            <Image 
                                 Width="50" 
                                 Height="50" 
-                                Grid.Column="0"
                                 Source="/imgs/virtulib-logo.png"
                                 RenderOptions.BitmapScalingMode="Fant"/>
+                        </Button>
+
                         <Button
                             x:Name="SideNavOpen"
 				            Style="{StaticResource MaterialDesignFlatButton}"
                             Grid.Column="1"
+                            Padding="0"
 			            >
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <fa:ImageAwesome 
-                                        Icon="Bars" 
-                                        VerticalAlignment="Center" 
-                                        HorizontalAlignment="Center" 
-                                        Foreground="White"/>
-                                </ControlTemplate>
-                            </Button.Template>
+                            <fa:ImageAwesome 
+                                Icon="Bars" 
+                                VerticalAlignment="Center" 
+                                HorizontalAlignment="Center" 
+                                Foreground="White"/>
                         </Button>
 
                         <TextBox 

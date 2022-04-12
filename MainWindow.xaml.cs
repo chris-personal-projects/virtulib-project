@@ -147,5 +147,10 @@ namespace virtulib_project
             LoginDialog userLoginDialog = new LoginDialog();
             _main.SetDialog(userLoginDialog);
         }
+
+        private void NavToHome(object sender, RoutedEventArgs e)
+        {
+            Main.Navigate(new Browse(_main));
+        }
     }
 }
