@@ -38,7 +38,7 @@ namespace virtulib_project.Pages
 
         private void GoToAccount(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Profile());
+            NavigationService.Navigate(new MyItems(_main));
         }
 
     }
