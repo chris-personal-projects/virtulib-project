@@ -373,7 +373,7 @@
             <Rectangle Name="Book1Background" Fill="#FFD8D8D7" HorizontalAlignment="Left" Height="160" Margin="35,155,0,0" Stroke="Black" VerticalAlignment="Top" Width="1125" StrokeThickness="4"/>
             <Rectangle Name="Book1Img" HorizontalAlignment="Left" Height="135" Margin="58,-147,0,0" Stroke="Black" StrokeThickness="4" VerticalAlignment="Top" Width="115">
                 <Rectangle.Fill>
-                    <ImageBrush ImageSource="C:\Users\User\Source\Repos\chrisoChen\virtulib-project\imgs\bookImgs\harry-potter-3.jpg"/>
+                    <ImageBrush ImageSource="/imgs\bookImgs\harry-potter-3.jpg"/>
                 </Rectangle.Fill>
             </Rectangle>
 
@@ -382,12 +382,12 @@
 
             <Rectangle Name="Book2Img" HorizontalAlignment="Left" Height="135" Margin="58,-337,0,0" Stroke="Black" StrokeThickness="4" VerticalAlignment="Top" Width="115">
                 <Rectangle.Fill>
-                    <ImageBrush ImageSource="C:\Users\User\Source\Repos\chrisoChen\virtulib-project\imgs\bookImgs\Kakuro-For-Dummies.jpg"/>
+                    <ImageBrush ImageSource="/imgs\bookImgs\Kakuro-For-Dummies.jpg"/>
                 </Rectangle.Fill>
             </Rectangle>
             <Rectangle Name="Book3Img" HorizontalAlignment="Left" Height="135" Margin="58,-147,0,0" Stroke="Black" StrokeThickness="4" VerticalAlignment="Top" Width="115">
                 <Rectangle.Fill>
-                    <ImageBrush ImageSource="C:\Users\User\Source\Repos\chrisoChen\virtulib-project\imgs\bookImgs\A-History-of-Apprenticeship-Nurse-Training-in-Ireland.jpg"/>
+                    <ImageBrush ImageSource="/imgs\bookImgs\A-History-of-Apprenticeship-Nurse-Training-in-Ireland.jpg"/>
                 </Rectangle.Fill>
             </Rectangle>
         </StackPanel>
