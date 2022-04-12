@@ -341,7 +341,9 @@
 							TextWrapping="Wrap"
 							VerticalAlignment="Center"
 							HorizontalAlignment="Left"
-							Grid.Column="1"><Run FontSize="20" FontFamily="fonts/Dosis.ttf #Dosis ExtraLight" Text="A History of Apprenticeship "/><LineBreak  FontSize="20" FontFamily="fonts/Dosis.ttf #Dosis ExtraLight"/><Run  FontSize="20" FontFamily="fonts/Dosis.ttf #Dosis ExtraLight" Text="Nurse Training in Ireland"/></TextBlock>
+							Grid.Column="1">
+							A History of Apprenticeship Nurse Training in Ireland
+                    </TextBlock>
                     <TextBlock
 							Foreground="Gray"
 							FontWeight="Bold"
@@ -351,7 +353,7 @@
 							TextWrapping="Wrap"
 							VerticalAlignment="Center"
 							HorizontalAlignment="Left"
-							Grid.Column="2">	
+							Grid.Column="2">
 							Physical
                     </TextBlock>
 

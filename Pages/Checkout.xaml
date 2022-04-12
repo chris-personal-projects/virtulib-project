@@ -51,10 +51,10 @@
                 >
                     <TextBlock
                 Foreground="Black"
-                FontSize="25"
+                FontSize="20"
                 FontWeight="UltraBold"
                 HorizontalAlignment="Left"
-                Margin="0,2,0,-17" Width="260"
+                Margin="0,6" Width="260"
             ><Run Text="Harry Potter and the "/><LineBreak/><Run Text="Prisoner of Azkaban"/></TextBlock>
 
 
@@ -109,10 +109,10 @@
                     <TextBlock
                 Text="Kakuro for DUMMIES"
                 Foreground="Black"
-                FontSize="25"
+                FontSize="20"
                 FontWeight="Bold"
                 HorizontalAlignment="Left"
-                Margin="10,10,0,0"
+                Margin="10,10,0,10"
             ></TextBlock>
 
 
@@ -169,7 +169,7 @@
                     <TextBlock
                 Text="  The Simpsons Movie"
                 Foreground="Black"
-                FontSize="25"
+                FontSize="20"
                 FontWeight="Bold"
                 HorizontalAlignment="Left"
                 Margin="0,10,0,0"
@@ -226,7 +226,7 @@
 
                     <TextBlock
                 Foreground="Black"
-                FontSize="25"
+                FontSize="20"
                 FontWeight="Bold"
                 HorizontalAlignment="Left"
                 Margin="0,2,0,0"
