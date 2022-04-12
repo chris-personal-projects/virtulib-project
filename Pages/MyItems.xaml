@@ -407,11 +407,13 @@
                             Style="{StaticResource MaterialDesignFlatButton}"
                             Padding="0"
                             Width="100"
+                            
                         >
                             <TextBlock
                                 Text="Returns"
                                 Foreground="AliceBlue"
-                                FontSize="25"/>
+                                FontSize="25"
+                                MouseLeftButtonDown="return1Event"/>
                         </Button>
                     </StackPanel>
                 </Grid>

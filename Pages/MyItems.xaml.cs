@@ -62,5 +62,6 @@ namespace virtulib_project.Pages
             object ReturnControl = new ReturnControl(_mainViewModel);
             _mainViewModel.SetDialog(ReturnControl);
         }
+
     }
 }
