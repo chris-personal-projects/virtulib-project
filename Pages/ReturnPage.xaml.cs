@@ -43,7 +43,27 @@ namespace virtulib_project.Pages
         {
             Panel1.Children.Clear();
             Panel2.Margin = new Thickness(70, 175, 0, 0);
-                
+            Panel1.Visibility = Visibility.Hidden;
+
         }
+
+        private void dropoff(object sender, MouseButtonEventArgs e)
+        {
+            DropOffDialog dropoffDialog = new DropOffDialog();
+            _mainViewModel.SetDialog(dropoffDialog);
+            Panel2.Children.Clear();
+            Panel2.Visibility = Visibility.Hidden;
+
+        }
+
+        private void print(object sender, MouseButtonEventArgs e)
+        {
+            PrintLabelDialog printpopup = new PrintLabelDialog();
+            _mainViewModel.SetDialog(printpopup);
+            Panel2.Children.Clear();
+            Panel2.Visibility = Visibility.Hidden;
+
+        }
+
     }
 }

@@ -98,6 +98,12 @@
     <Compile Include="UserControls\BookInfoDialog.xaml.cs">
       <DependentUpon>BookInfoDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\PrintLabelDialog.xaml.cs">
+      <DependentUpon>PrintLabelDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DropOffDialog.xaml.cs">
+      <DependentUpon>DropOffDialog.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ReturnControl.xaml.cs">
       <DependentUpon>ReturnControl.xaml</DependentUpon>
     </Compile>
@@ -173,6 +179,14 @@
     <Page Include="UserControls\BookInfoDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PrintLabelDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\DropOffDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\ReturnControl.xaml">
       <Generator>MSBuild:Compile</Generator>

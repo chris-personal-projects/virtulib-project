@@ -363,7 +363,7 @@
                 <Label Name="Book1Title" HorizontalAlignment="Left" Height="40" Margin="77,5,-439,0" Content="Harry Potter and the Prisoner of Azkaban" VerticalAlignment="Top" Width="442" FontSize="22" FontWeight="Bold" />
                 <Label HorizontalAlignment="Left" Height="40" Margin="742,17,-817,0" Content="Digital Return" VerticalAlignment="Top" Width="155" FontSize="22" FontWeight="Bold" />
                 <fa:ImageAwesome
-                    Name="dropoff"
+                    Name="dropoffIcon"
                     Icon="Send" 
                     VerticalAlignment="Center" 
                     HorizontalAlignment="Center" 
@@ -393,7 +393,7 @@
                     Width="65" 
                     Height="60"
                     Foreground="#FF326E0F"
-                    Margin="686,62,-671,-2"  Cursor="Hand"
+                    Margin="686,62,-671,-2"  Cursor="Hand" MouseLeftButtonDown="dropoff"
                 />
                 <TextBlock x:Name="Book2Date" HorizontalAlignment="Left" Height="32" Margin="82,104,-309,-16" TextWrapping="Wrap" VerticalAlignment="Top" Width="307" FontSize="22" FontWeight="Bold" ><Run Text="Due in: "/><Run Text="6 days&#xA;"/><LineBreak/><Run Text="&#xA;"/></TextBlock>
 
@@ -407,7 +407,7 @@
                     Width="65" 
                     Height="60"
                     Foreground="#FF326E0F"
-                    Margin="866,62,-851,-2"  Cursor="Hand"
+                    Margin="866,62,-851,-2"  Cursor="Hand" MouseLeftButtonDown="print"
                 />
 
             </Grid>
