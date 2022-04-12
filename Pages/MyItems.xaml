@@ -376,7 +376,7 @@
                             Width="100"
                         >
                             <TextBlock
-                                Text="Cake"
+                                Text="Loans"
                                 Foreground="AliceBlue"
                                 FontSize="25"/>
                         </Button>
