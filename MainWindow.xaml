@@ -245,7 +245,7 @@
                             Click="Open_Cart_Dialog"
                             Background="Transparent"
                             BorderBrush="Transparent"
-                            Padding="0"
+                            Padding="0" MouseLeftButtonDown="Open_Cart_Dialog"
 		                >
                             <fa:ImageAwesome 
                                 Icon="ShoppingCart" 

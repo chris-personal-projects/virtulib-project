@@ -1,4 +1,4 @@
-﻿<Page x:Class="virtulib_project.Pages.MyItems"
+﻿<Page x:Class="virtulib_project.Pages.ReturnPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -353,8 +353,7 @@
                 </Grid.RowDefinitions>
 
 
-                <TextBlock HorizontalAlignment="Left" Height="70" Margin="10,30,0,0" TextWrapping="Wrap" Text="Your Books" VerticalAlignment="Top" Width="260" FontWeight="Bold" Foreground="White" FontSize="48" Padding="0" Grid.RowSpan="2"/>
-                <TextBlock HorizontalAlignment="Left" Height="30" Margin="675,40,0,0" TextWrapping="Wrap" Text="All          Loans          Holds           Wishlist            More" VerticalAlignment="Top" Width="525" FontWeight="Bold" Foreground="White" FontSize="20" Padding="0"  Grid.RowSpan="2"/>
+                <TextBlock HorizontalAlignment="Left" Height="115" Margin="10,30,0,0" TextWrapping="Wrap" Text="Returns" VerticalAlignment="Top" Width="375" FontWeight="Bold" Foreground="White" FontSize="72" Padding="0" Grid.RowSpan="2"/>
 
             </Grid>
         </materialDesign:DialogHost>
@@ -377,14 +376,9 @@
                 </Rectangle.Fill>
             </Rectangle>
 
-            <Rectangle Name="Book2Background" Fill="#FFD8D8D7" HorizontalAlignment="Left" Height="160" Margin="35,30,0,0" Stroke="Black" VerticalAlignment="Top" Width="1125" StrokeThickness="4" OpacityMask="Black"/>
             <Rectangle Name="Book3Background" Fill="#FFD8D8D7" HorizontalAlignment="Left" Height="160" Margin="35,30,0,0" Stroke="Black" VerticalAlignment="Top" Width="1125" StrokeThickness="4"/>
 
-            <Rectangle Name="Book2Img" HorizontalAlignment="Left" Height="135" Margin="58,-337,0,0" Stroke="Black" StrokeThickness="4" VerticalAlignment="Top" Width="115">
-                <Rectangle.Fill>
-                    <ImageBrush ImageSource="C:\Users\User\Source\Repos\chrisoChen\virtulib-project\imgs\bookImgs\Kakuro-For-Dummies.jpg"/>
-                </Rectangle.Fill>
-            </Rectangle>
+
             <Rectangle Name="Book3Img" HorizontalAlignment="Left" Height="135" Margin="58,-147,0,0" Stroke="Black" StrokeThickness="4" VerticalAlignment="Top" Width="115">
                 <Rectangle.Fill>
                     <ImageBrush ImageSource="C:\Users\User\Source\Repos\chrisoChen\virtulib-project\imgs\bookImgs\A-History-of-Apprenticeship-Nurse-Training-in-Ireland.jpg"/>
@@ -392,12 +386,7 @@
             </Rectangle>
         </StackPanel>
         <Label Name="Book1Title" HorizontalAlignment="Left" Height="40" Margin="184,171,0,0" Content="Harry Potter and the Prisoner of Azkaban" VerticalAlignment="Top" Width="442" FontSize="22" FontWeight="Bold" />
-
-        <TextBlock Name="Book2Title" HorizontalAlignment="Left" Height="40" Margin="188,365,0,0" TextWrapping="Wrap" Text="Kakuro for DUMMIES" VerticalAlignment="Top" Width="237" FontSize="22" FontWeight="Bold" />
-        <TextBlock Name="Book3Title" HorizontalAlignment="Left" Height="63" Margin="188,557,0,0" TextWrapping="Wrap" Text="A History of Apprenticeship Nurse Training in Ireland" VerticalAlignment="Top" Width="447" FontSize="22" FontWeight="Bold"/>
-        <TextBlock Name="Book1Date" HorizontalAlignment="Left" Height="32" Margin="188,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="307" FontSize="22" FontWeight="Bold" ><Run Text="Expires in: "/><Run Text="6 days&#xA;"/><LineBreak/><Run Text="&#xA;"/></TextBlock>
-        <ProgressBar Name="Book1ProgressBar" HorizontalAlignment="Left" Height="20" Margin="188,270,0,0" VerticalAlignment="Top" Width="447" Foreground="#FF4D9B30" BorderBrush="Black" Value="80" Background="White"/>
-        <TextBlock Name="Book1Completion" HorizontalAlignment="Left" Height="32" Margin="655,262,0,0" TextWrapping="Wrap" Text="80% Complete&#xA;" VerticalAlignment="Top" Width="150" FontSize="22" FontWeight="Bold" />
+        <TextBlock Name="Book3Title" HorizontalAlignment="Left" Height="63" Margin="188,361,0,0" TextWrapping="Wrap" Text="A History of Apprenticeship Nurse Training in Ireland" VerticalAlignment="Top" Width="447" FontSize="22" FontWeight="Bold"/>
         <fa:ImageAwesome
             Name="Renew1"
             Icon="Refresh" 
@@ -406,7 +395,7 @@
             Width="65" 
             Height="60"
             Foreground="#FF326E0F"
-            Margin="855,193,280,547" MouseLeftButtonDown="RenewBook1" Cursor="Hand"
+            Margin="855,193,280,547"  Cursor="Hand"
                     />
         <fa:ImageAwesome 
             Cursor="Hand"
@@ -422,21 +411,7 @@
         <TextBlock Name="Book1Renew" HorizontalAlignment="Left" Height="32" Margin="855,258,0,0" TextWrapping="Wrap" Text="Renew" VerticalAlignment="Top" Width="75" FontSize="22" FontWeight="Bold" Foreground="#FF326E0F"/>
         <TextBlock Name="Book1Read" HorizontalAlignment="Left" Height="32" Margin="970,258,0,0" TextWrapping="Wrap" Text="Read" VerticalAlignment="Top" Width="55" FontSize="22" FontWeight="Bold"  Foreground="#FF136BEA"/>
         <TextBlock Name="Book1Version" HorizontalAlignment="Left" Height="24" Margin="645,179,0,0" TextWrapping="Wrap" Text=" Digital Version&#xA;" VerticalAlignment="Top" Width="160" FontSize="22" FontWeight="Bold" />
-        <TextBlock Name="Book2Date" HorizontalAlignment="Left" Height="40" Margin="188,411,0,0" TextWrapping="Wrap" Text="On Hold&#xA;" VerticalAlignment="Top" Width="112" FontSize="22" FontWeight="Bold" />
-        <TextBlock Name="Book2Version" HorizontalAlignment="Left" Height="40" Margin="645,365,0,0" TextWrapping="Wrap" Text=" Physical Version&#xA;" VerticalAlignment="Top" Width="180" FontSize="22" FontWeight="Bold" />
-        <TextBlock Name="Book2Waitlist" HorizontalAlignment="Left" Height="40" Margin="188,460,0,0" TextWrapping="Wrap" Text="12 Users in Waitlist - Expected Date March 4th&#xA;" VerticalAlignment="Top" Width="512" FontSize="22" FontWeight="Bold" />
-        <fa:ImageAwesome 
-            Name="Remove2"
-            Icon="TrashOutline"
-            VerticalAlignment="Center" 
-            HorizontalAlignment="Center" 
-            Width="55" 
-            Height="60"
-            Foreground="#FF992910"
-            Margin="1005,383,140,357"
-                    />
-        <TextBlock Name="Book2Remove" HorizontalAlignment="Left" Height="32" Margin="990,448,0,0" TextWrapping="Wrap" Text="Remove" VerticalAlignment="Top" Width="90" FontSize="22" FontWeight="Bold"  Foreground="#FF992910"/>
-        <TextBlock Name="Book3Date" HorizontalAlignment="Left" Height="40" Margin="188,625,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" FontSize="22" FontWeight="Bold" ><Run Text="Due in: "/><Run Text="6 days&#xA;"/><LineBreak/><Run/></TextBlock>
+        <TextBlock Name="Book3Date" HorizontalAlignment="Left" Height="40" Margin="188,429,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="207" FontSize="22" FontWeight="Bold" ><Run Text="Due in: "/><Run Text="6 days&#xA;"/><LineBreak/><Run/></TextBlock>
         <fa:ImageAwesome 
             Cursor="Hand"
             Name="Renew3"
@@ -446,8 +421,7 @@
             Width="60" 
             Height="60"
             Foreground="#FF326E0F"
-            Margin="944,577,196,163"
-            MouseLeftButtonDown="RenewBook3"
+            Margin="944,381,196,359"
                     />
         <fa:ImageAwesome 
             Name="Return3"
@@ -456,10 +430,10 @@
             Width="63" 
             Height="60"
             Foreground="#FF916D21"
-            Margin="1051,577,86,163" Icon="Send"
+            Margin="1051,381,86,359" Icon="Send"
                     />
-        <TextBlock Name="Book3Renew" HorizontalAlignment="Left" Height="32" Margin="940,645,0,0" TextWrapping="Wrap" Text="Renew" VerticalAlignment="Top" Width="75" FontSize="22" FontWeight="Bold"  Foreground="#FF326E0F"/>
-        <TextBlock Name="Book3Return" HorizontalAlignment="Left" Height="40" Margin="1051,642,0,0" TextWrapping="Wrap" Text="Return" VerticalAlignment="Top" Width="74" FontSize="22" FontWeight="Bold"  Foreground="#FF916D21"/>
+        <TextBlock Name="Book3Renew" HorizontalAlignment="Left" Height="32" Margin="940,449,0,0" TextWrapping="Wrap" Text="Renew" VerticalAlignment="Top" Width="75" FontSize="22" FontWeight="Bold"  Foreground="#FF326E0F"/>
+        <TextBlock Name="Book3Return" HorizontalAlignment="Left" Height="40" Margin="1051,446,0,0" TextWrapping="Wrap" Text="Return" VerticalAlignment="Top" Width="74" FontSize="22" FontWeight="Bold"  Foreground="#FF916D21"/>
         <fa:ImageAwesome
             Name="Return1"
             Cursor="Hand"
@@ -468,9 +442,9 @@
             Width="63" 
             Height="60"
             Foreground="#FF916D21"
-            Margin="1060,193,77,547" Icon="Send" MouseLeftButtonDown="return1Event"
+            Margin="1060,193,77,547" Icon="Send"
                     />
         <TextBlock Name="Book1Return" HorizontalAlignment="Left" Height="40" Margin="1060,258,0,0" TextWrapping="Wrap" Text="Return" VerticalAlignment="Top" Width="74" FontSize="22" FontWeight="Bold" Foreground="#FF916D21"/>
-        <TextBlock x:Name="Book2Version_Copy" HorizontalAlignment="Left" Height="40" Margin="655,557,0,0" TextWrapping="Wrap" Text=" Physical Version&#xA;" VerticalAlignment="Top" Width="180" FontSize="22" FontWeight="Bold" />
+        <TextBlock x:Name="Book2Version_Copy" HorizontalAlignment="Left" Height="40" Margin="655,361,0,0" TextWrapping="Wrap" Text=" Physical Version&#xA;" VerticalAlignment="Top" Width="180" FontSize="22" FontWeight="Bold" />
     </Grid>
 </Page>

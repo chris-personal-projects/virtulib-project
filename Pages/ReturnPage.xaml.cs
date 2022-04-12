@@ -27,40 +27,18 @@ namespace virtulib_project.Pages
     /// <summary>
     /// Interaction logic for Browse.xaml
     /// </summary>
-    public partial class MyItems : Page
+    public partial class ReturnPage : Page
     {
         
         private MainViewModel _mainViewModel = new MainViewModel();
-        private VirtulibBookModel[] BookList;
-        public MyItems(MainViewModel mainViewModel)
+
+        public ReturnPage(MainViewModel mainViewModel)
         {
             InitializeComponent();
             _mainViewModel = mainViewModel;
             DataContext = _mainViewModel;
         }
 
-        private void RenewBook1(object sender, MouseButtonEventArgs e)
-        {
-            Book1Date.Text = "Expires in: 30 days";
-
-        }
-
-        private void RenewBook3(object sender, MouseButtonEventArgs e)
-        {
-            Book3Date.Text = "Due in: 30 days";
-
-        }
-
-        private void return1Event(object sender, MouseButtonEventArgs e)
-        {
-            object ReturnControl = new ReturnControl(_mainViewModel);
-            _mainViewModel.SetDialog(ReturnControl);
-        }
-
-        private void return3Event(object sender, MouseButtonEventArgs e)
-        {
-            object ReturnControl = new ReturnControl(_mainViewModel);
-            _mainViewModel.SetDialog(ReturnControl);
-        }
+        
     }
 }

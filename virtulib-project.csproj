@@ -86,6 +86,9 @@
     <Compile Include="Pages\CheckoutConfirm.xaml.cs">
       <DependentUpon>CheckoutConfirm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\ReturnPage.xaml.cs">
+      <DependentUpon>ReturnPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\MyItems.xaml.cs">
       <DependentUpon>MyItems.xaml</DependentUpon>
     </Compile>
@@ -94,6 +97,9 @@
     </Compile>
     <Compile Include="UserControls\BookInfoDialog.xaml.cs">
       <DependentUpon>BookInfoDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ReturnControl.xaml.cs">
+      <DependentUpon>ReturnControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\CheckoutControl.xaml.cs">
       <DependentUpon>CheckoutControl.xaml</DependentUpon>
@@ -136,6 +142,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\ReturnPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Pages\MyItems.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -163,6 +173,10 @@
     <Page Include="UserControls\BookInfoDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ReturnControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\CheckoutControl.xaml">
       <SubType>Designer</SubType>

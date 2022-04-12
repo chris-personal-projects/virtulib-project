@@ -84,7 +84,7 @@ namespace virtulib_project
 
         private void myItemsClick(object sender, MouseButtonEventArgs e)
         {
-            Main.Navigate(new MyItems());
+            Main.Navigate(new MyItems(_main));
             Storyboard sb = this.FindResource("CloseMenu") as Storyboard;
             sb.Begin();
         }
