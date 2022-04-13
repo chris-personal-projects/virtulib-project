@@ -152,5 +152,10 @@ namespace virtulib_project
         {
             Main.Navigate(new Browse(_main));
         }
+
+        private void ProgramShutdown(object sender, MouseButtonEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
     }
 }

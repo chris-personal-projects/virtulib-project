@@ -121,10 +121,12 @@
                             </ListViewItem>
 
                             <ListViewItem Height="45" Padding="0">
-                                <StackPanel Orientation="Horizontal" Margin="10 0">
-                                    <materialDesign:PackIcon Kind="ExitToApp" Width="20" Height="20" Foreground="#FFD41515" Margin="5" VerticalAlignment="Center"/>
-                                    <TextBlock Text="Logout" Margin="10"/>
-                                </StackPanel>
+                                <Border Background="#00000000" MouseLeftButtonUp="ProgramShutdown" Cursor="Hand" Width="250">
+                                    <StackPanel Orientation="Horizontal" Margin="10 0">
+                                        <materialDesign:PackIcon Kind="ExitToApp" Width="20" Height="20" Foreground="#FFD41515" Margin="5" VerticalAlignment="Center"/>
+                                        <TextBlock Text="Logout" Margin="10"/>
+                                    </StackPanel>
+                                </Border>
                             </ListViewItem>
 
 
