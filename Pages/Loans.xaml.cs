@@ -27,12 +27,12 @@ namespace virtulib_project.Pages
     /// <summary>
     /// Interaction logic for Browse.xaml
     /// </summary>
-    public partial class MyItems : Page
+    public partial class Loans : Page
     {
         
         private MainViewModel _mainViewModel = new MainViewModel();
         private VirtulibBookModel[] BookList;
-        public MyItems(MainViewModel mainViewModel)
+        public Loans(MainViewModel mainViewModel)
         {
             InitializeComponent();
             _mainViewModel = mainViewModel;
@@ -63,10 +63,5 @@ namespace virtulib_project.Pages
             _mainViewModel.SetDialog(ReturnControl);
         }
 
-
-        private void toLoans(object sender, MouseButtonEventArgs e)
-        {
-            ItemsPage.Navigate(new Loans(_mainViewModel));
-        }
     }
 }

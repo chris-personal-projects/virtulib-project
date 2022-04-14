@@ -28,6 +28,7 @@ namespace virtulib_project.UserControls
             InitializeComponent();
             DataContext = this;
             viewModel = mainViewModel;
+            
         }
 
         private void ReturnRedirect(object sender, RoutedEventArgs e)
