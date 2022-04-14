@@ -1,6 +1,6 @@
 ﻿# CPSC 481 Winter 2022 Group 17 Project: Virtulib
 
-## Group Members: 
+## Group Members
 - Chris Chen
 - Kirill Larshin
 - Keaton Banik
@@ -26,7 +26,7 @@ The following features were added to our project:
 
 ## Running the program
 To run the program, ensure the correct NuGet package are installed. If the correct packages are not installed,
-right-click the project and select "Manage NuGet Packages". Navigate through the UI to install the correct packages, 
+right click the project and select "Manage NuGet Packages". Navigate through the UI to install the correct packages, 
 which are listed in the file `packages.config`.
 
 If the project has been opened by its `.sln` file in Visual Studio, press the `Start` button on the
@@ -42,7 +42,7 @@ books in our system. Book data is automatically generated from this file and use
 Users can 'log in' to our system, but this window is more for visual purposes and will automatically 
 close regardless of input: users can enter whatever information they wish to. 
 
-Users can change their personal information in their settings page by clickon the 'change?' button
+Users can change their personal information in their settings page by clicking on the 'change?' button
 editing their specific field, and then clicking on the button once more. Users can enter whatever fields they wish to
 in their name, email, phone, address, and password fields. Users can edit the rest of the fields from a drop-down menu
 for that specific field. 
