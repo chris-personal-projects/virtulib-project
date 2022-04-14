@@ -51,20 +51,7 @@ namespace virtulib_project.UserControls
             }
         }
 
-        private void Check2Click(object sender, RoutedEventArgs e)
-        {
-            if (Check2.Visibility.Equals(Visibility.Visible))
-            {
-                Check2.Visibility = Visibility.Hidden;
-
-            }
-            else if (Check2.Visibility.Equals(Visibility.Hidden))
-            {
-                Check2.Visibility = Visibility.Visible;
-
-            }
-        }
-
+        
         private void Check3Click(object sender, RoutedEventArgs e)
         {
             if (Check3.Visibility.Equals(Visibility.Visible))
@@ -96,7 +83,6 @@ namespace virtulib_project.UserControls
         private void removeAllClick(object sender, RoutedEventArgs e)
         {
             Check1.Visibility = Visibility.Hidden;
-            Check2.Visibility = Visibility.Hidden;
             Check3.Visibility = Visibility.Hidden;
             Check4.Visibility = Visibility.Hidden;
         }
